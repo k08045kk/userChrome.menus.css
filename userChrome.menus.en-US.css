@@ -1,0 +1,168 @@
+/* Delete context menu */
+/*  #mainPopupSet,                      /* Popup */
+/*    #tabContextMenu,                  /* Tab context menu */
+        #context_reloadTab,             /* [Reload Tab] */
+        #context_toggleMuteTab,         /* [Mute Tab] */
+        #context_toggleMuteTab + menuseparator,         /* [Separator] */
+/*      #context_pinTab,                /* [Pin Tab] */
+/*      #context_unpinTab,              /* [Unpin Tab] */
+/*      #context_duplicateTab,          /* [Duplicate Tab] */
+        #context_duplicateTab + menuseparator,         /* [Separator] */
+        #context_selectAllTabs,         /* [Select All Tabs] */
+        #context_bookmarkSelectedTabs,  /* [Bookmark Tabs…] */
+        #context_bookmarkTab,           /* [Bookmark Tab] */
+        #context_reopenInContainer,     /* [Reopen in Container] */
+        #context_moveTabOptions,        /* [Move Tab] */
+        #context_openTabInWindow,       /* [Move to New Window] */
+        #context_sendTabToDevice_separator,             /* [Separator] */
+        #context_sendTabToDevice,       /* [Send Tab to Device] */
+/*      #context_sendTabToDevice + menuseparator,       /* [Separator] */
+        #context_reloadAllTabs,         /* [Reload All Tabs] */
+        #context_bookmarkAllTabs,       /* [Bookmark All Tabs…] */
+/*      #context_closeTabsToTheEnd,     /* [Close Tabs to the Right] */
+/*      #context_closeOtherTabs,        /* [Close Other Tabs] */
+/*      #context_closeOtherTabs + menuseparator,        /* [Separator] */
+/*      #context_undoCloseTab,          /* [Undo Close Tab] */
+        #context_closeTab,              /* [Close Tab] */
+/*    #contentAreaContextMenu,          /* Context menu */
+/*      #context-navigation,            /* [Navigate] */
+/*        #context-back,                /* [Back] */
+/*        #context-forward,             /* [Forward] */
+/*        #context-reload,              /* [Reload] */
+/*        #context-stop,                /* [Stop] */
+/*        #context-bookmarkpage,        /* [Bookmark This Page] */
+/*      #context-sep-navigation,        /* [Separator] */
+        #page-menu-separator,           /* [Separator] */
+/*      #spell-no-suggestions,          /* [(No Spelling Suggestions)] */
+/*      #spell-add-to-dictionary,       /* [Add to Dictionary] */
+/*      #spell-undo-add-to-dictionary,  /* [Undo Add To Dictionary] */
+/*      #spell-suggestions-separator,   /* [Separator] */
+        #context-openlinkincurrent,     /* [Open Link] */
+        #context-openlinkincontainertab,/* [Open Link in New Personal Tab] */
+        #context-openlinkintab,         /* [Open Link in New Tab] */
+        #context-openlinkinusercontext-menu,    /* [Open Link in New Container Tab] */
+        #context-openlink,              /* [Open Link in New Window] */
+        #context-openlinkprivate,       /* [Open Link in New Private Window] */
+        #context-sep-open,              /* [Separator] */
+        #context-bookmarklink,          /* [Bookmark This Link] */
+/*      #context-savelink,              /* [Save Link As…] */
+        #context-savelinktopocket,      /* [Save Link to Poket] */
+        #context-copyemail,             /* [Copy Email Address] */
+/*      #context-copylink,              /* [Copy Link Location] */
+/*      #context-sep-copylink,          /* [Separator] */
+/*      #context-media-play,            /* [Play] */
+/*      #context-media-pause,           /* [Pause] */
+/*      #context-media-mute,            /* [Mute] */
+/*      #context-media-unmute,          /* [Unmute] */
+/*      #context-media-playbackrate,    /* [Play Speed] */
+/*      #context-media-loop,            /* [Loop] */
+/*      #context-media-showcontrols,    /* [Show Controls] */
+/*      #context-media-hidecontrols,    /* [Hide Controls] */
+        #context-video-fullscreen,      /* [Full Screen] */
+        #context-leave-dom-fullscreen,  /* [Exit Full Screen] */
+        #context-media-sep-commands,    /* [Separator] */
+        #context-reloadimage,           /* [Reload Image] */
+        #context-viewimage,             /* [View Image] */
+        #context-viewvideo,             /* [View Video] */
+        #context-copyimage-contents,    /* [Copy Image] */
+/*      #context-copyimage,             /* [Copy Image Location] */
+/*      #context-copyvideourl,          /* [Copy Video Location] */
+/*      #context-copyaudiourl,          /* [Copy Audio Location] */
+/*      #context-sep-copyimage,         /* [Separator] */
+/*      #context-saveimage,             /* [Save Image As…] */
+        #context-sendimage,             /* [Email Image…] */
+        #context-setDesktopBackground,  /* [Set As Desktop Background…] */
+/*      #context-viewimageinfo,         /* [View Image Info] */
+/*      #context-viewimagedesc,         /* [View Description] */
+/*      #context-savevideo,             /* [Save Video As…] */
+/*      #context-saveaudio,             /* [Save Audio As…] */
+/*      #context-video-saveimage,       /* [Save Snapshot As…] */
+        #context-sendvideo,             /* [Email Video…] */
+        #context-sendaudio,             /* [Email Audio…] */
+/*      #context-ctp-play,              /* [Activate this plugin] */
+/*      #context-ctp-hide,              /* [Hide this plugin] */
+/*      #context-sep-ctp,               /* [Separator] */
+        #context-savepage,              /* [Save Page As…] */
+        #context-pocket,                /* [Save Page to Poket] */
+        #context-sep-sendpagetodevice,  /* [Separator] */
+        #context-sendpagetodevice,      /* [Send Page to Device] */
+        #context-sep-viewbgimage,       /* [Separator] */
+        #context-viewbgimage,           /* [View Background Image] */
+/*      #context-undo,                  /* [Undo] */
+/*      #context-sep-undo,              /* [Separator] */
+/*      #context-cut,                   /* [Cut] */
+/*      #context-copy,                  /* [Copy] */
+/*      #context-paste,                 /* [Paste] */
+/*      #context-delete,                /* [Delete] */
+/*      #context-sep-paste,             /* [Separator] */
+/*      #context-selectall,             /* [Select All] */
+/*      #context-sep-selectall,         /* [Separator] */
+/*      #context-keywordfield,          /* [Add a Keyword for this Search…] */
+/*      #context-searchselect,          /* [Search … for “This add-on req…”] */
+        #context-sep-sendlinktodevice,  /* [Separator] */
+        #context-sendlinktodevice,      /* [Send Link to Device] */
+/*      #frame-sep,                     /* [Separator] */
+/*      #frame,                         /* [This Frame] */
+/*      #context-viewpartialsource-selection,   /* [View Selection Source] */
+/*      #context-viewpartialsource-mathml,      /* [View MathML Source] */
+/*      #context-sep-viewsource,        /* [Separator] */
+/*      #context-viewsource,            /* [View Page Source] */
+/*      #context-viewinfo,              /* [View Page Info] */
+/*      #spell-separator,               /* [Separator] */
+/*      #spell-check-enabled,           /* [Check Spelling] */
+/*      #spell-add-dictionaries-main,   /* [Add Dictionaries…] */
+/*      #spell-dictionaries,            /* [Languages] */
+/*      #context-sep-bidi,              /* [Separator] */
+/*      #context-bidi-text-direction-toggle,    /* [Switch Text Direction] */
+/*      #context-bidi-page-direction-toggle,    /* [Switch Page Direction] */
+/*      #fill-login-separator,          /* [Separator] */
+/*      #fill-login,                    /* [Fill Login] */
+/*      #inspect-separator,             /* [Separator] */
+/*      #context-inspect,               /* [Inspect Element] */
+/*      #context-media-eme-separator,   /* [Separator] */
+/*      #context-media-eme-learnmore,   /* [Learn more about DRM…] */
+/*    #placesContext,                   /* Bookmark menu */
+/*      #placesContext_open,            /* [Open] */
+/*      #placesContext_open\:newtab,    /* [Open in a New Tab] */
+/*      #placesContext_openContainer\:tabs,     /* [Open All in Tabs] */
+/*      #placesContext_openLinks\:tabs,         /* [Open All in Tabs] */
+/*      #placesContext_open\:newwindow,         /* [Open in a New Window] */
+/*      #placesContext_open\:newprivatewindow,  /* [Open in a New Private Window] */
+/*      #placesContext_openSeparator,   /* [Separator] */
+/*      #placesContext_new\:bookmark,   /* [New Bookmark…] */
+/*      #placesContext_new\:folder,     /* [New Folder…] */
+/*      #placesContext_new\:separator,  /* [New Separator] */
+/*      #placesContext_newSeparator,    /* [Separator] */
+/*      #placesContext_createBookmark,  /* [Bookmark Page] */
+/*      #placesContext_cut,             /* [Cut] */
+/*      #placesContext_copy,            /* [Copy] */
+/*      #placesContext_paste,           /* [Paste] */
+/*      #placesContext_editSeparator,   /* [Separator] */
+/*      #placesContext_delete,          /* [Delete] */
+/*      #placesContext_delete_history,  /* [Delete Page] */
+/*      #placesContext_deleteHost,      /* [Forget About This Site] */
+/*      #placesContext_deleteSeparator, /* [Separator] */
+/*      #placesContext_sortBy\:name,    /* [Sort By Name] */
+/*      #placesContext_reload,          /* [Reload Live Bookmark] */
+/*      #placesContext_show\:info,      /* [Properties] */
+    #context-dummy-dummy-dummy          /* Dummy */
+{
+  display: none !important;
+}
+ 
+/* Delete [Search … for “This add-on req…”] */
+/* If you right click on the link, delete it. */
+/* Do not delete selected text if it exists. */
+        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /**/
+    #context-dummy-dummy-dummy          /* Dummy */
+{
+  visibility: collapse !important;
+} 
+ 
+/* Delete context menu(For add-ons) */
+    menuitem[label="Take a Screenshot"],/* Take a Screenshot */
+/*  menuitem[label="NoScript"],         /* NoScript */
+    #context-dummy-dummy-dummy          /* Dummy */
+{
+  display: none !important;
+}
