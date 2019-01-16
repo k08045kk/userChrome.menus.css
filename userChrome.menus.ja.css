@@ -11,11 +11,11 @@
 /*      #context_unpinTab,              /* [タブのピン留めを外す] */
 /*      #context_duplicateTab,          /* [タブを複製] */
         #context_duplicateTab + menuseparator,         /* [区切り] */
-        #context_selectAllTabs,         /* [Select All Tabs] */
+        #context_selectAllTabs,         /* [すべてのタブを選択] */
         #context_bookmarkSelectedTabs,  /* [タブをブックマーク...] */
-        #context_bookmarkTab,           /* [Bookmark Tab] */
+        #context_bookmarkTab,           /* [タブをブックマーク] */
         #context_reopenInContainer,     /* [コンテナーを開きなおす] */
-        #context_moveTabOptions,        /* [Move Tab] */
+        #context_moveTabOptions,        /* [タブを移動] */
         #context_openTabInWindow,       /* [新しいウィンドウへ移動] */
         #context_sendTabToDevice_separator,             /* [区切り] */
         #context_sendTabToDevice,       /* [タブを端末へ送信] */
