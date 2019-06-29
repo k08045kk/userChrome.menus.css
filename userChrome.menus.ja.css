@@ -5,21 +5,28 @@
 /*  #mainPopupSet,                      /* ポップアップ */
 /*    #tabContextMenu,                  /* タブコンテキストメニュー */
         #context_reloadTab,             /* [タブを再読み込み] */
+        #context_reloadSelectedTabs,    /* [タブを再読み込み] */
         #context_toggleMuteTab,         /* [タブをミュート] */
+        #context_toggleMuteSelectedTabs,/* [タブをミュート] */
         #context_toggleMuteTab + menuseparator,         /* [区切り] */
 /*      #context_pinTab,                /* [タブをピン留め] */
 /*      #context_unpinTab,              /* [タブのピン留めを外す] */
+/*      #context_pinSelectedTabs,       /* [タブをピン留め] */
+/*      #context_unpinSelectedTabs,     /* [タブのピン留めを外す] */
 /*      #context_duplicateTab,          /* [タブを複製] */
-        #context_duplicateTab + menuseparator,         /* [区切り] */
+/*      #context_duplicateTabs,         /* [タブを複製] */
+/*      #context_duplicateTabs + menuseparator,        /* [区切り] */
         #context_selectAllTabs,         /* [すべてのタブを選択] */
         #context_bookmarkSelectedTabs,  /* [タブをブックマーク...] */
         #context_bookmarkTab,           /* [タブをブックマーク] */
         #context_reopenInContainer,     /* [コンテナーを開きなおす] */
         #context_moveTabOptions,        /* [タブを移動] */
-        #context_openTabInWindow,       /* [新しいウィンドウへ移動] */
-        #context_sendTabToDevice_separator,             /* [区切り] */
+        #moveTabOptionsMenu,            /* タブ移動 */
+          #context_moveToStart,         /* [最初のタブへ移動] */
+          #context_moveToEnd,           /* [最後のタブへ移動] */
+          #context_openTabInWindow,     /* [新しいウィンドウへ移動] */
         #context_sendTabToDevice,       /* [タブを端末へ送信] */
-/*      #context_sendTabToDevice + menuseparator,       /* [区切り] */
+        #context_sendTabToDevice + menuseparator,       /* [区切り] */
         #context_reloadAllTabs,         /* [すべてのタブを再読み込み] */
         #context_bookmarkAllTabs,       /* [すべてのタブをブックマーク...] */
 /*      #context_closeTabsToTheEnd,     /* [右側のタブをすべて閉じる] */
@@ -27,6 +34,7 @@
 /*      #context_closeOtherTabs + menuseparator,        /* [区切り] */
 /*      #context_undoCloseTab,          /* [閉じたタブを元に戻す] */
         #context_closeTab,              /* [タブを閉じる] */
+        #context_closeSelectedTabs,     /* [タブを閉じる] */
 /*    #contentAreaContextMenu,          /* コンテキストメニュー */
 /*      #context-navigation,            /* [ナビゲート] */
 /*        #context-back,                /* [戻る] */
@@ -103,7 +111,7 @@
 /*      #context-sep-paste,             /* [区切り] */
 /*      #context-selectall,             /* [すべて選択] */
 /*      #context-sep-selectall,         /* [区切り] */
-/*      #context-keywordfield,          /* [この検索にキーワードを設定...] */
+        #context-keywordfield,          /* [この検索にキーワードを設定...] */
 /*      #context-searchselect,          /* [[-をweb検索]] */
         #context-sep-sendlinktodevice,  /* [区切り] */
         #context-sendlinktodevice,      /* [リンクを端末へ送信] */
@@ -127,6 +135,7 @@
 /*      #fill-login,                    /* [ログイン情報を入力] */
 /*      #inspect-separator,             /* [区切り] */
 /*      #context-inspect,               /* [要素を調査] */
+/*      #context-inspect-a11y,          /* [アクセシビリティプロパティを調査] */
 /*      #context-media-eme-separator,   /* [区切り] */
 /*      #context-media-eme-learnmore,   /* [DRM の詳細...] */
 /*    #placesContext,                   /* ブックマークメニュー */
