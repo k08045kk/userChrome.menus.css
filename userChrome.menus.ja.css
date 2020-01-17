@@ -35,6 +35,7 @@
 /*      #context_undoCloseTab,          /* [閉じたタブを元に戻す] */
         #context_closeTab,              /* [タブを閉じる] */
         #context_closeSelectedTabs,     /* [タブを閉じる] */
+/*      #context_closeSelectedTabs + menuseparator,     /* [区切り] */
 /*    #contentAreaContextMenu,          /* コンテキストメニュー */
 /*      #context-navigation,            /* [ナビゲート] */
 /*        #context-back,                /* [戻る] */
