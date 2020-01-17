@@ -2,13 +2,13 @@
 @charset "UTF-8";
 
 /* コンテキストメニューを削除 */
+/* see https://www.bugbugnow.net/2017/12/firefox-quantum-57.html */
 /*  #mainPopupSet,                      /* ポップアップ */
 /*    #tabContextMenu,                  /* タブコンテキストメニュー */
         #context_reloadTab,             /* [タブを再読み込み] */
         #context_reloadSelectedTabs,    /* [タブを再読み込み] */
         #context_toggleMuteTab,         /* [タブをミュート] */
         #context_toggleMuteSelectedTabs,/* [タブをミュート] */
-        #context_toggleMuteTab + menuseparator,         /* [区切り] */
 /*      #context_pinTab,                /* [タブをピン留め] */
 /*      #context_unpinTab,              /* [タブのピン留めを外す] */
 /*      #context_pinSelectedTabs,       /* [タブをピン留め] */
