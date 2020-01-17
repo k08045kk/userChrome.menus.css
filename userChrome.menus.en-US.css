@@ -1,22 +1,29 @@
 /* Delete context menu */
+/* see https://www.bugbugnow.net/2018/04/firefox-quantum-context-menu-editing.html */
 /*  #mainPopupSet,                      /* Popup */
 /*    #tabContextMenu,                  /* Tab context menu */
         #context_reloadTab,             /* [Reload Tab] */
+        #context_reloadSelectedTabs,    /* [Reload Tabs] */
         #context_toggleMuteTab,         /* [Mute Tab] */
-        #context_toggleMuteTab + menuseparator,         /* [Separator] */
+        #context_toggleMuteSelectedTabs,/* [Mute Tabs] */
 /*      #context_pinTab,                /* [Pin Tab] */
 /*      #context_unpinTab,              /* [Unpin Tab] */
+/*      #context_pinSelectedTabs,       /* [Pin Tabs] */
+/*      #context_unpinSelectedTabs,     /* [Unpin Tabs] */
 /*      #context_duplicateTab,          /* [Duplicate Tab] */
-        #context_duplicateTab + menuseparator,         /* [Separator] */
+/*      #context_duplicateTabs,         /* [Duplicate Tabs] */
+/*      #context_duplicateTabs + menuseparator,         /* [Separator] */
         #context_selectAllTabs,         /* [Select All Tabs] */
         #context_bookmarkSelectedTabs,  /* [Bookmark Tabs…] */
         #context_bookmarkTab,           /* [Bookmark Tab] */
         #context_reopenInContainer,     /* [Reopen in Container] */
         #context_moveTabOptions,        /* [Move Tab] */
-        #context_openTabInWindow,       /* [Move to New Window] */
-        #context_sendTabToDevice_separator,             /* [Separator] */
+        #moveTabOptionsMenu,            /* Move Tab */
+          #context_moveToStart,         /* [Move to Start] */
+          #context_moveToEnd,           /* [Move to End] */
+          #context_openTabInWindow,     /* [Move to New Window] */
         #context_sendTabToDevice,       /* [Send Tab to Device] */
-/*      #context_sendTabToDevice + menuseparator,       /* [Separator] */
+        #context_sendTabToDevice + menuseparator,       /* [Separator] */
         #context_reloadAllTabs,         /* [Reload All Tabs] */
         #context_bookmarkAllTabs,       /* [Bookmark All Tabs…] */
 /*      #context_closeTabsToTheEnd,     /* [Close Tabs to the Right] */
@@ -24,6 +31,7 @@
 /*      #context_closeOtherTabs + menuseparator,        /* [Separator] */
 /*      #context_undoCloseTab,          /* [Undo Close Tab] */
         #context_closeTab,              /* [Close Tab] */
+        #context_closeSelectedTabs,     /* [Close Tabs] */
 /*    #contentAreaContextMenu,          /* Context menu */
 /*      #context-navigation,            /* [Navigate] */
 /*        #context-back,                /* [Back] */
@@ -97,7 +105,7 @@
 /*      #context-sep-paste,             /* [Separator] */
 /*      #context-selectall,             /* [Select All] */
 /*      #context-sep-selectall,         /* [Separator] */
-/*      #context-keywordfield,          /* [Add a Keyword for this Search…] */
+        #context-keywordfield,          /* [Add a Keyword for this Search…] */
 /*      #context-searchselect,          /* [Search … for “This add-on req…”] */
         #context-sep-sendlinktodevice,  /* [Separator] */
         #context-sendlinktodevice,      /* [Send Link to Device] */
