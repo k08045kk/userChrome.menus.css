@@ -32,6 +32,7 @@
 /*      #context_undoCloseTab,          /* [Undo Close Tab] */
         #context_closeTab,              /* [Close Tab] */
         #context_closeSelectedTabs,     /* [Close Tabs] */
+/*      #context_closeSelectedTabs + menuseparator,     /* [Separator] */
 /*    #contentAreaContextMenu,          /* Context menu */
 /*      #context-navigation,            /* [Navigate] */
 /*        #context-back,                /* [Back] */
