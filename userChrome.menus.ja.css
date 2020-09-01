@@ -174,8 +174,8 @@
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /**/
     #context-dummy-dummy-dummy          /* ダミー */
 {
-  visibility: collapse !important;
-} 
+  display: none !important;
+}
 
 /* コンテキストメニューを削除(拡張機能用) */
 /* @charsetとuserChrome.cssの文字コードに注意 */
