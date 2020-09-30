@@ -163,6 +163,17 @@
 /*      #placesContext_sortBy\:name,    /* [名前順に並べ替える] */
 /*      #placesContext_reload,          /* [ライブブックマークを再読み込み] */
 /*      #placesContext_show\:info,      /* [プロパティ] */
+/*    #pageActionPanel,                 /* ページアクション */
+/*      #pageAction-panel-bookmark,     /* [このページをブックマーク] */
+/*      #pageAction-panel-pocket,       /* [ページを Pocket に保存] */
+/*      #pageAction-panel-pinTab,       /* [タブをピン留め][タブのピン留めを外す] */
+/*      #pageAction-panel-bookmarkSeparator,    /* [区切り] */
+/*      #pageAction-panel-copyURL,      /* [リンクをコピー] */
+        #pageAction-panel-emailLink,    /* [ページの URL をメールで送信...] */
+        #pageAction-panel-sendToDevice, /* [1 個のタブを端末へ送信] */
+        #pageAction-panel-shareURL,     /* [共有] */
+/*      #pageAction-panel-screenshots_mozilla_org,      /* [スクリーンショットを撮る] */
+/*      #pageAction-panel-builtInSeparator,     /* [区切り] */
     #context-dummy-dummy-dummy          /* ダミー */
 {
   display: none !important;
