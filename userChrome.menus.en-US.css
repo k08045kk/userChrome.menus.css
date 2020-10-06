@@ -3,31 +3,32 @@
 /*  #mainPopupSet,                      /* Popup */
 /*    #tabContextMenu,                  /* Tab context menu */
         #context_reloadTab,             /* [Reload Tab] */
-        #context_reloadSelectedTabs,    /* [Reload Tabs] */
+        #context_reloadSelectedTabs,    /* [Reload Tabs] 67+ */
         #context_toggleMuteTab,         /* [Mute Tab] */
-        #context_toggleMuteSelectedTabs,/* [Mute Tabs] */
+        #context_toggleMuteSelectedTabs,/* [Mute Tabs] 67+ */
 /*      #context_pinTab,                /* [Pin Tab] */
 /*      #context_unpinTab,              /* [Unpin Tab] */
-/*      #context_pinSelectedTabs,       /* [Pin Tabs] */
-/*      #context_unpinSelectedTabs,     /* [Unpin Tabs] */
+/*      #context_pinSelectedTabs,       /* [Pin Tabs] 67+ */
+/*      #context_unpinSelectedTabs,     /* [Unpin Tabs] 67+ */
 /*      #context_duplicateTab,          /* [Duplicate Tab] */
-/*      #context_duplicateTabs,         /* [Duplicate Tabs] */
-/*      #context_duplicateTabs + menuseparator,         /* [Separator] */
-        #context_selectAllTabs,         /* [Select All Tabs] */
+/*      #context_duplicateTabs,         /* [Duplicate Tabs] 67+ */
+/*      #context_duplicateTabs + menuseparator,         /* [Separator] 67+ */
+        #context_selectAllTabs,         /* [Select All Tabs] 64+ */
         #context_bookmarkSelectedTabs,  /* [Bookmark Tabs…] */
-        #context_bookmarkTab,           /* [Bookmark Tab] */
+        #context_bookmarkTab,           /* [Bookmark Tab] 64+ */
         #context_reopenInContainer,     /* [Reopen in Container] */
-        #context_moveTabOptions,        /* [Move Tab] */
-        #moveTabOptionsMenu,            /* Move Tab */
-          #context_moveToStart,         /* [Move to Start] */
-          #context_moveToEnd,           /* [Move to End] */
-          #context_openTabInWindow,     /* [Move to New Window] */
+        #context_moveTabOptions,        /* [Move Tab] 64+ */
+        #moveTabOptionsMenu,            /* Move Tab 67+ */
+          #context_moveToStart,         /* [Move to Start] 67+ */
+          #context_moveToEnd,           /* [Move to End] 67+ */
+          #context_openTabInWindow,     /* [Move to New Window] 67+ */
         #context_sendTabToDevice,       /* [Send Tab to Device] */
         #context_sendTabToDevice + menuseparator,       /* [Separator] */
-        #context_reloadAllTabs,         /* [Reload All Tabs] */
-        #context_bookmarkAllTabs,       /* [Bookmark All Tabs…] */
-/*      #context_closeTabsToTheEnd,     /* [Close Tabs to the Right] */
-/*      #context_closeOtherTabs,        /* [Close Other Tabs] */
+        #context_reloadAllTabs,         /* [Reload All Tabs] 78- */
+        #context_bookmarkAllTabs,       /* [Bookmark All Tabs…] 78- */
+/*      #context_closeTabOptions,       /* [Close Multiple Tabs] 78+ */
+/*        #context_closeTabsToTheEnd,   /* [Close Tabs to the Right] */
+/*        #context_closeOtherTabs,      /* [Close Other Tabs] */
 /*      #context_closeOtherTabs + menuseparator,        /* [Separator] */
 /*      #context_undoCloseTab,          /* [Undo Close Tab] */
         #context_closeTab,              /* [Close Tab] */
@@ -128,6 +129,7 @@
 /*      #fill-login,                    /* [Fill Login] */
 /*      #inspect-separator,             /* [Separator] */
 /*      #context-inspect,               /* [Inspect Element] */
+/*      #context-inspect-a11y,          /* [Inspect Accessibility Properties] 67+ */
 /*      #context-media-eme-separator,   /* [Separator] */
 /*      #context-media-eme-learnmore,   /* [Learn more about DRM…] */
 /*    #placesContext,                   /* Bookmark menu */
@@ -154,20 +156,31 @@
 /*      #placesContext_sortBy\:name,    /* [Sort By Name] */
 /*      #placesContext_reload,          /* [Reload Live Bookmark] */
 /*      #placesContext_show\:info,      /* [Properties] */
+/*    #pageActionPanel,                 /* Page Action */
+/*      #pageAction-panel-bookmark,     /* [Bookmark This Page] */
+/*      #pageAction-panel-pocket,       /* [Save Page to Pocket] */
+/*      #pageAction-panel-pinTab,       /* [Pin Tab][Unpin Tab] */
+/*      #pageAction-panel-bookmarkSeparator,    /* [Separator] */
+/*      #pageAction-panel-copyURL,      /* [Copy Link] */
+        #pageAction-panel-emailLink,    /* [Email Link…] */
+        #pageAction-panel-sendToDevice, /* [Send Tab to Device] */
+        #pageAction-panel-shareURL,     /* [Share] */
+/*      #pageAction-panel-screenshots_mozilla_org,      /* [Take a Screenshot] */
+/*      #pageAction-panel-builtInSeparator,     /* [Share] */
     #context-dummy-dummy-dummy          /* Dummy */
 {
   display: none !important;
 }
- 
+
 /* Delete [Search … for “This add-on req…”] */
 /* If you right click on the link, delete it. */
 /* Do not delete selected text if it exists. */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /**/
     #context-dummy-dummy-dummy          /* Dummy */
 {
-  visibility: collapse !important;
+  display: none !important;
 } 
- 
+
 /* Delete context menu(For add-ons) */
     menuitem[label="Take a Screenshot"],/* Take a Screenshot */
 /*  menuitem[label="NoScript"],         /* NoScript */
