@@ -2,6 +2,7 @@
 @charset "UTF-8";
 
 /* コンテキストメニューを削除 */
+/* v82.20201031 */
 /* see https://www.bugbugnow.net/2017/12/firefox-quantum-57.html */
 /*  #mainPopupSet,                      /* ポップアップ */
 /*    #tabContextMenu,                  /* タブコンテキストメニュー */
@@ -21,7 +22,7 @@
         #context_bookmarkTab,           /* [タブをブックマーク] 64+ */
         #context_reopenInContainer,     /* [コンテナーを開きなおす] */
         #context_moveTabOptions,        /* [タブを移動] 64+ */
-        #moveTabOptionsMenu,            /* タブ移動 67+ */
+        #moveTabOptionsMenu,            /* [タブ移動] 67+ */
           #context_moveToStart,         /* [最初のタブへ移動] 67+ */
           #context_moveToEnd,           /* [最後のタブへ移動] 67+ */
           #context_openTabInWindow,     /* [新しいウィンドウへ移動] 67+ */
@@ -135,8 +136,8 @@
 /*      #fill-login-separator,          /* [区切り] */
 /*      #fill-login,                    /* [ログイン情報を入力] */
 /*      #inspect-separator,             /* [区切り] */
-/*      #context-inspect,               /* [要素を調査] */
-/*      #context-inspect-a11y,          /* [アクセシビリティプロパティを調査] 67+ */
+/*      #context-inspect-a11y,          /* [アクセシビリティプロパティを調査] 67+ 82+ */
+/*      #context-inspect,               /* [要素を調査] 82+ */
 /*      #context-media-eme-separator,   /* [区切り] */
 /*      #context-media-eme-learnmore,   /* [DRM の詳細...] */
 /*    #placesContext,                   /* ブックマークメニュー */
@@ -188,7 +189,7 @@
   display: none !important;
 }
 
-/* コンテキストメニューを削除(拡張機能用) */
+/* コンテキストメニューを削除（拡張機能用） */
 /* @charsetとuserChrome.cssの文字コードに注意 */
     menuitem[label="Take a Screenshot"],        /* スクリーンショットを撮る */
     menuitem[label="スクリーンショットを撮る"], /* スクリーンショットを撮る */
