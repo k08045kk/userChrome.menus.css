@@ -21,8 +21,7 @@
         #context_bookmarkSelectedTabs,  /* [タブをブックマーク...] */
         #context_bookmarkTab,           /* [タブをブックマーク] 64+ */
         #context_reopenInContainer,     /* [コンテナーを開きなおす] */
-        #context_moveTabOptions,        /* [タブを移動] 64+ */
-        #moveTabOptionsMenu,            /* [タブ移動] 67+ */
+        #context_moveTabOptions,        /* [タブを移動] 64+ 67+ */
           #context_moveToStart,         /* [最初のタブへ移動] 67+ */
           #context_moveToEnd,           /* [最後のタブへ移動] 67+ */
           #context_openTabInWindow,     /* [新しいウィンドウへ移動] 67+ */
@@ -197,12 +196,15 @@
 
 /* コンテキストメニューを削除（拡張機能用） */
 /* コンテキストメニューのラベル名を直接指定して削除する */
+/* メニューアイテムは、menuitemで指定する */
+/* メニューグループは、menuで指定する */
 /* CSSで先頭一致(^=)、部分一致(*=)、後方一致($=)も使用できる（要重複注意） */
 /* @charsetとuserChrome.cssの文字コードに注意 */
-    menuitem[label="Take a Screenshot"],        /* スクリーンショットを撮る */
-    menuitem[label="スクリーンショットを撮る"], /* スクリーンショットを撮る */
-/*  menuitem[label="NoScript"],                 /* NoScript */
-    #context-dummy-dummy-dummy                  /* ダミー */
+        menuitem[label="Take a Screenshot"],            /* スクリーンショットを撮る */
+        menuitem[label="スクリーンショットを撮る"],     /* スクリーンショットを撮る */
+/*      menuitem[label="NoScript"],                     /* NoScript */
+/*      menu[label="NoScript"],                         /* NoScript */
+    #context-dummy-dummy-dummy          /* ダミー */
 {
   display: none !important;
 }
