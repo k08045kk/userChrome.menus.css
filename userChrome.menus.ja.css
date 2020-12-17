@@ -2,7 +2,7 @@
 @charset "UTF-8";
 
 /* コンテキストメニューを削除 */
-/* v82.20201031 */
+/* v84.20201218 */
 /* see https://www.bugbugnow.net/2017/12/firefox-quantum-57.html */
 /*  #mainPopupSet,                      /* ポップアップ */
 /*    #tabContextMenu,                  /* タブコンテキストメニュー */
@@ -60,7 +60,7 @@
         #context-bookmarklink,          /* [このリンクをブックマーク] */
 /*      #context-savelink,              /* [名前を付けてリンク先を保存...] */
         #context-savelinktopocket,      /* [リンクを Pocket に保存] */
-        #context-sendlink,              /* ※[リンクのURLをメールで送信] */
+        #context-sendlink,              /* [リンクのURLをメールで送信] 57-? */
         #context-copyemail,             /* [メールアドレスをコピー] */
 /*      #context-copylink,              /* [リンクの URL をコピー] */
 /*      #context-sep-copylink,          /* [区切り] */
@@ -86,7 +86,7 @@
 /*      #context-saveimage,             /* [名前を付けて画像を保存...] */
         #context-sendimage,             /* [画像の URL をメールで送信...] */
         #context-setDesktopBackground,  /* [デスクトップの背景に設定...] */
-        #context-blockimage,            /* ※[画像をブロックする] */
+        #context-blockimage,            /* [画像をブロックする] 57-? */
 /*      #context-viewimageinfo,         /* [画像の情報を表示] */
 /*      #context-viewimagedesc,         /* [画像の詳細情報を表示] */
 /*      #context-savevideo,             /* [名前を付けて動画を保存...] */
@@ -101,9 +101,12 @@
         #context-pocket,                /* [ページを Pocket に保存] */
         #context-sep-sendpagetodevice,  /* [区切り] */
         #context-sendpagetodevice,      /* [ページを端末へ送信] */
-        #context-sendpage,              /* ※[ページのURLをメールで送信] */
+        #context-sendpage,              /* [ページのURLをメールで送信] 57-? */
         #context-sep-viewbgimage,       /* [区切り] */
         #context-viewbgimage,           /* [背景画像だけを表示] */
+/*      #fill-login,                    /* [ログイン情報を入力] 84+? */
+/*      #fill-login-generated-password, /* [生成パスワードを使う...] 84+? */
+/*      #fill-login-and-generated-password-separator,   /* [区切り] 84+? */
 /*      #context-undo,                  /* [元に戻す] */
 /*      #context-sep-undo,              /* [区切り] */
 /*      #context-cut,                   /* [切り取り] */
@@ -114,30 +117,32 @@
 /*      #context-selectall,             /* [すべて選択] */
 /*      #context-sep-selectall,         /* [区切り] */
         #context-keywordfield,          /* [この検索にキーワードを設定...] */
-/*      #context-searchselect,          /* [[-をweb検索]] */
+/*      #context-searchselect,          /* [〇〇 で検索: "△△"] 〇〇=検索エンジン、△△=選択文字列 */
+/*      #context-searchselect-private,  /* 不明 84+? */
         #context-sep-sendlinktodevice,  /* [区切り] */
         #context-sendlinktodevice,      /* [リンクを端末へ送信] */
 /*      #frame-sep,                     /* [区切り] */
 /*      #frame,                         /* [このフレーム] */
+        #context-print-selection,       /* [選択した部分を印刷] 84+ */
 /*      #context-viewpartialsource-selection,   /* [選択した部分のソースを表示] */
 /*      #context-viewpartialsource-mathml,      /* [MathML のソースを表示] */
 /*      #context-sep-viewsource,        /* [区切り] */
 /*      #context-viewsource,            /* [ページのソースを表示] */
 /*      #context-viewinfo,              /* [ページの情報を表示] */
-/*      #context-metadata,              /* ※[プロパティを表示する] */
+/*      #context-metadata,              /* [プロパティを表示する] 57-? */
 /*      #spell-separator,               /* [区切り] */
 /*      #spell-check-enabled,           /* [スペルチェックを行う] */
 /*      #spell-add-dictionaries-main,   /* [辞書を追加...] */
 /*      #spell-dictionaries,            /* [言語] */
-/*      #context-spell-check-enabled,   /* ※[スペルチェックを有効にするチェックボックス] */
+/*      #context-spell-check-enabled,   /* [スペルチェックを有効にするチェックボックス] 57-? */
 /*      #context-sep-bidi,              /* [区切り] */
 /*      #context-bidi-text-direction-toggle,    /* [テキストの記述方向を切り替える] */
 /*      #context-bidi-page-direction-toggle,    /* [ページの記述方向を切り替える] */
 /*      #fill-login-separator,          /* [区切り] */
 /*      #fill-login,                    /* [ログイン情報を入力] */
 /*      #inspect-separator,             /* [区切り] */
-/*      #context-inspect-a11y,          /* [アクセシビリティプロパティを調査] 67+ 82+ */
-/*      #context-inspect,               /* [要素を調査] 82+ */
+        #context-inspect-a11y,          /* [アクセシビリティプロパティを調査] 67+ 82+? */
+/*      #context-inspect,               /* [要素を調査] 82+? */
 /*      #context-media-eme-separator,   /* [区切り] */
 /*      #context-media-eme-learnmore,   /* [DRM の詳細...] */
 /*    #placesContext,                   /* ブックマークメニュー */
@@ -162,7 +167,8 @@
 /*      #placesContext_deleteHost,      /* [このサイトの履歴を消去] */
 /*      #placesContext_deleteSeparator, /* [区切り] */
 /*      #placesContext_sortBy\:name,    /* [名前順に並べ替える] */
-/*      #placesContext_reload,          /* [ライブブックマークを再読み込み] */
+/*      #placesContext_reload,          /* [ライブブックマークを再読み込み] 84-? */
+/*      #placesContext_sortSeparator,   /* [区切り] 84+? */
 /*      #placesContext_show\:info,      /* [プロパティ] */
 /*    #pageActionPanel,                 /* ページアクション */
 /*      #pageAction-panel-bookmark,     /* [このページをブックマーク] */
@@ -171,7 +177,7 @@
 /*      #pageAction-panel-bookmarkSeparator,    /* [区切り] */
 /*      #pageAction-panel-copyURL,      /* [リンクをコピー] */
         #pageAction-panel-emailLink,    /* [ページの URL をメールで送信...] */
-        #pageAction-panel-sendToDevice, /* [1 個のタブを端末へ送信] */
+        #pageAction-panel-sendToDevice, /* [n 個のタブを端末へ送信] n=選択タブ数 */
         #pageAction-panel-shareURL,     /* [共有] */
 /*      #pageAction-panel-screenshots_mozilla_org,      /* [スクリーンショットを撮る] */
 /*      #pageAction-panel-builtInSeparator,     /* [区切り] */
@@ -180,9 +186,9 @@
   display: none !important;
 }
 
-/* 「…で検索: "…"」を削除 */
-/* リンクを右クリックした場合、削除する。 */ 
-/* 選択中のテキストがある場合、削除しない。 */ 
+/* 「〇〇 で検索: "△△"」を削除 */
+/* リンクを右クリックした場合、削除する */ 
+/* 選択中のテキストがある場合、削除しない */ 
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /**/
     #context-dummy-dummy-dummy          /* ダミー */
 {
@@ -190,6 +196,8 @@
 }
 
 /* コンテキストメニューを削除（拡張機能用） */
+/* コンテキストメニューのラベル名を直接指定して削除する */
+/* CSSで先頭一致(^=)、部分一致(*=)、後方一致($=)も使用できる（要重複注意） */
 /* @charsetとuserChrome.cssの文字コードに注意 */
     menuitem[label="Take a Screenshot"],        /* スクリーンショットを撮る */
     menuitem[label="スクリーンショットを撮る"], /* スクリーンショットを撮る */
