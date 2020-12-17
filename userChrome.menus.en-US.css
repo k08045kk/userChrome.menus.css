@@ -1,4 +1,8 @@
+@charset "UTF-8";
+
 /* Delete context menu */
+/* v84.20201218 */
+/* see https://www.bugbugnow.net/2017/12/firefox-quantum-57.html */
 /* see https://www.bugbugnow.net/2018/04/firefox-quantum-context-menu-editing.html */
 /*  #mainPopupSet,                      /* Popup */
 /*    #tabContextMenu,                  /* Tab context menu */
@@ -98,6 +102,9 @@
         #context-sendpagetodevice,      /* [Send Page to Device] */
         #context-sep-viewbgimage,       /* [Separator] */
         #context-viewbgimage,           /* [View Background Image] */
+/*      #fill-login,                    /* [Fill Login] 84+? */
+/*      #fill-login-generated-password, /* [Use Generated Password…] 84+? */
+/*      #fill-login-and-generated-password-separator,   /* [Separator] 84+? */
 /*      #context-undo,                  /* [Undo] */
 /*      #context-sep-undo,              /* [Separator] */
 /*      #context-cut,                   /* [Cut] */
@@ -108,11 +115,13 @@
 /*      #context-selectall,             /* [Select All] */
 /*      #context-sep-selectall,         /* [Separator] */
         #context-keywordfield,          /* [Add a Keyword for this Search…] */
-/*      #context-searchselect,          /* [Search … for “This add-on req…”] */
+/*      #context-searchselect,          /* [Search … for “…”] */
+/*      #context-searchselect-private,  /* ??? 84+? */
         #context-sep-sendlinktodevice,  /* [Separator] */
         #context-sendlinktodevice,      /* [Send Link to Device] */
 /*      #frame-sep,                     /* [Separator] */
 /*      #frame,                         /* [This Frame] */
+        #context-print-selection,       /* [Print Selection] 84+ */
 /*      #context-viewpartialsource-selection,   /* [View Selection Source] */
 /*      #context-viewpartialsource-mathml,      /* [View MathML Source] */
 /*      #context-sep-viewsource,        /* [Separator] */
@@ -128,8 +137,8 @@
 /*      #fill-login-separator,          /* [Separator] */
 /*      #fill-login,                    /* [Fill Login] */
 /*      #inspect-separator,             /* [Separator] */
-/*      #context-inspect,               /* [Inspect Element] */
-/*      #context-inspect-a11y,          /* [Inspect Accessibility Properties] 67+ */
+/*      #context-inspect-a11y,          /* [Inspect Accessibility Properties] 67+ 82+? */
+/*      #context-inspect,               /* [Inspect Element] 82+? */
 /*      #context-media-eme-separator,   /* [Separator] */
 /*      #context-media-eme-learnmore,   /* [Learn more about DRM…] */
 /*    #placesContext,                   /* Bookmark menu */
@@ -154,7 +163,8 @@
 /*      #placesContext_deleteHost,      /* [Forget About This Site] */
 /*      #placesContext_deleteSeparator, /* [Separator] */
 /*      #placesContext_sortBy\:name,    /* [Sort By Name] */
-/*      #placesContext_reload,          /* [Reload Live Bookmark] */
+/*      #placesContext_reload,          /* [Reload Live Bookmark] 84-? */
+/*      #placesContext_sortSeparator,   /* [Separator] 84+? */
 /*      #placesContext_show\:info,      /* [Properties] */
 /*    #pageActionPanel,                 /* Page Action */
 /*      #pageAction-panel-bookmark,     /* [Bookmark This Page] */
@@ -172,7 +182,7 @@
   display: none !important;
 }
 
-/* Delete [Search … for “This add-on req…”] */
+/* Delete [Search … for “…”] */
 /* If you right click on the link, delete it. */
 /* Do not delete selected text if it exists. */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /**/
