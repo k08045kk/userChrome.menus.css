@@ -21,8 +21,7 @@
         #context_bookmarkSelectedTabs,  /* [Bookmark Tabs…] */
         #context_bookmarkTab,           /* [Bookmark Tab] 64+ */
         #context_reopenInContainer,     /* [Reopen in Container] */
-        #context_moveTabOptions,        /* [Move Tab] 64+ */
-        #moveTabOptionsMenu,            /* Move Tab 67+ */
+        #context_moveTabOptions,        /* [Move Tab] 64+ 67+ */
           #context_moveToStart,         /* [Move to Start] 67+ */
           #context_moveToEnd,           /* [Move to End] 67+ */
           #context_openTabInWindow,     /* [Move to New Window] 67+ */
@@ -192,8 +191,12 @@
 } 
 
 /* Delete context menu(For add-ons) */
-    menuitem[label="Take a Screenshot"],/* Take a Screenshot */
-/*  menuitem[label="NoScript"],         /* NoScript */
+/* Delete by directly specifying the label name of the context menu. */
+/* Menu item is specified by menuitem. */
+/* Menu group is specified by menu. */
+        menuitem[label="Take a Screenshot"],    /* Take a Screenshot */
+/*      menuitem[label="NoScript"],             /* NoScript */
+/*      menu[label="NoScript"],                 /* NoScript */
     #context-dummy-dummy-dummy          /* Dummy */
 {
   display: none !important;
