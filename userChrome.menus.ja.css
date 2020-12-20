@@ -61,9 +61,9 @@
         #toolbar-context-menu .customize-context-removeExtension,       /* [拡張機能を削除] */
         #toolbar-context-menu .customize-context-reportExtension,       /* [拡張機能を報告] */
 /*                                              /* [----------------] */
-/*                                              /* [オーバーフローメニューにピン留め] */
+/*      #toolbar-context-menu .customize-context-moveToPanel,           /* [オーバーフローメニューにピン留め] */
 /*      #toolbar-context-autohide-downloads-button,     /* [ツールバーでは自動的に非表示にする] */
-/*                                              /* [ツールバーから削除] */
+/*      #toolbar-context-menu .customize-context-removeFromToolbar,     /* [ツールバーから削除] */
 /*      #toolbar-context-reloadSelectedTab,     /* [選択したタブを再読み込み] */
 /*      #toolbar-context-reloadSelectedTabs,    /* [選択したタブを再読み込み] */
 /*      #toolbar-context-bookmarkSelectedTab,   /* [選択したタブをブックマーク...] */
@@ -74,7 +74,7 @@
 /*      #toggle_toolbar-menubar,                /* [メニューバー] */
 /*      #toggle_PersonalToolbar,                /* [ブックマークツールバー] */
 /*      #viewToolbarsMenuSeparator,             /* [----------------] */
-/*                                              /* [カスタマイズ...] */
+/*      #toolbar-context-menu .viewCustomizeToolbar,    /* [カスタマイズ...] */
 /* ---------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                  /* コンテンツエリア */
 /*      #context-navigation,                    /* */
