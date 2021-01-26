@@ -2,7 +2,7 @@
 @charset "UTF-8";
 
 /* コンテキストメニューを削除 */
-/* v84.20201219 */
+/* v85.20210127 */
 /* see https://www.bugbugnow.net/2017/12/firefox-quantum-57.html */
 /*  #mainPopupSet,                              /* ポップアップ */
 /* ---------------------------------------------------------------- */
@@ -60,9 +60,9 @@
 /*      #toolbar-context-menu .customize-context-manageExtension,       /* [拡張機能を管理] */
         #toolbar-context-menu .customize-context-removeExtension,       /* [拡張機能を削除] */
         #toolbar-context-menu .customize-context-reportExtension,       /* [拡張機能を報告] */
-/*                                              /* [----------------] */
-/*      #toolbar-context-menu .customize-context-moveToPanel,           /* [オーバーフローメニューにピン留め] */
-/*      #toolbar-context-autohide-downloads-button,     /* [ツールバーでは自動的に非表示にする] */
+/*                                                              /* [----------------] */
+/*      #toolbar-context-menu .customize-context-moveToPanel,   /* [オーバーフローメニューにピン留め] */
+/*      #toolbar-context-autohide-downloads-button,             /* [ツールバーでは自動的に非表示にする] */
 /*      #toolbar-context-menu .customize-context-removeFromToolbar,     /* [ツールバーから削除] */
 /*      #toolbar-context-reloadSelectedTab,     /* [選択したタブを再読み込み] */
 /*      #toolbar-context-reloadSelectedTabs,    /* [選択したタブを再読み込み] */
@@ -72,12 +72,15 @@
 /*      #toolbar-context-undoCloseTab,          /* [閉じたタブを元に戻す] */
 /*      #toolbar-context-undoCloseTab + menuseparator,  /* [----------------] */
 /*      #toggle_toolbar-menubar,                /* [メニューバー] */
-/*      #toggle_PersonalToolbar,                /* [ブックマークツールバー] */
+/*      #toggle_PersonalToolbar,                /* [ブックマークツールバー] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /*   [常に表示する] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /*   [表示しない] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /*   [新しいタブのみ表示する] 85+ */
 /*      #viewToolbarsMenuSeparator,             /* [----------------] */
 /*      #toolbar-context-menu .viewCustomizeToolbar,    /* [カスタマイズ...] */
 /* ---------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                  /* コンテンツエリア */
-/*      #context-navigation,                    /* */
+/*      #context-navigation,                    /* ナビゲーション */
 /*        #context-back,                        /*   [戻る] */
 /*        #context-forward,                     /*   [進む] */
 /*        #context-reload,                      /*   [更新] */
@@ -181,16 +184,16 @@
 /*      #frame-sep,                             /* [----------------] */
 /*      #frame,                                 /* [このフレーム] */
 /*        #context-showonlythisframe,           /*   [このフレームだけを表示] */
-/*        #context-openframeintab,              /*   [フレームを新しいタブで開く] */
-/*        #context-openframe,                   /*   [フレームを新しいウィンドウで開く] */
+          #context-openframeintab,              /*   [フレームを新しいタブで開く] */
+          #context-openframe,                   /*   [フレームを新しいウィンドウで開く] */
 /*        #open-frame-sep,                      /*   [----------------] */
-/*        #context-reloadframe,                 /*   [フレームの再読み込み] */
-/*        #context-reloadframe + menuseparator, /*   [----------------] */
-/*        #context-bookmarkframe,               /*   [このフレームをブックマーク] */
-/*        #context-saveframe,                   /*   [名前を付けてフレームを保存...] */
-/*        #context-saveframe + menuseparator,   /*   [----------------] */
-/*        #context-printframe,                  /*   [フレームを印刷...] */
-/*        #context-printframe + menuseparator,  /*   [----------------] */
+          #context-reloadframe,                 /*   [フレームの再読み込み] */
+          #context-reloadframe + menuseparator, /*   [----------------] */
+          #context-bookmarkframe,               /*   [このフレームをブックマーク] */
+          #context-saveframe,                   /*   [名前を付けてフレームを保存...] */
+          #context-saveframe + menuseparator,   /*   [----------------] */
+          #context-printframe,                  /*   [フレームを印刷...] */
+          #context-printframe + menuseparator,  /*   [----------------] */
 /*        #context-viewframesource,             /*   [フレームのソースを表示] */
 /*        #context-viewframeinfo,               /*   [フレームの情報を表示] */
         #context-print-selection,               /* [選択した部分を印刷] 84+ */
@@ -206,7 +209,7 @@
 /*      #spell-dictionaries,                    /* [言語] */
 /*        #spell-language-separator,            /*   [----------------] */
 /*        #spell-add-dictionaries,              /*   [辞書を追加...] */
-/*      #context-spell-check-enabled,           /* [スペルチェックを有効にするチェックボックス] 57-? */
+/*      #context-spell-check-enabled,           /* #[スペルチェックを有効にするチェックボックス] 57-? */
 /*      #context-sep-bidi,                      /* [----------------] */
 /*      #context-bidi-text-direction-toggle,    /* [テキストの記述方向を切り替える] */
 /*      #context-bidi-page-direction-toggle,    /* [ページの記述方向を切り替える] */
@@ -243,6 +246,11 @@
 /*      #placesContext_reload,                  /* #[ライブブックマークを再読み込み] 84-? */
 /*      #placesContext_sortSeparator,           /* [----------------] 84+? */
 /*      #placesContext_show\:info,              /* [プロパティ] */
+/*      #toggle_PersonalToolbar,                /* [ブックマークツールバー] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /*   [常に表示する] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /*   [表示しない] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /*   [新しいタブのみ表示する] 85+ */
+/*      #show-other-bookmarks_PersonalToolbar,  /* [他のブックマークを表示] 85+ */
 /* ---------------------------------------------------------------- */
 /*    #pageActionPanel,                         /* ページアクション */
 /*      #pageAction-panel-bookmark,             /* [このページをブックマーク] */
