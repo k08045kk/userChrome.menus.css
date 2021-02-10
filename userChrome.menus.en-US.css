@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* Set default namespace to XUL */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
 /* Delete context menu */
 /* v84.20201218 */
 /* see https://www.bugbugnow.net/2017/12/firefox-quantum-57.html */
