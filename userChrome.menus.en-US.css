@@ -1,206 +1,303 @@
+/* Set the character encoding for the file */
 @charset "UTF-8";
 
 /* Set default namespace to XUL */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* Delete context menu */
-/* v84.20201218 */
+/* v85.20210210 */
 /* see https://www.bugbugnow.net/2017/12/firefox-quantum-57.html */
 /* see https://www.bugbugnow.net/2018/04/firefox-quantum-context-menu-editing.html */
-/*  #mainPopupSet,                      /* Popup */
-/*    #tabContextMenu,                  /* Tab context menu */
-        #context_reloadTab,             /* [Reload Tab] */
-        #context_reloadSelectedTabs,    /* [Reload Tabs] 67+ */
-        #context_toggleMuteTab,         /* [Mute Tab] */
-        #context_toggleMuteSelectedTabs,/* [Mute Tabs] 67+ */
-/*      #context_pinTab,                /* [Pin Tab] */
-/*      #context_unpinTab,              /* [Unpin Tab] */
-/*      #context_pinSelectedTabs,       /* [Pin Tabs] 67+ */
-/*      #context_unpinSelectedTabs,     /* [Unpin Tabs] 67+ */
-/*      #context_duplicateTab,          /* [Duplicate Tab] */
-/*      #context_duplicateTabs,         /* [Duplicate Tabs] 67+ */
-/*      #context_duplicateTabs + menuseparator,         /* [Separator] 67+ */
-        #context_selectAllTabs,         /* [Select All Tabs] 64+ */
-        #context_bookmarkSelectedTabs,  /* [Bookmark Tabs…] */
-        #context_bookmarkTab,           /* [Bookmark Tab] 64+ */
-        #context_reopenInContainer,     /* [Reopen in Container] */
-        #context_moveTabOptions,        /* [Move Tab] 64+ 67+ */
-          #context_moveToStart,         /* [Move to Start] 67+ */
-          #context_moveToEnd,           /* [Move to End] 67+ */
-          #context_openTabInWindow,     /* [Move to New Window] 67+ */
-        #context_sendTabToDevice,       /* [Send Tab to Device] */
-        #context_sendTabToDevice + menuseparator,       /* [Separator] */
-        #context_reloadAllTabs,         /* [Reload All Tabs] 78- */
-        #context_bookmarkAllTabs,       /* [Bookmark All Tabs…] 78- */
-/*      #context_closeTabOptions,       /* [Close Multiple Tabs] 78+ */
-/*        #context_closeTabsToTheEnd,   /* [Close Tabs to the Right] */
-/*        #context_closeOtherTabs,      /* [Close Other Tabs] */
-/*      #context_closeOtherTabs + menuseparator,        /* [Separator] */
-/*      #context_undoCloseTab,          /* [Undo Close Tab] */
-        #context_closeTab,              /* [Close Tab] */
-        #context_closeSelectedTabs,     /* [Close Tabs] */
-/*      #context_closeSelectedTabs + menuseparator,     /* [Separator] */
-/*    #contentAreaContextMenu,          /* Context menu */
-/*      #context-navigation,            /* [Navigate] */
-/*        #context-back,                /* [Back] */
-/*        #context-forward,             /* [Forward] */
-/*        #context-reload,              /* [Reload] */
-/*        #context-stop,                /* [Stop] */
-/*        #context-bookmarkpage,        /* [Bookmark This Page] */
-/*      #context-sep-navigation,        /* [Separator] */
-        #page-menu-separator,           /* [Separator] */
-/*      #spell-no-suggestions,          /* [(No Spelling Suggestions)] */
-/*      #spell-add-to-dictionary,       /* [Add to Dictionary] */
-/*      #spell-undo-add-to-dictionary,  /* [Undo Add To Dictionary] */
-/*      #spell-suggestions-separator,   /* [Separator] */
-        #context-openlinkincurrent,     /* [Open Link] */
-        #context-openlinkincontainertab,/* [Open Link in New Personal Tab] */
-        #context-openlinkintab,         /* [Open Link in New Tab] */
+/* ---------------------------------------------------------------- */
+/*  #mainPopupSet,                              /* Popup */
+/* ---------------------------------------------------------------- */
+/*    #tabContextMenu,                          /* Tab */
+        #context_reloadTab,                     /* [Reload Tab] */
+        #context_reloadSelectedTabs,            /* [Reload Tabs] 67+ */
+        #context_toggleMuteTab,                 /* [Mute Tab] */
+        #context_toggleMuteSelectedTabs,        /* [Mute Tabs] 67+ */
+/*      #context_pinTab,                        /* [Pin Tab] */
+/*      #context_unpinTab,                      /* [Unpin Tab] */
+/*      #context_pinSelectedTabs,               /* [Pin Tabs] 67+ */
+/*      #context_unpinSelectedTabs,             /* [Unpin Tabs] 67+ */
+/*      #context_duplicateTab,                  /* [Duplicate Tab] */
+/*      #context_duplicateTabs,                 /* [Duplicate Tabs] 67+ */
+/*      #context_duplicateTabs + menuseparator, /* [----------------] 67+ */
+        #context_selectAllTabs,                 /* [Select All Tabs] 64+ */
+        #context_bookmarkSelectedTabs,          /* [Bookmark Tabs…] */
+        #context_bookmarkTab,                   /* [Bookmark Tab] 64+ */
+        #context_reopenInContainer,             /* [Reopen in Container] */
+/*                                              /* Container */
+        #context_moveTabOptions,                /* [Move Tab] 64+ 67+ */
+          #context_moveToStart,                 /*   [Move to Start] 67+ */
+          #context_moveToEnd,                   /*   [Move to End] 67+ */
+          #context_openTabInWindow,             /*   [Move to New Window] 67+ */
+        #context_sendTabToDevice,               /* [Send Tab to Device] */
+/*                                              /*   [Not Signed In] */
+/*                                              /*   [----------------] */
+/*                                              /*   [Sign in to Firefox…] */
+/*                                              /*   [Learn About Sending Tabs…] */
+/*                                              /*   [Send to All Devices] */
+/*                                              /*   [Manage Devices…] */
+        #context_sendTabToDevice + menuseparator,       /* [----------------] */
+        #context_reloadAllTabs,                 /* #[Reload All Tabs] 78- */
+        #context_bookmarkAllTabs,               /* #[Bookmark All Tabs…] 78- */
+/*      #context_closeTabOptions,               /* [Close Multiple Tabs] 78+ */
+/*        #context_closeTabsToTheEnd,           /*   [Close Tabs to the Right] */
+/*        #context_closeOtherTabs,              /*   [Close Other Tabs] */
+/*      #context_undoCloseTab,                  /* [Undo Close Tab] */
+        #context_closeTab,                      /* [Close Tab] */
+        #context_closeSelectedTabs,             /* #[Close Tab] 67+ 85-? */
+/*      #context_closeTab + menuseparator,      /* [----------------] */
+/* ---------------------------------------------------------------- */
+/*    #sidebarMenu-popup,                       /* Sidebar popup */
+/*      #sidebar-switcher-bookmarks,            /* [Bookmarks] */
+/*      #sidebar-switcher-history,              /* [History] */
+/*      #sidebar-switcher-tabs,                 /* [Synced Tabs] */
+/*      #sidebar-switcher-tabs + toolbarseparator,      /* [----------------] */
+/*                                              /* Extension（Sidebar） */
+/*      #sidebar-extensions-separator,          /* [----------------] */
+/*      #sidebar-reverse-position,              /* [Move Sidebar to Right][Move Sidebar to Left] */
+/*      #sidebar-reverse-position + toolbarseparator,   /* [----------------] */
+/*                                              /* [Close Sidebar] */
+/* ---------------------------------------------------------------- */
+/*    #toolbar-context-menu,                    /* Toolbar */
+/*                                              /* Extension（Browser action context menu） */
+/*                                              /* [----------------] */
+/*      #toolbar-context-menu .customize-context-manageExtension,       /* [Manage Extension] */
+        #toolbar-context-menu .customize-context-removeExtension,       /* [Remove Extension] */
+        #toolbar-context-menu .customize-context-reportExtension,       /* [Report Extension] */
+/*                                                              /* [----------------] */
+/*      #toolbar-context-menu .customize-context-moveToPanel,   /* [Pin to Overflow Menu] */
+/*      #toolbar-context-autohide-downloads-button,             /* [Auto-Hide in Toolbar] */
+/*      #toolbar-context-menu .customize-context-removeFromToolbar,     /* [Remove from Toolbar] */
+/*      #toolbar-context-reloadSelectedTab,     /* [Reload Selected Tab] */
+/*      #toolbar-context-reloadSelectedTabs,    /* [Reload Selected Tabs] */
+/*      #toolbar-context-bookmarkSelectedTab,   /* [Bookmark Selected Tab…] */
+/*      #toolbar-context-bookmarkSelectedTabs,  /* [Bookmark Selected Tabs…] */
+/*      #toolbar-context-selectAllTabs,         /* [Select All Tabs] */
+/*      #toolbar-context-undoCloseTab,          /* [Undo Close Tab] */
+/*      #toolbar-context-undoCloseTab + menuseparator,  /* [----------------] */
+/*      #toggle_toolbar-menubar,                /* [Menu Bar] */
+/*      #toggle_PersonalToolbar,                /* [Bookmarks Toolbar] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /*   [Always Show] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /*   [Never Show] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /*   [Only Show on New Tab] 85+ */
+/*      #viewToolbarsMenuSeparator,             /* [----------------] */
+/*      #toolbar-context-menu .viewCustomizeToolbar,    /* [Customize…] */
+/* ---------------------------------------------------------------- */
+/*    #contentAreaContextMenu,                  /* Content area */
+/*      #context-navigation,                    /* Navigation */
+/*        #context-back,                        /*   [Back] */
+/*        #context-forward,                     /*   [Forward] */
+/*        #context-reload,                      /*   [Reload] */
+/*        #context-stop,                        /*   [Stop] */
+/*        #context-bookmarkpage,                /*   [Bookmark This Page] */
+/*      #context-sep-navigation,                /* [----------------] */
+        #page-menu-separator,                   /* [----------------] */
+/*      #spell-no-suggestions,                  /* [(No Spelling Suggestions)] */
+/*      #spell-add-to-dictionary,               /* [Add to Dictionary] */
+/*      #spell-undo-add-to-dictionary,          /* [Undo Add To Dictionary] */
+/*      #spell-suggestions-separator,           /* [----------------] */
+        #context-openlinkincurrent,             /* [Open Link] */
+/*      #context-openlinkincontainertab,        /* [Open Link in New 〇〇 Tab] 〇〇=Container */
+/*      #context-openlinkintab,                 /* [Open Link in New Tab] */
         #context-openlinkinusercontext-menu,    /* [Open Link in New Container Tab] */
-        #context-openlink,              /* [Open Link in New Window] */
-        #context-openlinkprivate,       /* [Open Link in New Private Window] */
-        #context-sep-open,              /* [Separator] */
-        #context-bookmarklink,          /* [Bookmark This Link] */
-/*      #context-savelink,              /* [Save Link As…] */
-        #context-savelinktopocket,      /* [Save Link to Poket] */
-        #context-copyemail,             /* [Copy Email Address] */
-/*      #context-copylink,              /* [Copy Link Location] */
-/*      #context-sep-copylink,          /* [Separator] */
-/*      #context-media-play,            /* [Play] */
-/*      #context-media-pause,           /* [Pause] */
-/*      #context-media-mute,            /* [Mute] */
-/*      #context-media-unmute,          /* [Unmute] */
-/*      #context-media-playbackrate,    /* [Play Speed] */
-/*      #context-media-loop,            /* [Loop] */
-/*      #context-media-showcontrols,    /* [Show Controls] */
-/*      #context-media-hidecontrols,    /* [Hide Controls] */
-        #context-video-fullscreen,      /* [Full Screen] */
-        #context-leave-dom-fullscreen,  /* [Exit Full Screen] */
-        #context-media-sep-commands,    /* [Separator] */
-        #context-reloadimage,           /* [Reload Image] */
-        #context-viewimage,             /* [View Image] */
-        #context-viewvideo,             /* [View Video] */
-        #context-copyimage-contents,    /* [Copy Image] */
-/*      #context-copyimage,             /* [Copy Image Location] */
-/*      #context-copyvideourl,          /* [Copy Video Location] */
-/*      #context-copyaudiourl,          /* [Copy Audio Location] */
-/*      #context-sep-copyimage,         /* [Separator] */
-/*      #context-saveimage,             /* [Save Image As…] */
-        #context-sendimage,             /* [Email Image…] */
-        #context-setDesktopBackground,  /* [Set As Desktop Background…] */
-/*      #context-viewimageinfo,         /* [View Image Info] */
-/*      #context-viewimagedesc,         /* [View Description] */
-/*      #context-savevideo,             /* [Save Video As…] */
-/*      #context-saveaudio,             /* [Save Audio As…] */
-/*      #context-video-saveimage,       /* [Save Snapshot As…] */
-        #context-sendvideo,             /* [Email Video…] */
-        #context-sendaudio,             /* [Email Audio…] */
-/*      #context-ctp-play,              /* [Activate this plugin] */
-/*      #context-ctp-hide,              /* [Hide this plugin] */
-/*      #context-sep-ctp,               /* [Separator] */
-        #context-savepage,              /* [Save Page As…] */
-        #context-pocket,                /* [Save Page to Poket] */
-        #context-sep-sendpagetodevice,  /* [Separator] */
-        #context-sendpagetodevice,      /* [Send Page to Device] */
-        #context-sep-viewbgimage,       /* [Separator] */
-        #context-viewbgimage,           /* [View Background Image] */
-/*      #fill-login,                    /* [Fill Login] 84+? */
-/*      #fill-login-generated-password, /* [Use Generated Password…] 84+? */
-/*      #fill-login-and-generated-password-separator,   /* [Separator] 84+? */
-/*      #context-undo,                  /* [Undo] */
-/*      #context-sep-undo,              /* [Separator] */
-/*      #context-cut,                   /* [Cut] */
-/*      #context-copy,                  /* [Copy] */
-/*      #context-paste,                 /* [Paste] */
-/*      #context-delete,                /* [Delete] */
-/*      #context-sep-paste,             /* [Separator] */
-/*      #context-selectall,             /* [Select All] */
-/*      #context-sep-selectall,         /* [Separator] */
-        #context-keywordfield,          /* [Add a Keyword for this Search…] */
-/*      #context-searchselect,          /* [Search … for “…”] */
-/*      #context-searchselect-private,  /* ??? 84+? */
-        #context-sep-sendlinktodevice,  /* [Separator] */
-        #context-sendlinktodevice,      /* [Send Link to Device] */
-/*      #frame-sep,                     /* [Separator] */
-/*      #frame,                         /* [This Frame] */
-        #context-print-selection,       /* [Print Selection] 84+ */
+/*                                              /*   Container */
+        #context-openlink,                      /* [Open Link in New Window] */
+        #context-openlinkprivate,               /* [Open Link in New Private Window] */
+        #context-sep-open,                      /* [----------------] */
+        #context-bookmarklink,                  /* [Bookmark This Link] */
+/*      #context-savelink,                      /* [Save Link As…] */
+        #context-savelinktopocket,              /* [Save Link to Pocket] */
+        #context-copyemail,                     /* [Copy Email Address] */
+/*      #context-copylink,                      /* [Copy Link Location] */
+/*      #context-sep-copylink,                  /* [----------------] */
+/*      #context-media-play,                    /* [Play] */
+/*      #context-media-pause,                   /* [Pause] */
+/*      #context-media-mute,                    /* [Mute] */
+/*      #context-media-unmute,                  /* [Unmute] */
+/*      #context-media-playbackrate,            /* [Play Speed] */
+/*        #context-media-playbackrate-050x,     /*   [Slow (0.5×)] */
+/*        #context-media-playbackrate-100x,     /*   [Normal] */
+/*        #context-media-playbackrate-125x,     /*   [Fast (1.25×)] */
+/*        #context-media-playbackrate-150x,     /*   [Faster (1.5×)] */
+/*        #context-media-playbackrate-200x,     /*   [Ludicrous (2×)] */
+/*      #context-media-loop,                    /* [Loop] */
+/*      #context-media-showcontrols,            /* [Show Controls] */
+/*      #context-media-hidecontrols,            /* [Hide Controls] */
+/*      #context-video-fullscreen,              /* [Full Screen] */
+/*      #context-leave-dom-fullscreen,          /* [Exit Full Screen] */
+/*      #context-video-pictureinpicture,        /* [Picture-in-Picture] 85+? */
+/*      #context-media-sep-commands,            /* [----------------] */
+        #context-reloadimage,                   /* [Reload Image] */
+        #context-viewimage,                     /* [View Image] */
+        #context-viewvideo,                     /* [View Video] */
+        #context-copyimage-contents,            /* [Copy Image] */
+/*      #context-copyimage,                     /* [Copy Image Location] */
+/*      #context-copyvideourl,                  /* [Copy Video Location] */
+/*      #context-copyaudiourl,                  /* [Copy Audio Location] */
+/*      #context-sep-copyimage,                 /* [----------------] */
+/*      #context-saveimage,                     /* [Save Image As…] */
+        #context-sendimage,                     /* [Email Image…] */
+        #context-setDesktopBackground,          /* [Set As Desktop Background…] */
+/*      #context-viewimageinfo,                 /* [View Image Info] */
+/*      #context-viewimagedesc,                 /* [View Description] */
+/*      #context-savevideo,                     /* [Save Video As…] */
+/*      #context-saveaudio,                     /* [Save Audio As…] */
+/*      #context-video-saveimage,               /* [Save Snapshot As…] */
+        #context-sendvideo,                     /* [Email Video…] */
+        #context-sendaudio,                     /* [Email Audio…] */
+/*      #context-ctp-play,                      /* [Activate this plugin] */
+/*      #context-ctp-hide,                      /* [Hide this plugin] */
+/*      #context-sep-ctp,                       /* [----------------] */
+        #context-savepage,                      /* [Save Page As…] */
+        #context-pocket,                        /* [Save Page to Pocket] */
+        #context-sep-sendpagetodevice,          /* [----------------] */
+        #context-sendpagetodevice,              /* [Send Page to Device] */
+/*                                              /*   [Not Signed In] */
+/*                                              /*   [----------------] */
+/*                                              /*   [Sign in to Firefox…] */
+/*                                              /*   [Learn About Sending Tabs…] */
+/*                                              /*   [Send to All Devices] */
+/*                                              /*   [Manage Devices…] */
+        #context-sep-viewbgimage,               /* [----------------] */
+        #context-viewbgimage,                   /* [View Background Image] */
+/*      #fill-login,                            /* [Fill Login] 84+? */
+/*                                              /*   Login Information 84+? */
+/*        #fill-login-no-logins,                /*   [(No Login Suggestions)] 84+? */
+/*        #saved-logins-separator,              /*   [----------------] 84+? */
+/*        #fill-login-saved-passwords,          /*   [View Saved Logins] 84+? */
+/*      #fill-login-generated-password,         /* [Use Generated Password…] 84+? */
+/*      #fill-login-and-generated-password-separator,   /* [----------------] 84+? */
+/*      #context-undo,                          /* [Undo] */
+/*      #context-sep-undo,                      /* [----------------] */
+/*      #context-cut,                           /* [Cut] */
+/*      #context-copy,                          /* [Copy] */
+/*      #context-paste,                         /* [Paste] */
+/*      #context-delete,                        /* [Delete] */
+/*      #context-sep-paste,                     /* [----------------] */
+/*      #context-selectall,                     /* [Select All] */
+/*      #context-sep-selectall,                 /* [----------------] */
+        #context-keywordfield,                  /* [Add a Keyword for this Search…] */
+/*      #context-searchselect,                  /* [Search 〇〇 for “△△”] 〇〇=search engine、△△=selected text */
+/*      #context-searchselect-private,          /* ??? 84+? */
+        #context-sep-sendlinktodevice,          /* [----------------] */
+        #context-sendlinktodevice,              /* [Send Link to Device] */
+/*                                              /*   [Not Signed In] */
+/*                                              /*   [----------------] */
+/*                                              /*   [Sign in to Firefox…] */
+/*                                              /*   [Learn About Sending Tabs…] */
+/*                                              /*   [Send to All Devices] */
+/*                                              /*   [Manage Devices…] */
+/*      #frame-sep,                             /* [----------------] */
+/*      #frame,                                 /* [This Frame] */
+/*        #context-showonlythisframe,           /*   [Show Only This Frame] */
+          #context-openframeintab,              /*   [Open Frame in New Tab] */
+          #context-openframe,                   /*   [Open Frame in New Window] */
+/*        #open-frame-sep,                      /*   [----------------] */
+          #context-reloadframe,                 /*   [Reload Frame] */
+          #context-reloadframe + menuseparator, /*   [----------------] */
+          #context-bookmarkframe,               /*   [Bookmark This Frame] */
+          #context-saveframe,                   /*   [Save Frame As…] */
+          #context-saveframe + menuseparator,   /*   [----------------] */
+          #context-printframe,                  /*   [Print Frame…] */
+          #context-printframe + menuseparator,  /*   [----------------] */
+/*        #context-viewframesource,             /*   [View Frame Source] */
+/*        #context-viewframeinfo,               /*   [View Frame Info] */
+        #context-print-selection,               /* [Print Selection] 84+ */
 /*      #context-viewpartialsource-selection,   /* [View Selection Source] */
-/*      #context-viewpartialsource-mathml,      /* [View MathML Source] */
-/*      #context-sep-viewsource,        /* [Separator] */
-/*      #context-viewsource,            /* [View Page Source] */
-/*      #context-viewinfo,              /* [View Page Info] */
-/*      #spell-separator,               /* [Separator] */
-/*      #spell-check-enabled,           /* [Check Spelling] */
-/*      #spell-add-dictionaries-main,   /* [Add Dictionaries…] */
-/*      #spell-dictionaries,            /* [Languages] */
-/*      #context-sep-bidi,              /* [Separator] */
+/*      #context-viewpartialsource-mathml,      /* #[View MathML Source] 84-? */
+/*      #context-sep-viewsource,                /* [----------------] */
+/*      #context-viewsource,                    /* [View Page Source] */
+/*      #context-viewinfo,                      /* [View Page Info] */
+/*      #spell-separator,                       /* [----------------] */
+/*      #spell-check-enabled,                   /* [Check Spelling] */
+/*      #spell-add-dictionaries-main,           /* [Add Dictionaries…] */
+/*      #spell-dictionaries,                    /* [Languages] */
+/*        #spell-language-separator,            /*   [----------------] */
+/*        #spell-add-dictionaries,              /*   [Add Dictionaries…] */
+/*      #context-sep-bidi,                      /* [----------------] */
 /*      #context-bidi-text-direction-toggle,    /* [Switch Text Direction] */
 /*      #context-bidi-page-direction-toggle,    /* [Switch Page Direction] */
-/*      #fill-login-separator,          /* [Separator] */
-/*      #fill-login,                    /* [Fill Login] */
-/*      #inspect-separator,             /* [Separator] */
-/*      #context-inspect-a11y,          /* [Inspect Accessibility Properties] 67+ 82+? */
-/*      #context-inspect,               /* [Inspect Element] 82+? */
-/*      #context-media-eme-separator,   /* [Separator] */
-/*      #context-media-eme-learnmore,   /* [Learn more about DRM…] */
-/*    #placesContext,                   /* Bookmark menu */
-/*      #placesContext_open,            /* [Open] */
-/*      #placesContext_open\:newtab,    /* [Open in a New Tab] */
+/*      #fill-login-separator,                  /* [----------------] 84-? */
+/*      #fill-login,                            /* [Fill Login] 84-? */
+/*      #inspect-separator,                     /* [----------------] */
+        #context-inspect-a11y,                  /* [Inspect Accessibility Properties] 67+ 82+? */
+/*      #context-inspect,                       /* [Inspect Element] 82+? */
+/*      #context-media-eme-separator,           /* [----------------] */
+/*      #context-media-eme-learnmore,           /* [Learn more about DRM…] */
+/* ---------------------------------------------------------------- */
+/*    #placesContext,                           /* Bookmark・History */
+/*      #placesContext_open,                    /* [Open] */
+/*      #placesContext_open\:newtab,            /* [Open in a New Tab] */
 /*      #placesContext_openContainer\:tabs,     /* [Open All in Tabs] */
 /*      #placesContext_openLinks\:tabs,         /* [Open All in Tabs] */
 /*      #placesContext_open\:newwindow,         /* [Open in a New Window] */
 /*      #placesContext_open\:newprivatewindow,  /* [Open in a New Private Window] */
-/*      #placesContext_openSeparator,   /* [Separator] */
-/*      #placesContext_new\:bookmark,   /* [New Bookmark…] */
-/*      #placesContext_new\:folder,     /* [New Folder…] */
-/*      #placesContext_new\:separator,  /* [New Separator] */
-/*      #placesContext_newSeparator,    /* [Separator] */
-/*      #placesContext_createBookmark,  /* [Bookmark Page] */
-/*      #placesContext_cut,             /* [Cut] */
-/*      #placesContext_copy,            /* [Copy] */
-/*      #placesContext_paste,           /* [Paste] */
-/*      #placesContext_editSeparator,   /* [Separator] */
-/*      #placesContext_delete,          /* [Delete] */
-/*      #placesContext_delete_history,  /* [Delete Page] */
-/*      #placesContext_deleteHost,      /* [Forget About This Site] */
-/*      #placesContext_deleteSeparator, /* [Separator] */
-/*      #placesContext_sortBy\:name,    /* [Sort By Name] */
-/*      #placesContext_reload,          /* [Reload Live Bookmark] 84-? */
-/*      #placesContext_sortSeparator,   /* [Separator] 84+? */
-/*      #placesContext_show\:info,      /* [Properties] */
-/*    #pageActionPanel,                 /* Page Action */
-/*      #pageAction-panel-bookmark,     /* [Bookmark This Page] */
-/*      #pageAction-panel-pocket,       /* [Save Page to Pocket] */
-/*      #pageAction-panel-pinTab,       /* [Pin Tab][Unpin Tab] */
-/*      #pageAction-panel-bookmarkSeparator,    /* [Separator] */
-/*      #pageAction-panel-copyURL,      /* [Copy Link] */
-        #pageAction-panel-emailLink,    /* [Email Link…] */
-        #pageAction-panel-sendToDevice, /* [Send Tab to Device] */
-        #pageAction-panel-shareURL,     /* [Share] */
+/*      #placesContext_openSeparator,           /* [----------------] */
+/*      #placesContext_new\:bookmark,           /* [New Bookmark…] */
+/*      #placesContext_new\:folder,             /* [New Folder…] */
+/*      #placesContext_new\:separator,          /* [New Separator] */
+/*      #placesContext_newSeparator,            /* [----------------] */
+/*      #placesContext_createBookmark,          /* [Bookmark Page] */
+/*      #placesContext_cut,                     /* [Cut] */
+/*      #placesContext_copy,                    /* [Copy] */
+/*      #placesContext_paste,                   /* [Paste] */
+/*      #placesContext_editSeparator,           /* [----------------] */
+/*      #placesContext_delete,                  /* [Delete] */
+/*      #placesContext_delete_history,          /* [Delete Page] */
+/*      #placesContext_deleteHost,              /* [Forget About This Site] */
+/*      #placesContext_deleteSeparator,         /* [----------------] */
+/*      #placesContext_sortBy\:name,            /* [Sort By Name] */
+/*      #placesContext_reload,                  /* #[Reload Live Bookmark] 84-? */
+/*      #placesContext_sortSeparator,           /* [----------------] 84+? */
+/*      #placesContext_show\:info,              /* [Properties] */
+/*      #toggle_PersonalToolbar,                /* [Bookmarks Toolbar] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /*   [Always Show] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /*   [Never Show] 85+ */
+/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /*   [Only Show on New Tab] 85+ */
+/*      #show-other-bookmarks_PersonalToolbar,  /* [Show Other Bookmarks] 85+ */
+/* ---------------------------------------------------------------- */
+/*    #pageActionPanel,                         /* Page action */
+/*      #pageAction-panel-bookmark,             /* [Bookmark This Page] */
+/*      #pageAction-panel-pocket,               /* [Save Page to Pocket] */
+/*      #pageAction-panel-pinTab,               /* [Pin Tab][Unpin Tab] */
+/*      #pageAction-panel-bookmarkSeparator,    /* [----------------] */
+/*      #pageAction-panel-copyURL,              /* [Copy Link] */
+        #pageAction-panel-emailLink,            /* [Email Link…] */
+        #pageAction-panel-sendToDevice,         /* [Send Tab to Device] */
+        #pageAction-panel-shareURL,             /* [Share] */
 /*      #pageAction-panel-screenshots_mozilla_org,      /* [Take a Screenshot] */
-/*      #pageAction-panel-builtInSeparator,     /* [Share] */
-    #context-dummy-dummy-dummy          /* Dummy */
+/*      #pageAction-panel-builtInSeparator,     /* [----------------] */
+/*                                              /* Extension（Page action） */
+/* ---------------------------------------------------------------- */
+    #context-dummy-dummy-dummy                  /* Dummy */
 {
   display: none !important;
 }
 
-/* Delete [Search … for “…”] */
+/* Delete [Search 〇〇 for “△△”] */
 /* If you right click on the link, delete it. */
 /* Do not delete selected text if it exists. */
-        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /**/
-    #context-dummy-dummy-dummy          /* Dummy */
+/* ---------------------------------------------------------------- */
+        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* */
+/* ---------------------------------------------------------------- */
+    #context-dummy-dummy-dummy                  /* Dummy */
 {
   display: none !important;
-} 
+}
 
-/* Delete context menu(For add-ons) */
+/* Delete context menu (For add-ons) */
 /* Delete by directly specifying the label name of the context menu. */
 /* Menu item is specified by menuitem. */
 /* Menu group is specified by menu. */
-        menuitem[label="Take a Screenshot"],    /* Take a Screenshot */
-/*      menuitem[label="NoScript"],             /* NoScript */
-/*      menu[label="NoScript"],                 /* NoScript */
-    #context-dummy-dummy-dummy          /* Dummy */
+/* ---------------------------------------------------------------- */
+        menuitem[label="Take a Screenshot"],            /* Take a Screenshot */
+/*      menuitem[label="NoScript"],                     /* NoScript */
+/*      menu[label="NoScript"],                         /* NoScript */
+/* ---------------------------------------------------------------- */
+    #context-dummy-dummy-dummy                  /* Dummy */
 {
   display: none !important;
 }
