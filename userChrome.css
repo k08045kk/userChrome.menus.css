@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 
-/* Delete Context Menu */
-/*@import "userChrome.menus.css";*/
+/* userChrome.menus.css */
 @import "userChrome.menus.ja.css";
 /*@import "userChrome.menus.en-US.css";*/
 

@@ -1,12 +1,14 @@
 userChrome.menus.css
 ====================
 
-This is a file for userChrome.css that removes the context menu in Firefox.
+Remove the context menu in Firefox using userChrome.css.
 
 
 
 ## Description
-You can control the **display / non-display** of the menu by **adding / deleting** the leading `/*`. Please change it as you like.
+It aims to provide a context menu removal feature as an alternative to "Menu Wizard" extension in Firefox Quantum (57+).
+
+You can show/hide the menu by add/remov the "/*" at the beginning of the line. You can change it to your liking.
 
 
 
