@@ -52,8 +52,8 @@
 /*        #context_closeTabsToTheEnd,                   /*   [Close Tabs to the Right] */
 /*        #context_closeOtherTabs,                      /*   [Close Other Tabs] */
 /*      #context_undoCloseTab,                          /* [Undo Close Tab] */
-/*      #context_closeTab,                              /* [Close Tab] */
-/*      #context_closeSelectedTabs,                     /* #[Close Tab] 67+ 85-? */
+        #context_closeTab,                              /* [Close Tab] */
+        #context_closeSelectedTabs,                     /* #[Close Tab] 67+ 85-? */
 /*      #context_closeTab + menuseparator,              /* [----------------] 85-? */
 /* -------------------------------------------------------------------------- */
 /*    #sidebarMenu-popup,                               /* Sidebar popup */
@@ -233,6 +233,8 @@
 /*      #context-inspect,                               /* [Inspect Element] 82+? */
 /*      #context-media-eme-separator,                   /* [----------------] */
 /*      #context-media-eme-learnmore,                   /* [Learn more about DRM…] */
+/*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
+/*                                                      /* Extensions（Context menu） */
 /* -------------------------------------------------------------------------- */
 /*    #placesContext,                                   /* Bookmark・History */
 /*      #placesContext_open,                            /* [Open] */

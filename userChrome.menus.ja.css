@@ -51,8 +51,8 @@
 /*        #context_closeTabsToTheEnd,                   /*   [右側のタブをすべて閉じる] */
 /*        #context_closeOtherTabs,                      /*   [他のタブをすべて閉じる] */
 /*      #context_undoCloseTab,                          /* [閉じたタブを元に戻す] */
-/*      #context_closeTab,                              /* [タブを閉じる] */
-/*      #context_closeSelectedTabs,                     /* #[タブを閉じる] 67+ 85-? */
+        #context_closeTab,                              /* [タブを閉じる] */
+        #context_closeSelectedTabs,                     /* #[タブを閉じる] 67+ 85-? */
 /*      #context_closeTab + menuseparator,              /* [----------------] 85-? */
 /* -------------------------------------------------------------------------- */
 /*    #sidebarMenu-popup,                               /* サイドバーポップアップ */
@@ -232,6 +232,8 @@
 /*      #context-inspect,                               /* [要素を調査] 82+? */
 /*      #context-media-eme-separator,                   /* [----------------] */
 /*      #context-media-eme-learnmore,                   /* [DRM の詳細...] */
+/*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
+/*                                                      /* 拡張機能（コンテキストメニュー） */
 /* -------------------------------------------------------------------------- */
 /*    #placesContext,                                   /* ブックマーク・履歴 */
 /*      #placesContext_open,                            /* [開く] */
