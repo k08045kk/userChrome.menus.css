@@ -52,8 +52,8 @@
 /*        #context_closeTabsToTheEnd,                   /*   [Close Tabs to the Right] */
 /*        #context_closeOtherTabs,                      /*   [Close Other Tabs] */
 /*      #context_undoCloseTab,                          /* [Undo Close Tab] */
-        #context_closeTab,                              /* [Close Tab] */
-        #context_closeSelectedTabs,                     /* #[Close Tab] 67+ 85-? */
+/*      #context_closeTab,                              /* [Close Tab] */
+/*      #context_closeSelectedTabs,                     /* #[Close Tab] 67+ 85-? */
 /*      #context_closeTab + menuseparator,              /* [----------------] 85-? */
 /* -------------------------------------------------------------------------- */
 /*    #sidebarMenu-popup,                               /* Sidebar popup */
@@ -100,7 +100,7 @@
 /*        #context-stop,                                /*   [Stop] */
 /*        #context-bookmarkpage,                        /*   [Bookmark This Page] */
 /*      #context-sep-navigation,                        /* [----------------] */
-        #page-menu-separator,                           /* [----------------] */
+/*      #page-menu-separator,                           /* [----------------] */
 /*      #spell-no-suggestions,                          /* [(No Spelling Suggestions)] */
 /*      #spell-add-to-dictionary,                       /* [Add to Dictionary] */
 /*      #spell-undo-add-to-dictionary,                  /* [Undo Add To Dictionary] */
@@ -116,7 +116,7 @@
         #context-bookmarklink,                          /* [Bookmark This Link] */
 /*      #context-savelink,                              /* [Save Link As…] */
         #context-savelinktopocket,                      /* [Save Link to Pocket] */
-        #context-copyemail,                             /* [Copy Email Address] */
+/*      #context-copyemail,                             /* [Copy Email Address] */
 /*      #context-copylink,                              /* [Copy Link Location] */
 /*      #context-sep-copylink,                          /* [----------------] */
 /*      #context-media-play,                            /* [Play] */
@@ -285,7 +285,7 @@
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* [Search 〇〇 for “△△”] */
 /* -------------------------------------------------------------------------- */
 /* Remove context menu (for Extensions)                                       */
-/* Remove a label by directly specifying its name in the context menu.        */
+/* Remove a label name in the context menu by specifying it directly.         */
 /* The menu item is specified by menuitem.                                    */
 /* The menu group is specified by menu.                                       */
 /* -------------------------------------------------------------------------- */

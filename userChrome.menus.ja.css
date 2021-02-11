@@ -51,8 +51,8 @@
 /*        #context_closeTabsToTheEnd,                   /*   [右側のタブをすべて閉じる] */
 /*        #context_closeOtherTabs,                      /*   [他のタブをすべて閉じる] */
 /*      #context_undoCloseTab,                          /* [閉じたタブを元に戻す] */
-        #context_closeTab,                              /* [タブを閉じる] */
-        #context_closeSelectedTabs,                     /* #[タブを閉じる] 67+ 85-? */
+/*      #context_closeTab,                              /* [タブを閉じる] */
+/*      #context_closeSelectedTabs,                     /* #[タブを閉じる] 67+ 85-? */
 /*      #context_closeTab + menuseparator,              /* [----------------] 85-? */
 /* -------------------------------------------------------------------------- */
 /*    #sidebarMenu-popup,                               /* サイドバーポップアップ */
@@ -99,7 +99,7 @@
 /*        #context-stop,                                /*   [停止] */
 /*        #context-bookmarkpage,                        /*   [このページをブックマーク] */
 /*      #context-sep-navigation,                        /* [----------------] */
-        #page-menu-separator,                           /* [----------------] */
+/*      #page-menu-separator,                           /* [----------------] */
 /*      #spell-no-suggestions,                          /* [(修正候補がありません)] */
 /*      #spell-add-to-dictionary,                       /* [辞書に追加] */
 /*      #spell-undo-add-to-dictionary,                  /* [辞書への追加を元に戻す] */
@@ -115,7 +115,7 @@
         #context-bookmarklink,                          /* [このリンクをブックマーク] */
 /*      #context-savelink,                              /* [名前を付けてリンク先を保存...] */
         #context-savelinktopocket,                      /* [リンクを Pocket に保存] */
-        #context-copyemail,                             /* [メールアドレスをコピー] */
+/*      #context-copyemail,                             /* [メールアドレスをコピー] */
 /*      #context-copylink,                              /* [リンクの URL をコピー] */
 /*      #context-sep-copylink,                          /* [----------------] */
 /*      #context-media-play,                            /* [再生] */
@@ -284,7 +284,7 @@
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* [〇〇 で検索: "△△"] */
 /* -------------------------------------------------------------------------- */
 /* コンテキストメニューを削除（拡張機能用）                                   */
-/* コンテキストメニューのラベル名を直接指定して削除する。                     */
+/* コンテキストメニューのラベル名を直接指定で削除する。                       */
 /* メニューアイテムは、 menuitem で指定する。                                 */
 /* メニューグループは、 menu で指定する。                                     */
 /* -------------------------------------------------------------------------- */
