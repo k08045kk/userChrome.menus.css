@@ -3,18 +3,22 @@
 /* Set default namespace to XUL */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* -------------------------------------------------------------------------- *
+/**
  * @name        userChrome.menus.css
  * @description Remove the context menu in Firefox using userChrome.css.
  *              You can show/hide the menu by add/remov the "/*" at the beginning of the line.
  *              You can change it to your liking.
+ *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
- * @version     85.20210211
+ * @license     MIT License
+ * @see         https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
+ * @version     85.20210214
  * @note        57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
  * @see         https://www.bugbugnow.net/2018/04/firefox-quantum-context-menu-editing.html
- * -------------------------------------------------------------------------- */
+ */
+/* ========================================================================== */
 /*  #mainPopupSet,                                      /* Popup */
 /* -------------------------------------------------------------------------- */
 /*    #tabContextMenu,                                  /* Tab */
@@ -55,28 +59,18 @@
         #context_closeTab,                              /* [Close Tab] */
         #context_closeSelectedTabs,                     /* #[Close Tab] 67+ 85-? */
 /*      #context_closeTab + menuseparator,              /* [----------------] 85-? */
-/* -------------------------------------------------------------------------- */
-/*    #sidebarMenu-popup,                               /* Sidebar popup */
-/*      #sidebar-switcher-bookmarks,                    /* [Bookmarks] */
-/*      #sidebar-switcher-history,                      /* [History] */
-/*      #sidebar-switcher-tabs,                         /* [Synced Tabs] */
-/*      #sidebar-switcher-tabs + toolbarseparator,      /* [----------------] */
-/*                                                      /* Extensions (Sidebar) */
-/*      #sidebar-extensions-separator,                  /* [----------------] */
-/*      #sidebar-reverse-position,                      /* [Move Sidebar to Right][Move Sidebar to Left] */
-/*      #sidebar-reverse-position + toolbarseparator,   /* [----------------] */
-/*                                                      /* [Close Sidebar] */
+/*                                                      /* Extensions (Tab) */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* Toolbar */
 /*                                                      /* Extensions (Browser action) */
 /*                                                      /* [----------------] */
-/*      #toolbar-context-menu .customize-context-manageExtension,       /* [Manage Extension] */
-        #toolbar-context-menu .customize-context-removeExtension,       /* [Remove Extension] */
-        #toolbar-context-menu .customize-context-reportExtension,       /* [Report Extension] */
+/*      #toolbar-context-menu > .customize-context-manageExtension,     /* [Manage Extension] */
+        #toolbar-context-menu > .customize-context-removeExtension,     /* [Remove Extension] */
+        #toolbar-context-menu > .customize-context-reportExtension,     /* [Report Extension] */
 /*                                                                      /* [----------------] */
-/*      #toolbar-context-menu .customize-context-moveToPanel,           /* [Pin to Overflow Menu] */
-/*      #toolbar-context-autohide-downloads-button,                     /* [Auto-Hide in Toolbar] */
-/*      #toolbar-context-menu .customize-context-removeFromToolbar,     /* [Remove from Toolbar] */
+/*      #toolbar-context-menu > .customize-context-moveToPanel,         /* [Pin to Overflow Menu] */
+        #toolbar-context-autohide-downloads-button,                     /* [Auto-Hide in Toolbar] */
+/*      #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [Remove from Toolbar] */
 /*      #toolbar-context-reloadSelectedTab,             /* [Reload Selected Tab] */
 /*      #toolbar-context-reloadSelectedTabs,            /* [Reload Selected Tabs] */
 /*      #toolbar-context-bookmarkSelectedTab,           /* [Bookmark Selected Tab…] */
@@ -85,12 +79,12 @@
 /*      #toolbar-context-undoCloseTab,                  /* [Undo Close Tab] */
 /*      #toolbar-context-undoCloseTab + menuseparator,  /* [----------------] */
 /*      #toggle_toolbar-menubar,                        /* [Menu Bar] */
-/*      #toggle_PersonalToolbar,                        /* [Bookmarks Toolbar] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /*   [Always Show] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /*   [Never Show] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /*   [Only Show on New Tab] 85+ */
+/*      #toolbar-context-menu > #toggle_PersonalToolbar,/* [Bookmarks Toolbar] 85+ */
+/*        #toolbar-context-menu > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"], /*   [Always Show] 85+ */
+/*        #toolbar-context-menu > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],  /*   [Never Show] 85+ */
+/*        #toolbar-context-menu > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],  /*   [Only Show on New Tab] 85+ */
 /*      #viewToolbarsMenuSeparator,                     /* [----------------] */
-/*      #toolbar-context-menu .viewCustomizeToolbar,    /* [Customize…] */
+/*      #toolbar-context-menu > .viewCustomizeToolbar,  /* [Customize…] */
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* Content area */
 /*      #context-navigation,                            /* Navigation */
@@ -106,8 +100,8 @@
 /*      #spell-undo-add-to-dictionary,                  /* [Undo Add To Dictionary] */
 /*      #spell-suggestions-separator,                   /* [----------------] */
         #context-openlinkincurrent,                     /* [Open Link] */
-/*      #context-openlinkincontainertab,                /* [Open Link in New 〇〇 Tab] 〇〇=Container */
-/*      #context-openlinkintab,                         /* [Open Link in New Tab] */
+        #context-openlinkincontainertab,                /* [Open Link in New 〇〇 Tab] 〇〇=Container */
+        #context-openlinkintab,                         /* [Open Link in New Tab] */
         #context-openlinkinusercontext-menu,            /* [Open Link in New Container Tab] */
 /*                                                      /*   Container */
         #context-openlink,                              /* [Open Link in New Window] */
@@ -221,6 +215,7 @@
 /*      #spell-check-enabled,                           /* [Check Spelling] */
 /*      #spell-add-dictionaries-main,                   /* [Add Dictionaries…] */
 /*      #spell-dictionaries,                            /* [Languages] */
+/*                                                      /*   Languages */
 /*        #spell-language-separator,                    /*   [----------------] */
 /*        #spell-add-dictionaries,                      /*   [Add Dictionaries…] */
 /*      #context-sep-bidi,                              /* [----------------] */
@@ -234,16 +229,16 @@
 /*      #context-media-eme-separator,                   /* [----------------] */
 /*      #context-media-eme-learnmore,                   /* [Learn more about DRM…] */
 /*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
-/*                                                      /* Extensions（Context menu） */
+/*                                                      /* Extensions (Content area) */
 /* -------------------------------------------------------------------------- */
 /*    #placesContext,                                   /* Bookmark・History */
-/*      #placesContext_open,                            /* [Open] */
-/*      #placesContext_open\:newtab,                    /* [Open in a New Tab] */
-/*      #placesContext_openContainer\:tabs,             /* [Open All in Tabs] */
-/*      #placesContext_openLinks\:tabs,                 /* [Open All in Tabs] */
-/*      #placesContext_open\:newwindow,                 /* [Open in a New Window] */
-/*      #placesContext_open\:newprivatewindow,          /* [Open in a New Private Window] */
-/*      #placesContext_openSeparator,                   /* [----------------] */
+        #placesContext_open,                            /* [Open] */
+        #placesContext_open\:newtab,                    /* [Open in a New Tab] */
+        #placesContext_openContainer\:tabs,             /* [Open All in Tabs] */
+        #placesContext_openLinks\:tabs,                 /* [Open All in Tabs] */
+        #placesContext_open\:newwindow,                 /* [Open in a New Window] */
+        #placesContext_open\:newprivatewindow,          /* [Open in a New Private Window] */
+        #placesContext_openSeparator,                   /* [----------------] */
 /*      #placesContext_new\:bookmark,                   /* [New Bookmark…] */
 /*      #placesContext_new\:folder,                     /* [New Folder…] */
 /*      #placesContext_new\:separator,                  /* [New Separator] */
@@ -261,10 +256,10 @@
 /*      #placesContext_reload,                          /* #[Reload Live Bookmark] 84-? */
 /*      #placesContext_sortSeparator,                   /* [----------------] 84+? */
 /*      #placesContext_show\:info,                      /* [Properties] */
-/*      #toggle_PersonalToolbar,                        /* [Bookmarks Toolbar] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /*   [Always Show] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /*   [Never Show] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /*   [Only Show on New Tab] 85+ */
+/*      #placesContext > #toggle_PersonalToolbar,       /* [Bookmarks Toolbar] 85+ */
+/*        #placesContext > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],/*   [Always Show] 85+ */
+/*        #placesContext > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"], /*   [Never Show] 85+ */
+/*        #placesContext > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"], /*   [Only Show on New Tab] 85+ */
 /*      #show-other-bookmarks_PersonalToolbar,          /* [Show Other Bookmarks] 85+ */
 /* -------------------------------------------------------------------------- */
 /*    #pageActionPanel,                                 /* Page action */
@@ -275,26 +270,78 @@
 /*      #pageAction-panel-copyURL,                      /* [Copy Link] */
         #pageAction-panel-emailLink,                    /* [Email Link…] */
         #pageAction-panel-sendToDevice,                 /* [Send Tab to Device] */
-        #pageAction-panel-shareURL,                     /* [Share] */
+/*      #pageAction-panel-shareURL,                     /* [Share] */
 /*      #pageAction-panel-screenshots_mozilla_org,      /* [Take a Screenshot] */
 /*      #pageAction-panel-builtInSeparator,             /* [----------------] */
 /*                                                      /* Extensions (Page action) */
 /* -------------------------------------------------------------------------- */
+/*    #pageActionContextMenu,                           /* Page action context menu */
+/*                                                      /* [Add to Address Bar] */
+/*                                                      /* [Remove from Address Bar] */
+/*                                                      /* [Add to Address Bar] */
+/*                                                      /* [Remove from Address Bar] */
+/*                                                      /* [----------------] */
+/*      #pageActionContextMenu > menuitem[data-l10n-id="page-action-manage-extension"], /* [Manage Extension…] */
+        #pageActionContextMenu > menuitem[data-l10n-id="page-action-remove-extension"], /* [Remove Extension] */
+/* -------------------------------------------------------------------------- */
+/*    #customizationPanelItemContextMenu,               /* Customization panel item・Overflow Menu */
+/*      #customizationPanelItemContextMenu > .customize-context-manageExtension,/* [Manage Extension] */
+        #customizationPanelItemContextMenu > .customize-context-removeExtension,/* [Remove Extension] */
+        #customizationPanelItemContextMenu > .customize-context-reportExtension,/* [Report Extension] */
+/*                                                      /* [----------------] */
+/*      #customizationPanelItemContextMenuPin,          /* [Pin to Overflow Menu] */
+/*      #customizationPanelItemContextMenuUnpin,        /* [Unpin from Overflow Menu] */
+/*      #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [Remove from Toolbar] */
+/*                                                                              /* [----------------] */
+/*      #customizationPanelItemContextMenu > .viewCustomizeToolbar,             /* [Customize…] */
+/* ========================================================================== */
+/* Additional Features                                                        */
+/* ========================================================================== */
 /* Remove [Search 〇〇 for “△△”]                                          */
 /* If you right-click on a link, remove it.                                   */
 /* Do not remove text if it is currently selected.                            */
 /* -------------------------------------------------------------------------- */
+/*    #contentAreaContextMenu,                          /* Content area */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* [Search 〇〇 for “△△”] */
+/* ========================================================================== */
+/* Remove customization feature                                               */
+/* [Pin to Overflow Menu][Unpin from Overflow Menu][Remove from Toolbar]      */
+/* Remove it, as it can be replaced by customization.                         */
+/* -------------------------------------------------------------------------- */
+/*  #mainPopupSet,                                      /* Popup */
+/*    #toolbar-context-menu,                            /* Toolbar */
+        #toolbar-context-menu > .customize-context-moveToPanel,         /* [Pin to Overflow Menu] */
+        #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [Remove from Toolbar] */
+        #toolbar-context-autohide-downloads-button[hidden] ~ #toolbar-context-undoCloseTab[hidden] + menuseparator,  /* [----------------] */
+/*    #customizationPanelItemContextMenu,               /* Customization panel item・Overflow Menu */
+        #customizationPanelItemContextMenuPin,          /* [Pin to Overflow Menu] */
+        #customizationPanelItemContextMenuUnpin,        /* [Unpin from Overflow Menu] */
+        #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [Remove from Toolbar] */
+        #customizationPanelItemContextMenuUnpin + menuitem + menuseparator,     /* [----------------] */
+/* ========================================================================== */
+/* Fixed the problem of consecutive breaks in image page                      */
+/* Image page: `https://.../123.jpg`                                          */
+/* Problem due to removal of the following (usually does not occur)           */
+/* [Save Page As…][Save Page to Pocket][Send Page to Device]                 */
+/* -------------------------------------------------------------------------- */
+/*    #contentAreaContextMenu,                          /* Content area */
+        #context-selectall[hidden] ~ #context-sep-viewsource,     /* [----------------] */
+/* ========================================================================== */
+/* Remove unnecessary delimiters by deleting context menu (for extensions)    */
+/* However, [Inspect Element] should be displayed in the Extensions section.  */
+/* -------------------------------------------------------------------------- */
+/*    #contentAreaContextMenu,                          /* Content area */
+/*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
 /* -------------------------------------------------------------------------- */
 /* Remove context menu (for Extensions)                                       */
 /* Remove a label name in the context menu by specifying it directly.         */
 /* The menu item is specified by menuitem.                                    */
 /* The menu group is specified by menu.                                       */
 /* -------------------------------------------------------------------------- */
-        menuitem[label="Take a Screenshot"],            /* Take a Screenshot */
+/*      menuitem[label="Take a Screenshot"],            /* Take a Screenshot */
 /*      menuitem[label="NoScript"],                     /* NoScript */
-/*      menu[label="NoScript"],                         /* NoScript */
-/* -------------------------------------------------------------------------- */
+/*      menu[label="Firefox Multi-Account Containers"], /* Firefox Multi-Account Containers */
+/* ========================================================================== */
     #context-dummy-dummy-dummy                          /* Dummy */
 {
   display: none !important;

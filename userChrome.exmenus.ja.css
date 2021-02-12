@@ -3,22 +3,51 @@
 /* デフォルト名前空間をXULにする */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* -------------------------------------------------------------------------- *
- * @name        userChrome.exmenus.css
- * @description Firefox のコンテキストメニューを userChrome.css を利用して削除する。
- *              メニューの 表示/非表示 は、行頭の "/*" を 追加/削除 することで制御できます。
- *              お好みで変更してください。
+/**
+ * @name        README.css
+ * @description userChrome.menus.css の補足情報を記載します。
+ *              メニューの表示方法の覚書です。
+ *                表示しないとブラウザ開発ツールに表示されないため。
+ *              userChrome.menus.css の削除理由の覚書です。
+ *                記載しておかないと忘れてしまうため。
+ *              userChrome.menus.css に含めていない項目の覚書です。
+ *                不用意に項目数を増やさないため、メインファイルから分離しています。
+ *                必要に応じてコピー・ペーストして使用してください。
  * @author      toshi (https://github.com/k08045kk)
- * @version     85.20210211
- * @note        84.20201219 - 初版
+ * @license     MIT License
+ * @see         https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
+ * @version     85.20210214
+ * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
- * -------------------------------------------------------------------------- */
+ */
+/* ========================================================================== */
 /*  #mainPopupSet,                                      /* ポップアップ */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * タブ
+ * 表示方法：タブを右クリック
+ * 削除項目 - 削除理由
+ * [タブを再読み込み] - 「ツールバーボタン」「<ボタンの右クリック」で代用可能
+ * [タブをミュート] - 「タブ上のボタン」で代用可能
+ * [すべてのタブを選択] - 「Shift+クリック」「<ボタンの右クリック」で代用可能
+ * [タブをブックマーク] - 「ツールバーボタン」「ページアクション」「<ボタンの右クリック」で代用可能
+ * [コンテナーを開きなおす] - 「＋ボタン」で代用可能
+ * [タブを移動] - 「タブのドラッグ」で代用可能
+ * [タブを端末へ送信] - 
+ * [すべてのタブを再読み込み] - 「<ボタンの右クリック」で代用可能（又は、危険な操作のため）
+ * [すべてのタブをブックマーク...] - 「<ボタンの右クリック」で代用可能
+ * [タブを閉じる] - 「タブ上のボタン」で代用可能
+ * -------------------------------------------------------------------------- */
 /*    #tabContextMenu,                                  /* タブ */
 /*      userChrome.menus.css 参照 */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * 新規タブボタン
+ * 表示方法：タブバーの＋ボタンを右クリック（Firefox Multi-Account Containersをインストールする）
+ * -------------------------------------------------------------------------- */
 /*    #new-tab-button-popup,                            /* 新規タブボタン（コンテナー） */
 /*                                                      /* [コンテナーなし] */
 /*                                                      /* [----------------] */
@@ -29,113 +58,226 @@
 /*                                                      /* その他 */
 /*                                                      /* [----------------] */
 /*                                                      /* [コンテナーを管理] */
-/* タブバーの＋ボタンを右クリック */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * 検索バー検索エンジン
+ * 表示方法：検索バーに文字を入力してクリック、検索候補パネルの検索エンジンアイコンを右クリック
+ * see https://support.mozilla.org/ja/kb/add-or-remove-search-engine-firefox
+ * -------------------------------------------------------------------------- */
 /*    #PopupSearchAutoComplete .search-one-offs-context-menu,   /* 検索バー検索エンジン */
 /*      #PopupSearchAutoComplete .search-one-offs-context-open-in-new-tab,      /* [新しいタブで検索] */
 /*      #PopupSearchAutoComplete .search-one-offs-context-set-default,          /* [既定の検索エンジンに設定] */
 /*      #PopupSearchAutoComplete .search-one-offs-context-set-default-private,  /* [プライベートウィンドウの既定の検索エンジンに設定] */
-/* see https://support.mozilla.org/ja/kb/add-or-remove-search-engine-firefox */
-/* 検索バーに文字を入力して、クリック。検索候補パネルの検索エンジンアイコンを右クリック */
-/* -------------------------------------------------------------------------- */
-/*    #sidebarMenu-popup,                               /* サイドバーメニューポップアップ */
-/*      userChrome.menus.css 参照 */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * サイドバーポップアップ
+ * 表示方法：サイドバーのvを右クリック
+ * -------------------------------------------------------------------------- */
+/*    #sidebarMenu-popup,                               /* サイドバーポップアップ */
+/*      #sidebar-switcher-bookmarks,                    /* [ブックマーク] */
+/*      #sidebar-switcher-history,                      /* [履歴] */
+/*      #sidebar-switcher-tabs,                         /* [同期タブ] */
+/*      #sidebar-switcher-tabs + toolbarseparator,      /* [----------------] */
+/*                                                      /* 拡張機能（サイドバー） */
+/*      #sidebar-extensions-separator,                  /* [----------------] */
+/*      #sidebar-reverse-position,                      /* [サイドバーを右側へ移動][サイドバーを左側へ移動] */
+/*      #sidebar-reverse-position + toolbarseparator,   /* [----------------] */
+/*                                                      /* [サイドバーを閉じる] */
+
+
+/* -------------------------------------------------------------------------- *
+ * ポップアップブロック
+ * 表示方法：ポップアップブロック通知バーのオプションボタンをクリック
+ * see https://support.mozilla.org/ja/kb/pop-blocker-settings-exceptions-troubleshooting
+ * -------------------------------------------------------------------------- */
 /*    #blockedPopupOptions,                             /* ポップアップブロック */
 /*      #blockedPopupAllowSite,                         /* [このサイト (〇〇) によるポップアップを許可する] 〇〇=ドメイン名 */
 /*                                                      /* [ポップアップブロック設定を変更...] */
 /*      #blockedPopupDontShowMessage,                   /* [ポップアップをブロックするとき、このメッセージを表示しない] */
 /*      #blockedPopupsSeparator,                        /* [----------------] */
 /*                                                      /* ['〇〇' を表示] 〇〇=URL */
-/* see https://support.mozilla.org/ja/kb/pop-blocker-settings-exceptions-troubleshooting */
-/* ポップアップブロック通知バーのオプションボタンをクリック */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * ツールバー
+ * 表示方法：ツールバーボタンを右クリック
+ * 表示方法：ブラウザアクションを右クリック
+ * 表示方法：ダウンロードツールチップを右クリック（#toolbar-context-autohide-downloads-button）
+ * 削除項目 - 削除理由
+ * [拡張機能を削除] - `about:addons` の […] > [削除] で代用可能
+ * [拡張機能を報告] - `about:addons` の […] > [報告] で代用可能
+ * -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* ツールバー */
 /*      userChrome.menus.css 参照 */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * 自動非表示
+ * 表示方法：全画面表示時にタイトルバー、ツールバー、ブックマークバーの余白領域を右クリック
+ * see https://support.mozilla.org/ja/kb/how-make-firefox-and-websites-go-full-screen
+ * -------------------------------------------------------------------------- */
 /*    #autohide-context,                                /* 自動非表示 */
-/*      #autohide-context menuitem[data-l10n-id="full-screen-autohide"],/* [ツールバーを隠す] */
+/*      #autohide-context > menuitem[data-l10n-id="full-screen-autohide"],      /* [ツールバーを隠す] */
 /*                                                                      /* [----------------] */
-/*      #autohide-context menuitem[data-l10n-id="full-screen-exit"],    /* [全画面表示モードを終了] */
-/* see https://support.mozilla.org/ja/kb/how-make-firefox-and-websites-go-full-screen */
-/* 全画面表示時にタイトルバー、ツールバー、ブックマークバーの余白領域を右クリック */
-/* -------------------------------------------------------------------------- */
+/*      #autohide-context > menuitem[data-l10n-id="full-screen-exit"],  /* [全画面表示モードを終了] */
+
+
+/* -------------------------------------------------------------------------- *
+ * コンテンツエリア
+ * 表示方法：コンテンツエリアで右クリック（ページコンテキストメニュー）
+ * 表示方法：コンテンツエリアで文字列を選択して右クリック（選択コンテキストメニュー）
+ * 表示方法：コンテンツエリアでURL文字列を選択して右クリック
+ * 表示方法：コンテンツエリアで文字列を選択してリンクを右クリック
+ * 表示方法：コンテンツエリアで画像を右クリック（画像コンテキストメニュー）
+ * 表示方法：コンテンツエリアで動画を右クリック
+ * 表示方法：コンテンツエリアで音声を右クリック
+ * 表示方法：コンテンツエリアでフレームを右クリック
+ * 表示方法：コンテンツエリアでリンクを右クリック（リンクコンテキストメニュー）
+ * 表示方法：コンテンツエリアでメールアドレス（mailto）を右クリック
+ * 表示方法：コンテンツエリアでリンク画像を右クリック
+ * 表示方法：コンテンツエリアでテキストフィールドを右クリック
+ * 表示方法：コンテンツエリアでテキストフィールド（[name="name"]）を右クリック
+ * 表示方法：コンテンツエリアでテキストフィールド（[name="password"]）を右クリック
+ * 表示方法：コンテンツエリアでテキストエリアを右クリック
+ * 表示方法：コンテンツエリアの画像ページで画像以外を右クリック
+ * 削除項目 - 削除理由
+ * [リンクを開く] - クリック、中央クリックで代用可能
+ * [リンクを新しいタブで開く] - URL文字列選択は、`123.jpg`で誤作動するため
+ * [このリンクをブックマーク] - ページを開いてからブックマークで代用可能
+ * [リンクを Pocket に保存] - ページを開いてから[Pocket に保存]で代用可能
+ * [画像を再読み込み] - 
+ * [画像だけを表示] - 
+ * [動画だけを表示] - 
+ * [画像をコピー] - 
+ * [メールで送信] - 
+ * [デスクトップの背景に設定...] - 
+ * [名前を付けてページを保存...] - メインメニュー（[ファイル]）から代用可能
+ * [ページを Pocket に保存] - ページアクションで代用可能
+ * [タブを端末へ送信] - 
+ * [背景画像だけを表示] - 
+ * [この検索にキーワードを設定...] - 
+ * [フレームを開く] - 重複するため
+ * [フレームの再読み込み] - 
+ * [このフレームをブックマーク] - 
+ * [名前を付けてフレームを保存...] - 
+ * [フレームを印刷...] - 
+ * [選択した部分を印刷] - 
+ * [スペルチェックを行う] - 日本語をスペルチェックできないため
+ * [アクセシビリティプロパティを調査] - 
+ * -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* コンテンツエリア */
 /*      userChrome.menus.css 参照 */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * ピクチャーインピクチャー
+ * 表示方法：ピクチャーインピクチャー表示ボタンを右クリック
+ * 備考：[オプション] > [一般] > [ブラウズ] > [ピクチャーインピクチャーの動画操作を有効にする]
+ * -------------------------------------------------------------------------- */
 /*    #pictureInPictureToggleContextMenu,               /* ピクチャーインピクチャー */
 /*                                                      /* [ピクチャーインピクチャーの切り替えボタンを隠す] */
-/* ピクチャーインピクチャー表示ボタンを右クリック */
-/* [オプション] > [一般] > [ブラウズ] > [ピクチャーインピクチャーの動画操作を有効にする] で切り替え */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * ブックマーク・履歴
+ * 表示方法：ブックマーク・履歴のの右クリック
+ * 削除項目 - 削除理由
+ * [開く] - クリック・中央クリックで代用可能
+ * -------------------------------------------------------------------------- */
 /*    #placesContext,                                   /* ブックマーク・履歴 */
 /*      userChrome.menus.css 参照 */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * ページアクション
+ * 表示方法：URLバーの […] をクリック
+ * 削除項目 - 削除理由
+ * [メールで送信] - 
+ * [タブを端末へ送信] - 
+ * -------------------------------------------------------------------------- */
 /*    #pageActionPanel,                                 /* ページアクション */
 /*      userChrome.menus.css 参照 */
-/* -------------------------------------------------------------------------- */
-/*    #pageActionContextMenu,                           /* ページアクション */
-/*                                                      /* [アドレスバーに追加] */
-/*                                                      /* [アドレスバーから削除] */
-/*                                                      /* [アドレスバーに追加] */
-/*                                                      /* [アドレスバーから削除] */
-/*                                                      /* [----------------] */
-/*      #pageActionContextMenu menuitem[data-l10n-id="page-action-manage-extension"],   /* [拡張機能を管理...] */
-        #pageActionContextMenu menuitem[data-l10n-id="page-action-remove-extension"],   /* [拡張機能を削除] */
-/* アドレスバー（URLバー）のページアクションボタンを右クリック */
-/* アドレスバー（URLバー）の︙をクリック。メニュー項目を右クリック */
-/* -------------------------------------------------------------------------- */
-/*    #customizationPaletteItemContextMenu,             /* カスタマイズパレットアイテム */
+
+
+/* -------------------------------------------------------------------------- *
+ * ページアクションコンテキストメニュー
+ * 表示方法：アドレスバー（URLバー）のページアクションボタンを右クリック
+ * 表示方法：アドレスバー（URLバー）の [︙] をクリック。メニュー項目を右クリック
+ * 削除項目 - 削除理由
+ * [拡張機能を削除] - `about:addons` の […] > [削除] で代用可能
+ * -------------------------------------------------------------------------- */
+/*    #pageActionContextMenu,                           /* ページアクションコンテキストメニュー */
+/*      userChrome.menus.css 参照 */
+
+
+/* -------------------------------------------------------------------------- *
+ * カスタマイズ
+ * 表示方法：カスタマイズパレット上のツールチップを右クリック
+ * 表示方法：カスタマイズパネル or オーバーフローメニューの右クリック
+ * see https://support.mozilla.org/ja/kb/customize-firefox-controls-buttons-and-toolbars
+ * 削除項目 - 削除理由
+ * [拡張機能を削除] - `about:addons` の […] > [削除] で代用可能
+ * [拡張機能を報告] - `about:addons` の […] > [報告] で代用可能
+ * [ツールバーから削除] - カスタマイズで代用可能
+ * -------------------------------------------------------------------------- */
+/*    #customizationPaletteItemContextMenu,             /* カスタマイズパレット */
 /*                                                      /* [ツールバーに追加] */
 /*                                                      /* [オーバーフローメニューに追加] */
-/* see https://support.mozilla.org/ja/kb/customize-firefox-controls-buttons-and-toolbars */
 /* -------------------------------------------------------------------------- */
 /*    #customizationPanelItemContextMenu,               /* カスタマイズパネルアイテム */
-/*      #customizationPanelItemContextMenu .customize-context-manageExtension,  /* [拡張機能を管理] */
-        #customizationPanelItemContextMenu .customize-context-removeExtension,  /* [拡張機能を削除] */
-        #customizationPanelItemContextMenu .customize-context-reportExtension,  /* [拡張機能を報告] */
-/*                                                      /* [----------------] */
-/*      #customizationPanelItemContextMenuPin,          /* [オーバーフローメニューにピン留め] */
-/*      #customizationPanelItemContextMenuUnpin,        /* [オーバーフローメニューからピン留めを外す] */
-/*      #customizationPanelItemContextMenu .customize-context-removeFromPanel,  /* [ツールバーから削除] */
-/*                                                      /* [----------------] */
-/*      #customizationPanelItemContextMenu .viewCustomizeToolbar,               /* [カスタマイズ...] */
+/*      userChrome.menus.css 参照 */
 /* -------------------------------------------------------------------------- */
 /*    #customizationPanelContextMenu,                   /* カスタマイズパネル */
 /*                                                      /* [その他の項目を追加...] */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * ダウンロードパネル
+ * 表示方法：[三] > [ブラウジングライブラリー] > [ダウンロード] > [ダウンロード項目] > [右クリック]
+ * -------------------------------------------------------------------------- */
 /*    #panelDownloadsContextMenu,                       /* ダウンロードパネル */
-/*      #panelDownloadsContextMenu .downloadPauseMenuItem,      /* [中断] */
-/*      #panelDownloadsContextMenu .downloadResumeMenuItem,     /* [再開] */
-/*      #panelDownloadsContextMenu .downloadUnblockMenuItem,    /* [ダウンロードを許可] */
-/*      #panelDownloadsContextMenu .downloadUseSystemDefaultMenuItem,   /* [システムのビューアーで開く] */
-/*      #panelDownloadsContextMenu .downloadAlwaysUseSystemDefaultMenuItem,     /* [常にシステムのビューアーで開く] */
-/*      #panelDownloadsContextMenu .downloadShowMenuItem,       /* [保存フォルダーを開く] */
-/*      #panelDownloadsContextMenu .downloadCommandsSeparator,  /* [----------------] */
-/*      #panelDownloadsContextMenu menuitem[data-l10n-id="downloads-cmd-go-to-download-page"],  /* [ダウンロード元のページを開く] */
-/*      #panelDownloadsContextMenu menuitem[data-l10n-id="downloads-cmd-copy-download-link"],   /* [ダウンロード元の URL をコピー] */
+/*      #panelDownloadsContextMenu > .downloadPauseMenuItem,    /* [中断] */
+/*      #panelDownloadsContextMenu > .downloadResumeMenuItem,   /* [再開] */
+/*      #panelDownloadsContextMenu > .downloadUnblockMenuItem,  /* [ダウンロードを許可] */
+/*      #panelDownloadsContextMenu > .downloadUseSystemDefaultMenuItem, /* [システムのビューアーで開く] */
+/*      #panelDownloadsContextMenu > .downloadAlwaysUseSystemDefaultMenuItem,   /* [常にシステムのビューアーで開く] */
+/*      #panelDownloadsContextMenu > .downloadShowMenuItem,     /* [保存フォルダーを開く] */
+/*      #panelDownloadsContextMenu > .downloadCommandsSeparator,/* [----------------] */
+/*      #panelDownloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-go-to-download-page"],/* [ダウンロード元のページを開く] */
+/*      #panelDownloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-copy-download-link"], /* [ダウンロード元の URL をコピー] */
 /*                                                              /* [----------------] */
-/*      #panelDownloadsContextMenu .downloadRemoveFromHistoryMenuItem,          /* [履歴から削除] */
-/*      #panelDownloadsContextMenu menuitem[data-l10n-id="downloads-cmd-clear-list"],           /* [プレビューパネルの消去] */
-/*      #panelDownloadsContextMenu menuitem[data-l10n-id="downloads-cmd-clear-downloads"],      /* [ダウンロードの消去] */
-/* [三] > [ブラウジングライブラリー] > [ダウンロード] > [ダウンロード項目] > [右クリック] */
-/* -------------------------------------------------------------------------- */
-/*    #downloadsContextMenu,                    /* ダウンロード */
-/*      #downloadsContextMenu .downloadPauseMenuItem,           /* [中断] */
-/*      #downloadsContextMenu .downloadResumeMenuItem,          /* [再開] */
-/*      #downloadsContextMenu .downloadUnblockMenuItem,         /* [ダウンロードを許可] */
-/*      #downloadsContextMenu .downloadUseSystemDefaultMenuItem,/* [システムのビューアーで開く] */
-/*      #downloadsContextMenu .downloadAlwaysUseSystemDefaultMenuItem,  /* [常にシステムのビューアーで開く] */
-/*      #downloadsContextMenu .downloadShowMenuItem,            /* [保存フォルダーを開く] */
-/*      #downloadsContextMenu .downloadCommandsSeparator,       /* [----------------] */
-/*      #downloadsContextMenu menuitem[data-l10n-id="downloads-cmd-go-to-download-page"],       /* [ダウンロード元のページを開く] */
-/*      #downloadsContextMenu menuitem[data-l10n-id="downloads-cmd-copy-download-link"],        /* [ダウンロード元の URL をコピー] */
+/*      #panelDownloadsContextMenu > .downloadRemoveFromHistoryMenuItem,        /* [履歴から削除] */
+/*      #panelDownloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-clear-list"],         /* [プレビューパネルの消去] */
+/*      #panelDownloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-clear-downloads"],    /* [ダウンロードの消去] */
+
+
+/* -------------------------------------------------------------------------- *
+ * ダウンロード
+ * 表示方法：[ツールチップ（ブラウザアクション）] > [ダウンロード] > [ダウンロード項目] > [右クリック]
+ * -------------------------------------------------------------------------- */
+/*    #downloadsContextMenu,                            /* ダウンロード */
+/*      #downloadsContextMenu > .downloadPauseMenuItem,         /* [中断] */
+/*      #downloadsContextMenu > .downloadResumeMenuItem,        /* [再開] */
+/*      #downloadsContextMenu > .downloadUnblockMenuItem,       /* [ダウンロードを許可] */
+/*      #downloadsContextMenu > .downloadUseSystemDefaultMenuItem,      /* [システムのビューアーで開く] */
+/*      #downloadsContextMenu > .downloadAlwaysUseSystemDefaultMenuItem,/* [常にシステムのビューアーで開く] */
+/*      #downloadsContextMenu > .downloadShowMenuItem,          /* [保存フォルダーを開く] */
+/*      #downloadsContextMenu > .downloadCommandsSeparator,     /* [----------------] */
+/*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-go-to-download-page"],     /* [ダウンロード元のページを開く] */
+/*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-copy-download-link"],      /* [ダウンロード元の URL をコピー] */
 /*                                                              /* [----------------] */
-/*      #downloadsContextMenu .downloadRemoveFromHistoryMenuItem,       /* [履歴から削除] */
-/*      #downloadsContextMenu menuitem[data-l10n-id="downloads-cmd-clear-list"],        /* [プレビューパネルの消去] */
-/*      #downloadsContextMenu menuitem[data-l10n-id="downloads-cmd-clear-downloads"],   /* [ダウンロードの消去] */
-/* [ツールチップ（ブラウザアクション）] > [ダウンロード] > [ダウンロード項目] > [右クリック] */
-/* -------------------------------------------------------------------------- */
+/*      #downloadsContextMenu > .downloadRemoveFromHistoryMenuItem,     /* [履歴から削除] */
+/*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-clear-list"],      /* [プレビューパネルの消去] */
+/*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-clear-downloads"], /* [ダウンロードの消去] */
+
+
+/* -------------------------------------------------------------------------- *
+ * 同期タブ
+ * 表示方法：
+ * see https://support.mozilla.org/ja/kb/view-synced-tabs-other-devices
+ * -------------------------------------------------------------------------- */
 /*    #SyncedTabsSidebarContext,                        /* 同期タブ */
 /*      #syncedTabsOpenSelected,                        /* [開く] */
 /*      #syncedTabsOpenSelectedInTab,                   /* [新しいタブで開く] */
@@ -148,67 +290,97 @@
 /*      #syncedTabsOpenAllInTabs,                       /* [すべてをタブで開く] */
 /*      #syncedTabsManageDevices,                       /* [端末の管理...] */
 /*      #syncedTabsRefresh,                             /* [今すぐ同期] */
-/* see https://support.mozilla.org/ja/kb/view-synced-tabs-other-devices */
 /* -------------------------------------------------------------------------- */
 /*    #SyncedTabsSidebarTabsFilterContext,              /* 同期タブフィルター */
-/*      #SyncedTabsSidebarTabsFilterContext menuitem[data-l10n-id="text-action-undo"],          /* [元に戻す] */
+/*      #SyncedTabsSidebarTabsFilterContext > menuitem[data-l10n-id="text-action-undo"],        /* [元に戻す] */
 /*                                                                                              /* [----------------] */
-/*      #SyncedTabsSidebarTabsFilterContext menuitem[data-l10n-id="text-action-cut"],           /* [切り取り] */
-/*      #SyncedTabsSidebarTabsFilterContext menuitem[data-l10n-id="text-action-copy"],          /* [コピー] */
-/*      #SyncedTabsSidebarTabsFilterContext menuitem[data-l10n-id="text-action-paste"],         /* [貼り付け] */
-/*      #SyncedTabsSidebarTabsFilterContext menuitem[data-l10n-id="text-action-delete"],        /* [削除] */
+/*      #SyncedTabsSidebarTabsFilterContext > menuitem[data-l10n-id="text-action-cut"],         /* [切り取り] */
+/*      #SyncedTabsSidebarTabsFilterContext > menuitem[data-l10n-id="text-action-copy"],        /* [コピー] */
+/*      #SyncedTabsSidebarTabsFilterContext > menuitem[data-l10n-id="text-action-paste"],       /* [貼り付け] */
+/*      #SyncedTabsSidebarTabsFilterContext > menuitem[data-l10n-id="text-action-delete"],      /* [削除] */
 /*                                                                                              /* [----------------] */
-/*      #SyncedTabsSidebarTabsFilterContext menuitem[data-l10n-id="text-action-select-all"],    /* [すべて選択] */
+/*      #SyncedTabsSidebarTabsFilterContext > menuitem[data-l10n-id="text-action-select-all"],  /* [すべて選択] */
 /*                                                      /* [----------------] */
 /*      #syncedTabsRefreshFilter,                       /* ??? (空白の謎メニューを表示する。不具合) */
-/* see https://support.mozilla.org/ja/kb/view-synced-tabs-other-devices */
-/* see https://bugzilla.mozilla.org/show_bug.cgi?id=1683599 */
-/* -------------------------------------------------------------------------- */
-/*  #main-menubar,                                      /* メインメニューバー */
-/*    #file-menu,                                       /* [ファイル] */
-/*    #edit-menu,                                       /* [編集] */
-/*    #view-menu,                                       /* [表示 */
-/*    #history-menu,                                    /* [履歴] */
-/*    #bookmarksMenu,                                   /* [ブックマーク] */
-/*    #tools-menu,                                      /* [ツール] */
-/*    #helpMenu,                                        /* [ヘルプ] */
-/*      省略 */
-/* -------------------------------------------------------------------------- */
-/*  #urlbar .textbox-contextmenu,                       /* URLバー（アドレスバー） */
-/*    #urlbar menuitem[data-l10n-id="text-action-undo"],                /* [元に戻す] */
-/*                                                                      /* [----------------] */
-/*    #urlbar menuitem[data-l10n-id="text-action-cut"],                 /* [切り取り] */
-/*    #urlbar menuitem[data-l10n-id="text-action-copy"],                /* [コピー] */
-/*    #urlbar menuitem[data-l10n-id="text-action-paste"],               /* [貼り付け] */
-/*    #paste-and-go,                                                    /* [貼り付けて移動] */
-/*    #urlbar menuitem[data-l10n-id="text-action-delete"],              /* [削除] */
-/*                                                                      /* [----------------] */
-/*    #urlbar menuitem[data-l10n-id="text-action-select-all"],          /* [すべて選択] */
-/* -------------------------------------------------------------------------- */
-/*  #urlbar .search-one-offs-context-menu,              /* URLバー（アドレスバー） */
+
+
+
+/* ========================================================================== */
+/*  #navigator-toolbox,                                 /* ナビゲーションツールボックス */
+
+
+/* -------------------------------------------------------------------------- *
+ * メインメニューバー
+ * 表示方法：[Alt]キー押下
+ * -------------------------------------------------------------------------- */
+/*    #main-menubar,                                    /* メインメニューバー */
+/*      #file-menu,                                     /* [ファイル] */
+/*      #edit-menu,                                     /* [編集] */
+/*      #view-menu,                                     /* [表示 */
+/*      #history-menu,                                  /* [履歴] */
+/*      #bookmarksMenu,                                 /* [ブックマーク] */
+/*      #tools-menu,                                    /* [ツール] */
+/*      #helpMenu,                                      /* [ヘルプ] */
+/*        省略 */
+
+
+/* -------------------------------------------------------------------------- *
+ * URLバー（アドレスバー）
+ * 表示方法：URLバーの右クリック
+ * -------------------------------------------------------------------------- */
+/*    #urlbar .textbox-contextmenu,                     /* URLバー（アドレスバー） */
+/*      #urlbar menuitem[data-l10n-id="text-action-undo"],      /* [元に戻す] */
+/*                                                              /* [----------------] */
+/*      #urlbar menuitem[data-l10n-id="text-action-cut"],       /* [切り取り] */
+/*      #urlbar menuitem[data-l10n-id="text-action-copy"],      /* [コピー] */
+/*      #urlbar menuitem[data-l10n-id="text-action-paste"],     /* [貼り付け] */
+/*      #paste-and-go,                                          /* [貼り付けて移動] */
+/*      #urlbar menuitem[data-l10n-id="text-action-delete"],    /* [削除] */
+/*                                                              /* [----------------] */
+/*      #urlbar menuitem[data-l10n-id="text-action-select-all"],/* [すべて選択] */
+
+
+/* -------------------------------------------------------------------------- *
+ * URLバー（アドレスバー）
+ * 表示方法：表示方法不明（検索エンジンアイコンの右クリックで表示できない）
+ * -------------------------------------------------------------------------- */
+/*    #urlbar .search-one-offs-context-menu,              /* URLバー（アドレスバー） */
 /*      #urlbar .search-one-offs-context-open-in-new-tab,       /* [新しいタブで検索] */
 /*      #urlbar .search-one-offs-context-set-default,           /* [既定の検索エンジンに設定] */
 /*      #urlbar .search-one-offs-context-set-default-private,   /* [プライベートウィンドウの既定の検索エンジンに設定] */
-/* 表示方法不明（検索エンジンアイコンの右クリックで表示できない） */
-/* -------------------------------------------------------------------------- */
-/*  #searchbar .textbox-contextmenu,                    /* 検索バー */
-/*    #searchbar menuitem[data-l10n-id="text-action-undo"],             /* [元に戻す] */
-/*                                                                      /* [----------------] */
-/*    #searchbar menuitem[data-l10n-id="text-action-cut"],              /* [切り取り] */
-/*    #searchbar menuitem[data-l10n-id="text-action-copy"],             /* [コピー] */
-/*    #searchbar menuitem[data-l10n-id="text-action-paste"],            /* [貼り付け] */
-/*    #searchbar .searchbar-paste-and-search,                           /* [貼り付けて検索] */
-/*    #searchbar menuitem[data-l10n-id="text-action-delete"],           /* [削除] */
-/*                                                                      /* [----------------] */
-/*    #searchbar menuitem[data-l10n-id="text-action-select-all"],       /* [すべて選択] */
-/*                                                                      /* [----------------] */
-/*    #searchbar .searchbar-clear-history,                              /* [検索履歴を消去] */
-/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- *
+ * 検索バー
+ * 表示方法：検索バーの右クリック
+ * -------------------------------------------------------------------------- */
+/*    #searchbar .textbox-contextmenu,                  /* 検索バー */
+/*      #searchbar menuitem[data-l10n-id="text-action-undo"],   /* [元に戻す] */
+/*                                                              /* [----------------] */
+/*      #searchbar menuitem[data-l10n-id="text-action-cut"],    /* [切り取り] */
+/*      #searchbar menuitem[data-l10n-id="text-action-copy"],   /* [コピー] */
+/*      #searchbar menuitem[data-l10n-id="text-action-paste"],  /* [貼り付け] */
+/*      #searchbar .searchbar-paste-and-search,                 /* [貼り付けて検索] */
+/*      #searchbar menuitem[data-l10n-id="text-action-delete"], /* [削除] */
+/*                                                              /* [----------------] */
+/*      #searchbar menuitem[data-l10n-id="text-action-select-all"],     /* [すべて選択] */
+/*                                                              /* [----------------] */
+/*      #searchbar .searchbar-clear-history,                    /* [検索履歴を消去] */
+
+
+/* -------------------------------------------------------------------------- *
+ * ブックマークバー
+ * 表示方法：ブックマークのクリック
+ * -------------------------------------------------------------------------- */
+/*    #PlacesToolbar,                                   /* ブックマークバー */
+/*                                                      /* ブックマーク */
+/*      #PlacesToolbar .bookmarks-actions-menuseparator,/* [----------------] */
+/*      #PlacesToolbar .openintabs-menuitem,            /* [タブですべて開く] */
+
+
+/* ========================================================================== */
 /*      #dummy,                                         /* [] */
     #context-dummy-dummy-dummy                          /* ダミー */
 {
   display: none !important;
 }
-
-/* [覚書] */
-/* #mainPopupSet menupopup */

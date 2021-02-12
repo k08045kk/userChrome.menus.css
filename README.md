@@ -18,6 +18,11 @@ You can show/hide the menu by add/remov the "/*" at the beginning of the line. Y
 
 
 
+## License
+[MIT](https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE)
+
+
+
 ## Author
 [toshi](https://github.com/k08045kk)
 

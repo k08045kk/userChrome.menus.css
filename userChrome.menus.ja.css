@@ -3,17 +3,21 @@
 /* デフォルト名前空間をXULにする */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* -------------------------------------------------------------------------- *
+/**
  * @name        userChrome.menus.css
  * @description Firefox のコンテキストメニューを userChrome.css を利用して削除する。
  *              メニューの 表示/非表示 は、行頭の "/*" を 追加/削除 することで制御できます。
  *              お好みで変更してください。
+ *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
- * @version     85.20210211
+ * @license     MIT License
+ * @see         https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
+ * @version     85.20210214
  * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
- * -------------------------------------------------------------------------- */
+ */
+/* ========================================================================== */
 /*  #mainPopupSet,                                      /* ポップアップ */
 /* -------------------------------------------------------------------------- */
 /*    #tabContextMenu,                                  /* タブ */
@@ -54,28 +58,18 @@
         #context_closeTab,                              /* [タブを閉じる] */
         #context_closeSelectedTabs,                     /* #[タブを閉じる] 67+ 85-? */
 /*      #context_closeTab + menuseparator,              /* [----------------] 85-? */
-/* -------------------------------------------------------------------------- */
-/*    #sidebarMenu-popup,                               /* サイドバーポップアップ */
-/*      #sidebar-switcher-bookmarks,                    /* [ブックマーク] */
-/*      #sidebar-switcher-history,                      /* [履歴] */
-/*      #sidebar-switcher-tabs,                         /* [同期タブ] */
-/*      #sidebar-switcher-tabs + toolbarseparator,      /* [----------------] */
-/*                                                      /* 拡張機能（サイドバー） */
-/*      #sidebar-extensions-separator,                  /* [----------------] */
-/*      #sidebar-reverse-position,                      /* [サイドバーを右側へ移動][サイドバーを左側へ移動] */
-/*      #sidebar-reverse-position + toolbarseparator,   /* [----------------] */
-/*                                                      /* [サイドバーを閉じる] */
+/*                                                      /* Extensions（タブ） */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* ツールバー */
 /*                                                      /* 拡張機能（ブラウザアクション） */
 /*                                                      /* [----------------] */
-/*      #toolbar-context-menu .customize-context-manageExtension,       /* [拡張機能を管理] */
-        #toolbar-context-menu .customize-context-removeExtension,       /* [拡張機能を削除] */
-        #toolbar-context-menu .customize-context-reportExtension,       /* [拡張機能を報告] */
+/*      #toolbar-context-menu > .customize-context-manageExtension,     /* [拡張機能を管理] */
+        #toolbar-context-menu > .customize-context-removeExtension,     /* [拡張機能を削除] */
+        #toolbar-context-menu > .customize-context-reportExtension,     /* [拡張機能を報告] */
 /*                                                                      /* [----------------] */
-/*      #toolbar-context-menu .customize-context-moveToPanel,           /* [オーバーフローメニューにピン留め] */
+/*      #toolbar-context-menu > .customize-context-moveToPanel,         /* [オーバーフローメニューにピン留め] */
 /*      #toolbar-context-autohide-downloads-button,                     /* [ツールバーでは自動的に非表示にする] */
-/*      #toolbar-context-menu .customize-context-removeFromToolbar,     /* [ツールバーから削除] */
+/*      #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [ツールバーから削除] */
 /*      #toolbar-context-reloadSelectedTab,             /* [選択したタブを再読み込み] */
 /*      #toolbar-context-reloadSelectedTabs,            /* [選択したタブを再読み込み] */
 /*      #toolbar-context-bookmarkSelectedTab,           /* [選択したタブをブックマーク...] */
@@ -84,12 +78,12 @@
 /*      #toolbar-context-undoCloseTab,                  /* [閉じたタブを元に戻す] */
 /*      #toolbar-context-undoCloseTab + menuseparator,  /* [----------------] */
 /*      #toggle_toolbar-menubar,                        /* [メニューバー] */
-/*      #toggle_PersonalToolbar,                        /* [ブックマークツールバー] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /*   [常に表示する] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /*   [表示しない] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /*   [新しいタブのみ表示する] 85+ */
+/*      #toolbar-context-menu > #toggle_PersonalToolbar,/* [ブックマークツールバー] 85+ */
+/*        #toolbar-context-menu > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"], /*   [常に表示する] 85+ */
+/*        #toolbar-context-menu > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],  /*   [表示しない] 85+ */
+/*        #toolbar-context-menu > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],  /*   [新しいタブのみ表示する] 85+ */
 /*      #viewToolbarsMenuSeparator,                     /* [----------------] */
-/*      #toolbar-context-menu .viewCustomizeToolbar,    /* [カスタマイズ...] */
+/*      #toolbar-context-menu > .viewCustomizeToolbar,  /* [カスタマイズ...] */
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* コンテンツエリア */
 /*      #context-navigation,                            /* ナビゲーション */
@@ -105,8 +99,8 @@
 /*      #spell-undo-add-to-dictionary,                  /* [辞書への追加を元に戻す] */
 /*      #spell-suggestions-separator,                   /* [----------------] */
         #context-openlinkincurrent,                     /* [選択した URL を開く] */
-/*      #context-openlinkincontainertab,                /* [リンクを新しい 〇〇 タブで開く] 〇〇=コンテナ名 */
-/*      #context-openlinkintab,                         /* [リンクを新しいタブで開く] */
+        #context-openlinkincontainertab,                /* [リンクを新しい 〇〇 タブで開く] 〇〇=コンテナ名 */
+        #context-openlinkintab,                         /* [リンクを新しいタブで開く] */
         #context-openlinkinusercontext-menu,            /* [リンクを新しいコンテナータブで開く] */
 /*                                                      /*   コンテナ */
         #context-openlink,                              /* [リンクを新しいウィンドウで開く] */
@@ -216,10 +210,11 @@
 /*      #context-sep-viewsource,                        /* [----------------] */
 /*      #context-viewsource,                            /* [ページのソースを表示] */
 /*      #context-viewinfo,                              /* [ページの情報を表示] */
-/*      #spell-separator,                               /* [----------------] */
-/*      #spell-check-enabled,                           /* [スペルチェックを行う] */
-/*      #spell-add-dictionaries-main,                   /* [辞書を追加...] */
-/*      #spell-dictionaries,                            /* [言語] */
+        #spell-separator,                               /* [----------------] */
+        #spell-check-enabled,                           /* [スペルチェックを行う] */
+        #spell-add-dictionaries-main,                   /* [辞書を追加...] */
+        #spell-dictionaries,                            /* [言語] */
+/*                                                      /*   言語 */
 /*        #spell-language-separator,                    /*   [----------------] */
 /*        #spell-add-dictionaries,                      /*   [辞書を追加...] */
 /*      #context-sep-bidi,                              /* [----------------] */
@@ -233,16 +228,16 @@
 /*      #context-media-eme-separator,                   /* [----------------] */
 /*      #context-media-eme-learnmore,                   /* [DRM の詳細...] */
 /*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
-/*                                                      /* 拡張機能（コンテキストメニュー） */
+/*                                                      /* 拡張機能（コンテンツエリア） */
 /* -------------------------------------------------------------------------- */
 /*    #placesContext,                                   /* ブックマーク・履歴 */
-/*      #placesContext_open,                            /* [開く] */
-/*      #placesContext_open\:newtab,                    /* [新しいタブで開く] */
-/*      #placesContext_openContainer\:tabs,             /* [タブですべて開く] */
-/*      #placesContext_openLinks\:tabs,                 /* [タブですべて開く] */
-/*      #placesContext_open\:newwindow,                 /* [新しいウィンドウで開く] */
-/*      #placesContext_open\:newprivatewindow,          /* [新しいプライベートウィンドウで開く] */
-/*      #placesContext_openSeparator,                   /* [----------------] */
+        #placesContext_open,                            /* [開く] */
+        #placesContext_open\:newtab,                    /* [新しいタブで開く] */
+        #placesContext_openContainer\:tabs,             /* [タブですべて開く] */
+        #placesContext_openLinks\:tabs,                 /* [タブですべて開く] */
+        #placesContext_open\:newwindow,                 /* [新しいウィンドウで開く] */
+        #placesContext_open\:newprivatewindow,          /* [新しいプライベートウィンドウで開く] */
+        #placesContext_openSeparator,                   /* [----------------] */
 /*      #placesContext_new\:bookmark,                   /* [新しいブックマーク...] */
 /*      #placesContext_new\:folder,                     /* [新しいフォルダー...] */
 /*      #placesContext_new\:separator,                  /* [新しい区切り] */
@@ -260,10 +255,10 @@
 /*      #placesContext_reload,                          /* #[ライブブックマークを再読み込み] 84-? */
 /*      #placesContext_sortSeparator,                   /* [----------------] 84+? */
 /*      #placesContext_show\:info,                      /* [プロパティ] */
-/*      #toggle_PersonalToolbar,                        /* [ブックマークツールバー] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],  /*   [常に表示する] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"],   /*   [表示しない] 85+ */
-/*        #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"],   /*   [新しいタブのみ表示する] 85+ */
+/*      #placesContext > #toggle_PersonalToolbar,       /* [ブックマークツールバー] 85+ */
+/*        #placesContext > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"],/*   [常に表示する] 85+ */
+/*        #placesContext > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"], /*   [表示しない] 85+ */
+/*        #placesContext > #toggle_PersonalToolbar > menupopup > menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"], /*   [新しいタブのみ表示する] 85+ */
 /*      #show-other-bookmarks_PersonalToolbar,          /* [他のブックマークを表示] 85+ */
 /* -------------------------------------------------------------------------- */
 /*    #pageActionPanel,                                 /* ページアクション */
@@ -274,27 +269,79 @@
 /*      #pageAction-panel-copyURL,                      /* [リンクをコピー] */
         #pageAction-panel-emailLink,                    /* [ページの URL をメールで送信...] */
         #pageAction-panel-sendToDevice,                 /* [n 個のタブを端末へ送信] n=選択タブ数 */
-        #pageAction-panel-shareURL,                     /* [共有] */
+/*      #pageAction-panel-shareURL,                     /* [共有] */
 /*      #pageAction-panel-screenshots_mozilla_org,      /* [スクリーンショットを撮る] */
 /*      #pageAction-panel-builtInSeparator,             /* [----------------] */
 /*                                                      /* 拡張機能（ページアクション） */
 /* -------------------------------------------------------------------------- */
-/* 「〇〇 で検索: "△△"」を削除                                              */
+/*    #pageActionContextMenu,                           /* ページアクションコンテキストメニュー */
+/*                                                      /* [アドレスバーに追加] */
+/*                                                      /* [アドレスバーから削除] */
+/*                                                      /* [アドレスバーに追加] */
+/*                                                      /* [アドレスバーから削除] */
+/*                                                      /* [----------------] */
+/*      #pageActionContextMenu > menuitem[data-l10n-id="page-action-manage-extension"], /* [拡張機能を管理...] */
+        #pageActionContextMenu > menuitem[data-l10n-id="page-action-remove-extension"], /* [拡張機能を削除] */
+/* -------------------------------------------------------------------------- */
+/*    #customizationPanelItemContextMenu,               /* カスタマイズパネルアイテム・オーバーフローメニュー */
+/*      #customizationPanelItemContextMenu > .customize-context-manageExtension,/* [拡張機能を管理] */
+        #customizationPanelItemContextMenu > .customize-context-removeExtension,/* [拡張機能を削除] */
+        #customizationPanelItemContextMenu > .customize-context-reportExtension,/* [拡張機能を報告] */
+/*                                                      /* [----------------] */
+/*      #customizationPanelItemContextMenuPin,          /* [オーバーフローメニューにピン留め] */
+/*      #customizationPanelItemContextMenuUnpin,        /* [オーバーフローメニューからピン留めを外す] */
+/*      #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [ツールバーから削除] */
+/*                                                                              /* [----------------] */
+/*      #customizationPanelItemContextMenu > .viewCustomizeToolbar,             /* [カスタマイズ...] */
+/* ========================================================================== */
+/* 追加機能                                                                   */
+/* ========================================================================== */
+/* [〇〇 で検索: "△△"]を削除                                                */
 /* リンクを右クリックした場合、削除する。                                     */
 /* 選択中のテキストがある場合、削除しない。                                   */
 /* -------------------------------------------------------------------------- */
+/*    #contentAreaContextMenu,                          /* コンテンツエリア */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* [〇〇 で検索: "△△"] */
+/* ========================================================================== */
+/* カスタマイズ機能を削除                                                     */
+/* [オーバーフローメニューにピン留め][オーバーフローメニューからピン留めを外す][ツールバーから削除] */
+/* カスタマイズで代用可能なため、削除する。                                   */
+/* -------------------------------------------------------------------------- */
+/*  #mainPopupSet,                                      /* ポップアップ */
+/*    #toolbar-context-menu,                            /* ツールバー */
+        #toolbar-context-menu > .customize-context-moveToPanel,         /* [オーバーフローメニューにピン留め] */
+        #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [ツールバーから削除] */
+        #toolbar-context-autohide-downloads-button[hidden] ~ #toolbar-context-undoCloseTab[hidden] + menuseparator,  /* [----------------] */
+/*    #customizationPanelItemContextMenu,               /* カスタマイズパネルアイテム・オーバーフローメニュー */
+        #customizationPanelItemContextMenuPin,          /* [オーバーフローメニューにピン留め] */
+        #customizationPanelItemContextMenuUnpin,        /* [オーバーフローメニューからピン留めを外す] */
+        #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [ツールバーから削除] */
+        #customizationPanelItemContextMenuUnpin + menuitem + menuseparator,     /* [----------------] */
+/* ========================================================================== */
+/* 画像ページで区切りが連続する問題対応                                       */
+/* 画像ページ: `https://.../123.jpg`                                          */
+/* 下記を削除したための問題（通常は発生しない）                               */
+/* [名前を付けてページを保存...][ページを Pocket に保存][ページを端末へ送信]  */
+/* -------------------------------------------------------------------------- */
+/*    #contentAreaContextMenu,                          /* コンテンツエリア */
+        #context-selectall[hidden] ~ #context-sep-viewsource,     /* [----------------] */
+/* ========================================================================== */
+/* コンテキストメニュー削除（拡張機能用）による不要な区切りを削除             */
+/* ただし、[要素を調査]を拡張機能の区間に表示する。                           */
+/* -------------------------------------------------------------------------- */
+/*    #contentAreaContextMenu,                          /* コンテンツエリア */
+/*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
 /* -------------------------------------------------------------------------- */
 /* コンテキストメニューを削除（拡張機能用）                                   */
 /* コンテキストメニューのラベル名を直接指定で削除する。                       */
 /* メニューアイテムは、 menuitem で指定する。                                 */
 /* メニューグループは、 menu で指定する。                                     */
 /* -------------------------------------------------------------------------- */
-        menuitem[label="Take a Screenshot"],            /* スクリーンショットを撮る */
-        menuitem[label="スクリーンショットを撮る"],     /* スクリーンショットを撮る */
+/*      menuitem[label="スクリーンショットを撮る"],     /* スクリーンショットを撮る */
+/*      menuitem[label="Take a Screenshot"],            /* スクリーンショットを撮る */
 /*      menuitem[label="NoScript"],                     /* NoScript */
-/*      menu[label="NoScript"],                         /* NoScript */
-/* -------------------------------------------------------------------------- */
+/*      menu[label="Firefox Multi-Account Containers"], /* Firefox Multi-Account Containers */
+/* ========================================================================== */
     #context-dummy-dummy-dummy                          /* ダミー */
 {
   display: none !important;
