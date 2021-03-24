@@ -131,23 +131,24 @@
 /*      #context-video-pictureinpicture,                /* [Picture-in-Picture] 85+? */
 /*      #context-media-sep-commands,                    /* [----------------] */
         #context-reloadimage,                           /* [Reload Image] */
-        #context-viewimage,                             /* [View Image] */
+        #context-viewimage,                             /* [View Image][Open Image in New Tab] 88+ */
         #context-viewvideo,                             /* [View Video] */
+/*      #context-saveimage,                             /* [Save Image As…] 87+ */
+/*      #context-savevideo,                             /* [Save Video As…] 87+ */
+/*      #context-saveaudio,                             /* [Save Audio As…] 87+ */
+/*      #context-video-saveimage,                       /* [Save Snapshot As…] */
         #context-copyimage-contents,                    /* [Copy Image] */
 /*      #context-copyimage,                             /* [Copy Image Location] */
 /*      #context-copyvideourl,                          /* [Copy Video Location] */
 /*      #context-copyaudiourl,                          /* [Copy Audio Location] */
-/*      #context-sep-copyimage,                         /* [----------------] */
-/*      #context-saveimage,                             /* [Save Image As…] */
+/*      #context-sep-copyimage,                         /* [----------------] 87- */
+/*      #context-viewimageinfo,                         /* [View Image Info] 87- */
         #context-sendimage,                             /* [Email Image…] */
-        #context-setDesktopBackground,                  /* [Set As Desktop Background…] */
-/*      #context-viewimageinfo,                         /* [View Image Info] */
-/*      #context-viewimagedesc,                         /* [View Description] */
-/*      #context-savevideo,                             /* [Save Video As…] */
-/*      #context-saveaudio,                             /* [Save Audio As…] */
-/*      #context-video-saveimage,                       /* [Save Snapshot As…] */
         #context-sendvideo,                             /* [Email Video…] */
         #context-sendaudio,                             /* [Email Audio…] */
+/*      #context-viewimagedesc,                         /* [View Description] 87+ */
+        #context-sep-setbackground,                     /* [----------------] 87+ */
+        #context-setDesktopBackground,                  /* [Set As Desktop Background…] 87+ */
 /*      #context-ctp-play,                              /* [Activate this plugin] */
 /*      #context-ctp-hide,                              /* [Hide this plugin] */
 /*      #context-sep-ctp,                               /* [----------------] */

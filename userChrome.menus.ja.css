@@ -132,21 +132,22 @@
         #context-reloadimage,                           /* [画像を再読み込み] */
         #context-viewimage,                             /* [画像だけを表示] */
         #context-viewvideo,                             /* [動画だけを表示] */
+/*      #context-saveimage,                             /* [名前を付けて画像を保存...] 87+ */
+/*      #context-savevideo,                             /* [名前を付けて動画を保存...] 87+ */
+/*      #context-saveaudio,                             /* [名前を付けて音声を保存...] 87+ */
+/*      #context-video-saveimage,                       /* [スナップショットを保存...] 87+ */
         #context-copyimage-contents,                    /* [画像をコピー] */
 /*      #context-copyimage,                             /* [画像の URL をコピー] */
 /*      #context-copyvideourl,                          /* [動画の URL をコピー] */
 /*      #context-copyaudiourl,                          /* [音声の URL をコピー] */
-/*      #context-sep-copyimage,                         /* [----------------] */
-/*      #context-saveimage,                             /* [名前を付けて画像を保存...] */
+/*      #context-sep-copyimage,                         /* [----------------] 87- */
+/*      #context-viewimageinfo,                         /* [画像の情報を表示] 87- */
         #context-sendimage,                             /* [画像の URL をメールで送信...] */
-        #context-setDesktopBackground,                  /* [デスクトップの背景に設定...] */
-/*      #context-viewimageinfo,                         /* [画像の情報を表示] */
-/*      #context-viewimagedesc,                         /* [画像の詳細情報を表示] */
-/*      #context-savevideo,                             /* [名前を付けて動画を保存...] */
-/*      #context-saveaudio,                             /* [名前を付けてオーディオを保存...] */
-/*      #context-video-saveimage,                       /* [スナップショットを保存...] */
         #context-sendvideo,                             /* [動画の URL をメールで送信...] */
         #context-sendaudio,                             /* [音声の URL をメールで送信...] */
+/*      #context-viewimagedesc,                         /* [画像の詳細情報を表示] 87+ */
+        #context-sep-setbackground,                     /* [----------------] 87+ */
+        #context-setDesktopBackground,                  /* [デスクトップの背景に設定...] 87+ */
 /*      #context-ctp-play,                              /* [このプラグインを有効化] */
 /*      #context-ctp-hide,                              /* [このプラグインを非表示] */
 /*      #context-sep-ctp,                               /* [----------------] */
