@@ -11,8 +11,8 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     87.20210324
- * @note        57.20171227 - 初版
+ * @version     87.20210329
+ * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
  */
@@ -48,15 +48,11 @@
 /*                                                      /*   [すべての端末に送信] */
 /*                                                      /*   [端末を管理...] */
         #context_sendTabToDevice + menuseparator,       /* [----------------] */
-        #context_reloadAllTabs,                         /* #[すべてのタブを再読み込み] 78- */
-        #context_bookmarkAllTabs,                       /* #[すべてのタブをブックマーク...] 78- */
 /*      #context_closeTabOptions,                       /* [複数のタブを閉じる] 78+ */
 /*        #context_closeTabsToTheEnd,                   /*   [右側のタブをすべて閉じる] */
 /*        #context_closeOtherTabs,                      /*   [他のタブをすべて閉じる] */
 /*      #context_undoCloseTab,                          /* [閉じたタブを元に戻す] */
         #context_closeTab,                              /* [タブを閉じる] */
-        #context_closeSelectedTabs,                     /* #[タブを閉じる] 67+ 85-? */
-/*      #context_closeTab + menuseparator,              /* [----------------] 85-? */
 /*                                                      /* Extensions（タブ） */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* ツールバー */
@@ -139,8 +135,6 @@
 /*      #context-copyimage,                             /* [画像の URL をコピー] */
 /*      #context-copyvideourl,                          /* [動画の URL をコピー] */
 /*      #context-copyaudiourl,                          /* [音声の URL をコピー] */
-/*      #context-sep-copyimage,                         /* [----------------] 87- */
-/*      #context-viewimageinfo,                         /* [画像の情報を表示] 87- */
         #context-sendimage,                             /* [画像の URL をメールで送信...] */
         #context-sendvideo,                             /* [動画の URL をメールで送信...] */
         #context-sendaudio,                             /* [音声の URL をメールで送信...] */
@@ -206,7 +200,6 @@
 /*        #context-viewframeinfo,                       /*   [フレームの情報を表示] */
         #context-print-selection,                       /* [選択した部分を印刷] 84+ */
 /*      #context-viewpartialsource-selection,           /* [選択した部分のソースを表示] */
-/*      #context-viewpartialsource-mathml,              /* #[MathML のソースを表示] 84-? */
 /*      #context-sep-viewsource,                        /* [----------------] */
 /*      #context-viewsource,                            /* [ページのソースを表示] */
 /*      #context-viewinfo,                              /* [ページの情報を表示] */
@@ -220,8 +213,6 @@
 /*      #context-sep-bidi,                              /* [----------------] */
 /*      #context-bidi-text-direction-toggle,            /* [テキストの記述方向を切り替える] */
 /*      #context-bidi-page-direction-toggle,            /* [ページの記述方向を切り替える] */
-/*      #fill-login-separator,                          /* [----------------] 84-? */
-/*      #fill-login,                                    /* [ログイン情報を入力] 84-? */
 /*      #inspect-separator,                             /* [----------------] */
         #context-inspect-a11y,                          /* [アクセシビリティプロパティを調査] 67+ 82+? */
 /*      #context-inspect,                               /* [要素を調査] 82+? */
@@ -252,7 +243,6 @@
 /*      #placesContext_deleteHost,                      /* [このサイトの履歴を消去] */
 /*      #placesContext_deleteSeparator,                 /* [----------------] */
 /*      #placesContext_sortBy\:name,                    /* [名前順に並べ替える] */
-/*      #placesContext_reload,                          /* #[ライブブックマークを再読み込み] 84-? */
 /*      #placesContext_sortSeparator,                   /* [----------------] 84+? */
 /*      #placesContext_show\:info,                      /* [プロパティ] */
 /*      #placesContext > #toggle_PersonalToolbar,       /* [ブックマークツールバー] 85+ */

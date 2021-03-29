@@ -11,8 +11,8 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     87.20210324
- * @note        57.20171227 - First edition
+ * @version     87.20210329
+ * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
  * @see         https://www.bugbugnow.net/2018/04/firefox-quantum-context-menu-editing.html
@@ -49,15 +49,11 @@
 /*                                                      /*   [Send to All Devices] */
 /*                                                      /*   [Manage Devices…] */
         #context_sendTabToDevice + menuseparator,       /* [----------------] */
-        #context_reloadAllTabs,                         /* #[Reload All Tabs] 78- */
-        #context_bookmarkAllTabs,                       /* #[Bookmark All Tabs…] 78- */
 /*      #context_closeTabOptions,                       /* [Close Multiple Tabs] 78+ */
 /*        #context_closeTabsToTheEnd,                   /*   [Close Tabs to the Right] */
 /*        #context_closeOtherTabs,                      /*   [Close Other Tabs] */
 /*      #context_undoCloseTab,                          /* [Undo Close Tab] */
         #context_closeTab,                              /* [Close Tab] */
-        #context_closeSelectedTabs,                     /* #[Close Tab] 67+ 85-? */
-/*      #context_closeTab + menuseparator,              /* [----------------] 85-? */
 /*                                                      /* Extensions (Tab) */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* Toolbar */
@@ -140,8 +136,6 @@
 /*      #context-copyimage,                             /* [Copy Image Location] */
 /*      #context-copyvideourl,                          /* [Copy Video Location] */
 /*      #context-copyaudiourl,                          /* [Copy Audio Location] */
-/*      #context-sep-copyimage,                         /* [----------------] 87- */
-/*      #context-viewimageinfo,                         /* [View Image Info] 87- */
         #context-sendimage,                             /* [Email Image…] */
         #context-sendvideo,                             /* [Email Video…] */
         #context-sendaudio,                             /* [Email Audio…] */
@@ -207,7 +201,6 @@
 /*        #context-viewframeinfo,                       /*   [View Frame Info] */
         #context-print-selection,                       /* [Print Selection] 84+ */
 /*      #context-viewpartialsource-selection,           /* [View Selection Source] */
-/*      #context-viewpartialsource-mathml,              /* #[View MathML Source] 84-? */
 /*      #context-sep-viewsource,                        /* [----------------] */
 /*      #context-viewsource,                            /* [View Page Source] */
 /*      #context-viewinfo,                              /* [View Page Info] */
@@ -221,8 +214,6 @@
 /*      #context-sep-bidi,                              /* [----------------] */
 /*      #context-bidi-text-direction-toggle,            /* [Switch Text Direction] */
 /*      #context-bidi-page-direction-toggle,            /* [Switch Page Direction] */
-/*      #fill-login-separator,                          /* [----------------] 84-? */
-/*      #fill-login,                                    /* [Fill Login] 84-? */
 /*      #inspect-separator,                             /* [----------------] */
         #context-inspect-a11y,                          /* [Inspect Accessibility Properties] 67+ 82+? */
 /*      #context-inspect,                               /* [Inspect Element] 82+? */
@@ -253,7 +244,6 @@
 /*      #placesContext_deleteHost,                      /* [Forget About This Site] */
 /*      #placesContext_deleteSeparator,                 /* [----------------] */
 /*      #placesContext_sortBy\:name,                    /* [Sort By Name] */
-/*      #placesContext_reload,                          /* #[Reload Live Bookmark] 84-? */
 /*      #placesContext_sortSeparator,                   /* [----------------] 84+? */
 /*      #placesContext_show\:info,                      /* [Properties] */
 /*      #placesContext > #toggle_PersonalToolbar,       /* [Bookmarks Toolbar] 85+ */
