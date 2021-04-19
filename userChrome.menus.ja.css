@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     87.20210329
+ * @version     88.20210420
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -31,10 +31,8 @@
 /*      #context_duplicateTab,                          /* [タブを複製] */
 /*      #context_duplicateTabs,                         /* [タブを複製] 67+ */
 /*      #context_duplicateTabs + menuseparator,         /* [----------------] 67+ */
-        #context_selectAllTabs,                         /* [すべてのタブを選択] 64+ */
         #context_bookmarkSelectedTabs,                  /* [タブをブックマーク...] */
         #context_bookmarkTab,                           /* [タブをブックマーク] 64+ */
-        #context_reopenInContainer,                     /* [コンテナーを開きなおす] */
 /*                                                      /* コンテナー */
         #context_moveTabOptions,                        /* [タブを移動] 64+ 67+ */
           #context_moveToStart,                         /*   [最初のタブへ移動] 67+ */
@@ -47,12 +45,14 @@
 /*                                                      /*   [タブの送信について...] */
 /*                                                      /*   [すべての端末に送信] */
 /*                                                      /*   [端末を管理...] */
-        #context_sendTabToDevice + menuseparator,       /* [----------------] */
+        #context_reopenInContainer,                     /* [コンテナーを開きなおす] 88+ */
+        #context_selectAllTabs,                         /* [すべてのタブを選択] 64+ 88+ */
+        #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
+        #context_closeTab,                              /* [タブを閉じる] 88+ */
 /*      #context_closeTabOptions,                       /* [複数のタブを閉じる] 78+ */
 /*        #context_closeTabsToTheEnd,                   /*   [右側のタブをすべて閉じる] */
 /*        #context_closeOtherTabs,                      /*   [他のタブをすべて閉じる] */
-/*      #context_undoCloseTab,                          /* [閉じたタブを元に戻す] */
-        #context_closeTab,                              /* [タブを閉じる] */
+/*      #context_undoCloseTab,                          /* [閉じたタブを開きなおす] 88+ */
 /*                                                      /* Extensions（タブ） */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* ツールバー */
@@ -89,7 +89,11 @@
 /*        #context-bookmarkpage,                        /*   [このページをブックマーク] */
 /*      #context-sep-navigation,                        /* [----------------] */
 /*      #page-menu-separator,                           /* [----------------] */
-/*      #spell-no-suggestions,                          /* [(修正候補がありません)] */
+/*      #context-viewsource-goToLine,                   /* [指定行へ移動...] 88+ */
+/*      #context-viewsource-wrapLongLines,              /* [長い行を折り返す] 88+ */
+/*      #context-viewsource-highlightSyntax,            /* [構文を強調表示] 88+ */
+/*      #context-sep-viewsource-commands,               /* [----------------] 88+ */
+/*      #spell-no-suggestions,                          /* [修正候補なし] 88+ */
 /*      #spell-add-to-dictionary,                       /* [辞書に追加] */
 /*      #spell-undo-add-to-dictionary,                  /* [辞書への追加を元に戻す] */
 /*      #spell-suggestions-separator,                   /* [----------------] */
@@ -105,7 +109,7 @@
 /*      #context-savelink,                              /* [名前を付けてリンク先を保存...] */
         #context-savelinktopocket,                      /* [リンクを Pocket に保存] */
 /*      #context-copyemail,                             /* [メールアドレスをコピー] */
-/*      #context-copylink,                              /* [リンクの URL をコピー] */
+/*      #context-copylink,                              /* [リンクをコピー] 88+ */
 /*      #context-sep-copylink,                          /* [----------------] */
 /*      #context-media-play,                            /* [再生] */
 /*      #context-media-pause,                           /* [一時停止] */
@@ -118,23 +122,24 @@
 /*        #context-media-playbackrate-150x,             /*   [早送り (1.5倍)] */
 /*        #context-media-playbackrate-200x,             /*   [ウルトラスーパーハイ (2倍)] */
 /*      #context-media-loop,                            /* [連続再生] */
-/*      #context-media-showcontrols,                    /* [コントロールを表示] */
-/*      #context-media-hidecontrols,                    /* [コントロールを隠す] */
-/*      #context-video-fullscreen,                      /* [全画面表示] */
-/*      #context-leave-dom-fullscreen,                  /* [全画面表示モードを終了] */
+/*      #context-leave-dom-fullscreen,                  /* [全画面表示モードを終了] 88+ */
+/*      #context-video-fullscreen,                      /* [全画面表示] 88+ */
+/*      #context-media-hidecontrols,                    /* [コントロールを隠す] 88+ */
+/*      #context-media-showcontrols,                    /* [コントロールを表示] 88+ */
+/*      #context-media-sep-video-commands,              /* [----------------] 88+ */
+        #context-viewvideo,                             /* [動画だけを表示] 88+ */
 /*      #context-video-pictureinpicture,                /* [ピクチャーインピクチャー] 85+? */
 /*      #context-media-sep-commands,                    /* [----------------] */
         #context-reloadimage,                           /* [画像を再読み込み] */
-        #context-viewimage,                             /* [画像だけを表示] */
-        #context-viewvideo,                             /* [動画だけを表示] */
+        #context-viewimage,                             /* [画像を新しいタブで開く] 88+ */
 /*      #context-saveimage,                             /* [名前を付けて画像を保存...] 87+ */
 /*      #context-savevideo,                             /* [名前を付けて動画を保存...] 87+ */
 /*      #context-saveaudio,                             /* [名前を付けて音声を保存...] 87+ */
 /*      #context-video-saveimage,                       /* [スナップショットを保存...] 87+ */
         #context-copyimage-contents,                    /* [画像をコピー] */
-/*      #context-copyimage,                             /* [画像の URL をコピー] */
-/*      #context-copyvideourl,                          /* [動画の URL をコピー] */
-/*      #context-copyaudiourl,                          /* [音声の URL をコピー] */
+/*      #context-copyimage,                             /* [画像のリンクをコピー] 88+ */
+/*      #context-copyvideourl,                          /* [動画のリンクをコピー] 88+ */
+/*      #context-copyaudiourl,                          /* [音声のリンクをコピー] 88+ */
         #context-sendimage,                             /* [画像の URL をメールで送信...] */
         #context-sendvideo,                             /* [動画の URL をメールで送信...] */
         #context-sendaudio,                             /* [音声の URL をメールで送信...] */
@@ -161,21 +166,19 @@
 /*        #fill-login-no-logins,                        /*   [(ログイン情報の候補なし)] 84+? */
 /*        #saved-logins-separator,                      /*   [----------------] 84+? */
 /*        #fill-login-saved-passwords,                  /*   [保存されたログイン情報を表示] 84+? */
-/*      #fill-login-generated-password,                 /* [生成パスワードを使う...] 84+? */
-/*      #fill-login-and-generated-password-separator,   /* [----------------] 84+? */
+/*      #fill-login-generated-password,                 /* [安全なパスワードを生成...] 84+? 88+ */
+/*      #manage-saved-logins,                           /* [ログイン情報を管理...] 88+ */
+/*      #passwordmgr-items-separator,                   /* [----------------] 88+ */
+        #manage-saved-logins[hidden] + #passwordmgr-items-separator,    /* [----------------] 88+ */
 /*      #context-undo,                                  /* [元に戻す] */
 /*      #context-sep-undo,                              /* [----------------] */
 /*      #context-cut,                                   /* [切り取り] */
 /*      #context-copy,                                  /* [コピー] */
 /*      #context-paste,                                 /* [貼り付け] */
 /*      #context-delete,                                /* [削除] */
-/*      #context-sep-paste,                             /* [----------------] */
 /*      #context-selectall,                             /* [すべて選択] */
-/*      #context-sep-selectall,                         /* [----------------] */
-        #context-keywordfield,                          /* [この検索にキーワードを設定...] */
-/*      #context-searchselect,                          /* [〇〇 で検索: "△△"] 〇〇=検索エンジン、△△=選択文字列 */
-/*      #context-searchselect-private,                  /* ??? 84+? */
-        #context-sep-sendlinktodevice,                  /* [----------------] */
+        #context-print-selection,                       /* [選択した部分を印刷] 84+ 88+ */
+/*      #context-sep-sendlinktodevice,                  /* [----------------] */
         #context-sendlinktodevice,                      /* [リンクを端末へ送信] */
 /*                                                      /*   [接続された端末がありません] */
 /*                                                      /*   [----------------] */
@@ -183,7 +186,15 @@
 /*                                                      /*   [タブの送信について...] */
 /*                                                      /*   [すべての端末に送信] */
 /*                                                      /*   [端末を管理...] */
+/*      #context-sep-selectall,                         /* [----------------] 88+ */
+        #context-sep-setbackground:not([hidden]) ~ #context-sep-selectall,      /* [----------------] 88+ */
+        #context-sep-sendlinktodevice:not([hidden]) ~ #context-sep-selectall,   /* [----------------] 88+ */
+        #context-keywordfield,                          /* [この検索にキーワードを設定...] 88+ */
+/*      #context-searchselect,                          /* [〇〇 で検索: "△△"] 〇〇=検索エンジン、△△=選択文字列 88+ */
+/*      #context-searchselect-private,                  /* ??? 84+? 88+ */
 /*      #frame-sep,                                     /* [----------------] */
+        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #frame-sep,   /* [----------------] 88+ */
+        #context-sep-sendlinktodevice:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,       /* [----------------] 88+ */
 /*      #frame,                                         /* [このフレーム] */
 /*        #context-showonlythisframe,                   /*   [このフレームだけを表示] */
           #context-openframeintab,                      /*   [フレームを新しいタブで開く] */
@@ -198,15 +209,12 @@
           #context-printframe + menuseparator,          /*   [----------------] */
 /*        #context-viewframesource,                     /*   [フレームのソースを表示] */
 /*        #context-viewframeinfo,                       /*   [フレームの情報を表示] */
-        #context-print-selection,                       /* [選択した部分を印刷] 84+ */
-/*      #context-viewpartialsource-selection,           /* [選択した部分のソースを表示] */
-/*      #context-sep-viewsource,                        /* [----------------] */
-/*      #context-viewsource,                            /* [ページのソースを表示] */
-/*      #context-viewinfo,                              /* [ページの情報を表示] */
-        #spell-separator,                               /* [----------------] */
-        #spell-check-enabled,                           /* [スペルチェックを行う] */
-        #spell-add-dictionaries-main,                   /* [辞書を追加...] */
-        #spell-dictionaries,                            /* [言語] */
+/*      #context-sep-screenshots,                       /* [----------------] 88+ */
+/*      #context-take-screenshot,                       /* [スクリーンショットを撮影] 88+ */
+/*      #spell-separator,                               /* [----------------] */
+/*      #spell-check-enabled,                           /* [スペルチェックを行う] */
+/*      #spell-add-dictionaries-main,                   /* [辞書を追加...] */
+/*      #spell-dictionaries,                            /* [言語] */
 /*                                                      /*   言語 */
 /*        #spell-language-separator,                    /*   [----------------] */
 /*        #spell-add-dictionaries,                      /*   [辞書を追加...] */
@@ -214,6 +222,8 @@
 /*      #context-bidi-text-direction-toggle,            /* [テキストの記述方向を切り替える] */
 /*      #context-bidi-page-direction-toggle,            /* [ページの記述方向を切り替える] */
 /*      #inspect-separator,                             /* [----------------] */
+        #context-viewpartialsource-selection,           /* [選択した部分のソースを表示] 88+ */
+/*      #context-viewsource,                            /* [ページのソースを表示] 88+ */
         #context-inspect-a11y,                          /* [アクセシビリティプロパティを調査] 67+ 82+? */
 /*      #context-inspect,                               /* [要素を調査] 82+? */
 /*      #context-media-eme-separator,                   /* [----------------] */
@@ -292,6 +302,7 @@
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* コンテンツエリア */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* [〇〇 で検索: "△△"] */
+        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #frame-sep,   /* [----------------] 88+ */
 /* ========================================================================== */
 /* カスタマイズ機能を削除                                                     */
 /* [オーバーフローメニューにピン留め][オーバーフローメニューからピン留めを外す][ツールバーから削除] */
@@ -308,27 +319,17 @@
         #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [ツールバーから削除] */
         #customizationPanelItemContextMenuUnpin + menuitem + menuseparator,     /* [----------------] */
 /* ========================================================================== */
-/* 画像ページで区切りが連続する問題対応                                       */
-/* 画像ページ: `https://.../123.jpg`                                          */
-/* 下記を削除したための問題（通常は発生しない）                               */
-/* [名前を付けてページを保存...][ページを Pocket に保存][ページを端末へ送信]  */
-/* -------------------------------------------------------------------------- */
-/*    #contentAreaContextMenu,                          /* コンテンツエリア */
-        #context-selectall[hidden] ~ #context-sep-viewsource,     /* [----------------] */
-/* ========================================================================== */
 /* コンテキストメニュー削除（拡張機能用）による不要な区切りを削除             */
 /* ただし、[要素を調査]を拡張機能の区間に表示する。                           */
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* コンテンツエリア */
-/*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
+/*      #context-media-eme-separator,                   /* [----------------] 88+ */
 /* -------------------------------------------------------------------------- */
 /* コンテキストメニューを削除（拡張機能用）                                   */
 /* コンテキストメニューのラベル名を直接指定で削除する。                       */
 /* メニューアイテムは、 menuitem で指定する。                                 */
 /* メニューグループは、 menu で指定する。                                     */
 /* -------------------------------------------------------------------------- */
-/*      menuitem[label="スクリーンショットを撮る"],     /* スクリーンショットを撮る */
-/*      menuitem[label="Take a Screenshot"],            /* スクリーンショットを撮る */
 /*      menuitem[label="NoScript"],                     /* NoScript */
 /*      menu[label="Firefox Multi-Account Containers"], /* Firefox Multi-Account Containers */
 /* ========================================================================== */

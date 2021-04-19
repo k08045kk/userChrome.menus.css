@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     87.20210329
+ * @version     88.20210420
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -32,10 +32,8 @@
 /*      #context_duplicateTab,                          /* [Duplicate Tab] */
 /*      #context_duplicateTabs,                         /* [Duplicate Tabs] 67+ */
 /*      #context_duplicateTabs + menuseparator,         /* [----------------] 67+ */
-        #context_selectAllTabs,                         /* [Select All Tabs] 64+ */
         #context_bookmarkSelectedTabs,                  /* [Bookmark Tabs…] */
         #context_bookmarkTab,                           /* [Bookmark Tab] 64+ */
-        #context_reopenInContainer,                     /* [Reopen in Container] */
 /*                                                      /* Container */
         #context_moveTabOptions,                        /* [Move Tab] 64+ 67+ */
           #context_moveToStart,                         /*   [Move to Start] 67+ */
@@ -48,12 +46,14 @@
 /*                                                      /*   [Learn About Sending Tabs…] */
 /*                                                      /*   [Send to All Devices] */
 /*                                                      /*   [Manage Devices…] */
-        #context_sendTabToDevice + menuseparator,       /* [----------------] */
+        #context_reopenInContainer,                     /* [Reopen in Container] 88+ */
+        #context_selectAllTabs,                         /* [Select All Tabs] 64+ 88+ */
+        #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
+        #context_closeTab,                              /* [Close Tab] 88+ */
 /*      #context_closeTabOptions,                       /* [Close Multiple Tabs] 78+ */
 /*        #context_closeTabsToTheEnd,                   /*   [Close Tabs to the Right] */
 /*        #context_closeOtherTabs,                      /*   [Close Other Tabs] */
-/*      #context_undoCloseTab,                          /* [Undo Close Tab] */
-        #context_closeTab,                              /* [Close Tab] */
+/*      #context_undoCloseTab,                          /* [Reopen Closed Tab] 88+ */
 /*                                                      /* Extensions (Tab) */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* Toolbar */
@@ -90,7 +90,11 @@
 /*        #context-bookmarkpage,                        /*   [Bookmark This Page] */
 /*      #context-sep-navigation,                        /* [----------------] */
 /*      #page-menu-separator,                           /* [----------------] */
-/*      #spell-no-suggestions,                          /* [(No Spelling Suggestions)] */
+/*      #context-viewsource-goToLine,                   /* [Go to Line…] 88+ */
+/*      #context-viewsource-wrapLongLines,              /* [Wrap Long Lines] 88+ */
+/*      #context-viewsource-highlightSyntax,            /* [Syntax Highlighting] 88+ */
+/*      #context-sep-viewsource-commands,               /* [----------------] 88+ */
+/*      #spell-no-suggestions,                          /* [No Spelling Suggestions] 88+ */
 /*      #spell-add-to-dictionary,                       /* [Add to Dictionary] */
 /*      #spell-undo-add-to-dictionary,                  /* [Undo Add To Dictionary] */
 /*      #spell-suggestions-separator,                   /* [----------------] */
@@ -106,7 +110,7 @@
 /*      #context-savelink,                              /* [Save Link As…] */
         #context-savelinktopocket,                      /* [Save Link to Pocket] */
 /*      #context-copyemail,                             /* [Copy Email Address] */
-/*      #context-copylink,                              /* [Copy Link Location] */
+/*      #context-copylink,                              /* [Copy Link] 88+ */
 /*      #context-sep-copylink,                          /* [----------------] */
 /*      #context-media-play,                            /* [Play] */
 /*      #context-media-pause,                           /* [Pause] */
@@ -119,23 +123,24 @@
 /*        #context-media-playbackrate-150x,             /*   [Faster (1.5×)] */
 /*        #context-media-playbackrate-200x,             /*   [Ludicrous (2×)] */
 /*      #context-media-loop,                            /* [Loop] */
-/*      #context-media-showcontrols,                    /* [Show Controls] */
-/*      #context-media-hidecontrols,                    /* [Hide Controls] */
-/*      #context-video-fullscreen,                      /* [Full Screen] */
-/*      #context-leave-dom-fullscreen,                  /* [Exit Full Screen] */
+/*      #context-leave-dom-fullscreen,                  /* [Exit Full Screen] 88+ */
+/*      #context-video-fullscreen,                      /* [Full Screen] 88+ */
+/*      #context-media-hidecontrols,                    /* [Hide Controls] 88+ */
+/*      #context-media-showcontrols,                    /* [Show Controls] 88+ */
+        #context-media-sep-video-commands,              /* [----------------] 88+ */
+        #context-viewvideo,                             /* [View Video] 88+ */
 /*      #context-video-pictureinpicture,                /* [Picture-in-Picture] 85+? */
 /*      #context-media-sep-commands,                    /* [----------------] */
         #context-reloadimage,                           /* [Reload Image] */
-        #context-viewimage,                             /* [View Image][Open Image in New Tab] 88+ */
-        #context-viewvideo,                             /* [View Video] */
+        #context-viewimage,                             /* [Open Image in New Tab] 88+ */
 /*      #context-saveimage,                             /* [Save Image As…] 87+ */
 /*      #context-savevideo,                             /* [Save Video As…] 87+ */
 /*      #context-saveaudio,                             /* [Save Audio As…] 87+ */
 /*      #context-video-saveimage,                       /* [Save Snapshot As…] */
         #context-copyimage-contents,                    /* [Copy Image] */
-/*      #context-copyimage,                             /* [Copy Image Location] */
-/*      #context-copyvideourl,                          /* [Copy Video Location] */
-/*      #context-copyaudiourl,                          /* [Copy Audio Location] */
+/*      #context-copyimage,                             /* [Copy Image Link] 88+ */
+/*      #context-copyvideourl,                          /* [Copy Video Link] 88+ */
+/*      #context-copyaudiourl,                          /* [Copy Audio Link] 88+ */
         #context-sendimage,                             /* [Email Image…] */
         #context-sendvideo,                             /* [Email Video…] */
         #context-sendaudio,                             /* [Email Audio…] */
@@ -162,21 +167,19 @@
 /*        #fill-login-no-logins,                        /*   [(No Login Suggestions)] 84+? */
 /*        #saved-logins-separator,                      /*   [----------------] 84+? */
 /*        #fill-login-saved-passwords,                  /*   [View Saved Logins] 84+? */
-/*      #fill-login-generated-password,                 /* [Use Generated Password…] 84+? */
-/*      #fill-login-and-generated-password-separator,   /* [----------------] 84+? */
+/*      #fill-login-generated-password,                 /* [Suggest Strong Password…] 84+? 88+ */
+/*      #manage-saved-logins,                           /* [Manage Logins…] 88+ */
+/*      #passwordmgr-items-separator,                   /* [----------------] 88+ */
+        #manage-saved-logins[hidden] + #passwordmgr-items-separator,    /* [----------------] 88+ */
 /*      #context-undo,                                  /* [Undo] */
 /*      #context-sep-undo,                              /* [----------------] */
 /*      #context-cut,                                   /* [Cut] */
 /*      #context-copy,                                  /* [Copy] */
 /*      #context-paste,                                 /* [Paste] */
 /*      #context-delete,                                /* [Delete] */
-/*      #context-sep-paste,                             /* [----------------] */
 /*      #context-selectall,                             /* [Select All] */
-/*      #context-sep-selectall,                         /* [----------------] */
-        #context-keywordfield,                          /* [Add a Keyword for this Search…] */
-/*      #context-searchselect,                          /* [Search 〇〇 for “△△”] 〇〇=search engine、△△=selected text */
-/*      #context-searchselect-private,                  /* ??? 84+? */
-        #context-sep-sendlinktodevice,                  /* [----------------] */
+        #context-print-selection,                       /* [Print Selection] 84+ 88+ */
+/*      #context-sep-sendlinktodevice,                  /* [----------------] */
         #context-sendlinktodevice,                      /* [Send Link to Device] */
 /*                                                      /*   [Not Signed In] */
 /*                                                      /*   [----------------] */
@@ -184,7 +187,15 @@
 /*                                                      /*   [Learn About Sending Tabs…] */
 /*                                                      /*   [Send to All Devices] */
 /*                                                      /*   [Manage Devices…] */
+/*      #context-sep-selectall,                         /* [----------------] 88+ */
+        #context-sep-setbackground:not([hidden]) ~ #context-sep-selectall,      /* [----------------] 88+ */
+        #context-sep-sendlinktodevice:not([hidden]) ~ #context-sep-selectall,   /* [----------------] 88+ */
+        #context-keywordfield,                          /* [Add a Keyword for this Search…] 88+ */
+/*      #context-searchselect,                          /* [Search 〇〇 for “△△”] 88+ 〇〇=search engine、△△=selected text */
+/*      #context-searchselect-private,                  /* ??? 84+? 88+ */
 /*      #frame-sep,                                     /* [----------------] */
+        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #frame-sep,   /* [----------------] 88+ */
+        #context-sep-sendlinktodevice:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,       /* [----------------] 88+ */
 /*      #frame,                                         /* [This Frame] */
 /*        #context-showonlythisframe,                   /*   [Show Only This Frame] */
           #context-openframeintab,                      /*   [Open Frame in New Tab] */
@@ -199,11 +210,8 @@
           #context-printframe + menuseparator,          /*   [----------------] */
 /*        #context-viewframesource,                     /*   [View Frame Source] */
 /*        #context-viewframeinfo,                       /*   [View Frame Info] */
-        #context-print-selection,                       /* [Print Selection] 84+ */
-/*      #context-viewpartialsource-selection,           /* [View Selection Source] */
-/*      #context-sep-viewsource,                        /* [----------------] */
-/*      #context-viewsource,                            /* [View Page Source] */
-/*      #context-viewinfo,                              /* [View Page Info] */
+/*      #context-sep-screenshots,                       /* [----------------] 88+ */
+/*      #context-take-screenshot,                       /* [Take Screenshot] 88+ */
 /*      #spell-separator,                               /* [----------------] */
 /*      #spell-check-enabled,                           /* [Check Spelling] */
 /*      #spell-add-dictionaries-main,                   /* [Add Dictionaries…] */
@@ -215,6 +223,8 @@
 /*      #context-bidi-text-direction-toggle,            /* [Switch Text Direction] */
 /*      #context-bidi-page-direction-toggle,            /* [Switch Page Direction] */
 /*      #inspect-separator,                             /* [----------------] */
+/*      #context-viewpartialsource-selection,           /* [View Selection Source] 88+ */
+/*      #context-viewsource,                            /* [View Page Source] 88+ */
         #context-inspect-a11y,                          /* [Inspect Accessibility Properties] 67+ 82+? */
 /*      #context-inspect,                               /* [Inspect Element] 82+? */
 /*      #context-media-eme-separator,                   /* [----------------] */
@@ -293,6 +303,7 @@
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* Content area */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* [Search 〇〇 for “△△”] */
+        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #frame-sep,   /* [----------------] 88+ */
 /* ========================================================================== */
 /* Remove customization feature                                               */
 /* [Pin to Overflow Menu][Unpin from Overflow Menu][Remove from Toolbar]      */
@@ -309,26 +320,17 @@
         #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [Remove from Toolbar] */
         #customizationPanelItemContextMenuUnpin + menuitem + menuseparator,     /* [----------------] */
 /* ========================================================================== */
-/* Fixed the problem of consecutive breaks in image page                      */
-/* Image page: `https://.../123.jpg`                                          */
-/* Problem due to removal of the following (usually does not occur)           */
-/* [Save Page As…][Save Page to Pocket][Send Page to Device]                 */
-/* -------------------------------------------------------------------------- */
-/*    #contentAreaContextMenu,                          /* Content area */
-        #context-selectall[hidden] ~ #context-sep-viewsource,     /* [----------------] */
-/* ========================================================================== */
 /* Remove unnecessary delimiters by deleting context menu (for extensions)    */
 /* However, [Inspect Element] should be displayed in the Extensions section.  */
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* Content area */
-/*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
+/*      #context-media-eme-separator,                   /* [----------------] 88+ */
 /* -------------------------------------------------------------------------- */
 /* Remove context menu (for Extensions)                                       */
 /* Remove a label name in the context menu by specifying it directly.         */
 /* The menu item is specified by menuitem.                                    */
 /* The menu group is specified by menu.                                       */
 /* -------------------------------------------------------------------------- */
-/*      menuitem[label="Take a Screenshot"],            /* Take a Screenshot */
 /*      menuitem[label="NoScript"],                     /* NoScript */
 /*      menu[label="Firefox Multi-Account Containers"], /* Firefox Multi-Account Containers */
 /* ========================================================================== */
