@@ -173,6 +173,7 @@
 /*      #passwordmgr-items-separator,                   /* [----------------] 88+ */
         #manage-saved-logins[hidden] + #passwordmgr-items-separator,    /* [----------------] 88+ */
 /*      #context-undo,                                  /* [Undo] */
+/*      #context-redo,                                  /* [Redo] 88+? */
 /*      #context-sep-undo,                              /* [----------------] */
 /*      #context-cut,                                   /* [Cut] */
 /*      #context-copy,                                  /* [Copy] */

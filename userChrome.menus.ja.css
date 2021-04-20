@@ -172,6 +172,7 @@
 /*      #passwordmgr-items-separator,                   /* [----------------] 88+ */
         #manage-saved-logins[hidden] + #passwordmgr-items-separator,    /* [----------------] 88+ */
 /*      #context-undo,                                  /* [元に戻す] */
+/*      #context-redo,                                  /* [やり直し] 88+? */
 /*      #context-sep-undo,                              /* [----------------] */
 /*      #context-cut,                                   /* [切り取り] */
 /*      #context-copy,                                  /* [コピー] */

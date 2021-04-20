@@ -15,7 +15,7 @@
  *                必要に応じてコピー・ペーストして使用してください。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210420
+ * @version     88.20210421
  * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -332,13 +332,13 @@
  * -------------------------------------------------------------------------- */
 /*    #urlbar .textbox-contextmenu,                     /* URLバー（アドレスバー） */
 /*      #urlbar menuitem[data-l10n-id="text-action-undo"],      /* [元に戻す] */
+/*      #urlbar menuitem[data-l10n-id="text-action-redo"],      /* [やり直し] 88+? */
 /*                                                              /* [----------------] */
 /*      #urlbar menuitem[data-l10n-id="text-action-cut"],       /* [切り取り] */
 /*      #urlbar menuitem[data-l10n-id="text-action-copy"],      /* [コピー] */
 /*      #urlbar menuitem[data-l10n-id="text-action-paste"],     /* [貼り付け] */
 /*      #paste-and-go,                                          /* [貼り付けて移動] */
 /*      #urlbar menuitem[data-l10n-id="text-action-delete"],    /* [削除] */
-/*                                                              /* [----------------] */
 /*      #urlbar menuitem[data-l10n-id="text-action-select-all"],/* [すべて選択] */
 
 
@@ -358,13 +358,13 @@
  * -------------------------------------------------------------------------- */
 /*    #searchbar .textbox-contextmenu,                  /* 検索バー */
 /*      #searchbar menuitem[data-l10n-id="text-action-undo"],   /* [元に戻す] */
+/*      #searchbar menuitem[data-l10n-id="text-action-redo"],   /* [やり直し] 88+? */
 /*                                                              /* [----------------] */
 /*      #searchbar menuitem[data-l10n-id="text-action-cut"],    /* [切り取り] */
 /*      #searchbar menuitem[data-l10n-id="text-action-copy"],   /* [コピー] */
 /*      #searchbar menuitem[data-l10n-id="text-action-paste"],  /* [貼り付け] */
 /*      #searchbar .searchbar-paste-and-search,                 /* [貼り付けて検索] */
 /*      #searchbar menuitem[data-l10n-id="text-action-delete"], /* [削除] */
-/*                                                              /* [----------------] */
 /*      #searchbar menuitem[data-l10n-id="text-action-select-all"],     /* [すべて選択] */
 /*                                                              /* [----------------] */
 /*      #searchbar .searchbar-clear-history,                    /* [検索履歴を消去] */
