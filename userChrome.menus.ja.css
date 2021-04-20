@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210420
+ * @version     88.20210421
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -50,6 +50,7 @@
         #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
         #context_closeTab,                              /* [タブを閉じる] 88+ */
 /*      #context_closeTabOptions,                       /* [複数のタブを閉じる] 78+ */
+/*        #context_closeTabsToTheStart,                 /*   [左側のタブをすべて閉じる] 88+ */
 /*        #context_closeTabsToTheEnd,                   /*   [右側のタブをすべて閉じる] */
 /*        #context_closeOtherTabs,                      /*   [他のタブをすべて閉じる] */
 /*      #context_undoCloseTab,                          /* [閉じたタブを開きなおす] 88+ */
@@ -270,7 +271,6 @@
         #pageAction-panel-emailLink,                    /* [ページの URL をメールで送信...] */
         #pageAction-panel-sendToDevice,                 /* [n 個のタブを端末へ送信] n=選択タブ数 */
 /*      #pageAction-panel-shareURL,                     /* [共有] */
-/*      #pageAction-panel-screenshots_mozilla_org,      /* [スクリーンショットを撮る] */
 /*      #pageAction-panel-builtInSeparator,             /* [----------------] */
 /*                                                      /* 拡張機能（ページアクション） */
 /* -------------------------------------------------------------------------- */

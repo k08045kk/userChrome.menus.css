@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210420
+ * @version     88.20210421
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -51,6 +51,7 @@
         #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
         #context_closeTab,                              /* [Close Tab] 88+ */
 /*      #context_closeTabOptions,                       /* [Close Multiple Tabs] 78+ */
+/*        #context_closeTabsToTheStart,                 /*   [Close Tabs to the Left] 88+ */
 /*        #context_closeTabsToTheEnd,                   /*   [Close Tabs to the Right] */
 /*        #context_closeOtherTabs,                      /*   [Close Other Tabs] */
 /*      #context_undoCloseTab,                          /* [Reopen Closed Tab] 88+ */
@@ -271,7 +272,6 @@
         #pageAction-panel-emailLink,                    /* [Email Link…] */
         #pageAction-panel-sendToDevice,                 /* [Send Tab to Device] */
 /*      #pageAction-panel-shareURL,                     /* [Share] */
-/*      #pageAction-panel-screenshots_mozilla_org,      /* [Take a Screenshot] */
 /*      #pageAction-panel-builtInSeparator,             /* [----------------] */
 /*                                                      /* Extensions (Page action) */
 /* -------------------------------------------------------------------------- */
