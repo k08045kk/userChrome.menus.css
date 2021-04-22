@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210421
+ * @version     88.20210422
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -72,7 +72,7 @@
 /*      #toolbar-context-bookmarkSelectedTab,           /* [Bookmark Selected Tab…] */
 /*      #toolbar-context-bookmarkSelectedTabs,          /* [Bookmark Selected Tabs…] */
 /*      #toolbar-context-selectAllTabs,                 /* [Select All Tabs] */
-/*      #toolbar-context-undoCloseTab,                  /* [Undo Close Tab] */
+/*      #toolbar-context-undoCloseTab,                  /* [Reopen Closed Tab] 88+ */
 /*      #toolbar-context-undoCloseTab + menuseparator,  /* [----------------] */
 /*      #toggle_toolbar-menubar,                        /* [Menu Bar] */
 /*      #toolbar-context-menu > #toggle_PersonalToolbar,/* [Bookmarks Toolbar] 85+ */

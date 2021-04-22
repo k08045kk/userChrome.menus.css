@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210421
+ * @version     88.20210422
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -71,7 +71,7 @@
 /*      #toolbar-context-bookmarkSelectedTab,           /* [選択したタブをブックマーク...] */
 /*      #toolbar-context-bookmarkSelectedTabs,          /* [選択したタブをブックマーク...] */
 /*      #toolbar-context-selectAllTabs,                 /* [すべてのタブを選択] */
-/*      #toolbar-context-undoCloseTab,                  /* [閉じたタブを元に戻す] */
+/*      #toolbar-context-undoCloseTab,                  /* [閉じたタブを開きなおす] 88+ */
 /*      #toolbar-context-undoCloseTab + menuseparator,  /* [----------------] */
 /*      #toggle_toolbar-menubar,                        /* [メニューバー] */
 /*      #toolbar-context-menu > #toggle_PersonalToolbar,/* [ブックマークツールバー] 85+ */
