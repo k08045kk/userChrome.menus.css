@@ -5,13 +5,13 @@
 
 /**
  * @name        userChrome.menus.css
- * @description Firefox のコンテキストメニューを userChrome.css を利用して削除する。
+ * @description Firefox のコンテキストメニューを userChrome.css を利用して削除します。
  *              メニューの 表示/非表示 は、行頭の "/*" を 追加/削除 することで制御できます。
  *              お好みで変更してください。
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210422
+ * @version     88.20210430
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -301,6 +301,7 @@
 /* リンクを右クリックした場合、削除する。                                     */
 /* 選択中のテキストがある場合、削除しない。                                   */
 /* -------------------------------------------------------------------------- */
+/*  #mainPopupSet,                                      /* ポップアップ */
 /*    #contentAreaContextMenu,                          /* コンテンツエリア */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* [〇〇 で検索: "△△"] */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #frame-sep,   /* [----------------] 88+ */
@@ -320,9 +321,18 @@
         #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [ツールバーから削除] */
         #customizationPanelItemContextMenuUnpin + menuitem + menuseparator,     /* [----------------] */
 /* ========================================================================== */
+/* ブックマークツールバーメニューの[タブですべて開く]を削除                   */
+/* -------------------------------------------------------------------------- */
+/*  #navigator-toolbox,                                 /* ナビゲーションツールボックス */
+/*    #PlacesToolbar,                                   /* ブックマークツールバー */
+/*                                                      /* ブックマーク */
+        #PlacesToolbar .bookmarks-actions-menuseparator,/* [----------------] */
+        #PlacesToolbar .openintabs-menuitem,            /* [タブですべて開く] */
+/* ========================================================================== */
 /* コンテキストメニュー削除（拡張機能用）による不要な区切りを削除             */
 /* ただし、[要素を調査]を拡張機能の区間に表示する。                           */
 /* -------------------------------------------------------------------------- */
+/*  #mainPopupSet,                                      /* ポップアップ */
 /*    #contentAreaContextMenu,                          /* コンテンツエリア */
 /*      #context-media-eme-separator,                   /* [----------------] 88+ */
 /* -------------------------------------------------------------------------- */

@@ -5,13 +5,13 @@
 
 /**
  * @name        userChrome.menus.css
- * @description Remove the context menu in Firefox using userChrome.css.
+ * @description Use userChrome.css to remove the Firefox context menu.
  *              You can show/hide the menu by add/remov the "/*" at the beginning of the line.
  *              You can change it to your liking.
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210422
+ * @version     88.20210430
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -302,6 +302,7 @@
 /* If you right-click on a link, remove it.                                   */
 /* Do not remove text if it is currently selected.                            */
 /* -------------------------------------------------------------------------- */
+/*  #mainPopupSet,                                      /* Popup */
 /*    #contentAreaContextMenu,                          /* Content area */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #context-searchselect, /* [Search 〇〇 for “△△”] */
         #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #frame-sep,   /* [----------------] 88+ */
@@ -321,9 +322,18 @@
         #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [Remove from Toolbar] */
         #customizationPanelItemContextMenuUnpin + menuitem + menuseparator,     /* [----------------] */
 /* ========================================================================== */
+/* Removed [Open All in Tabs] from the Bookmark Toolbar menu                  */
+/* -------------------------------------------------------------------------- */
+/*  #navigator-toolbox,                                 /* Navigation toolbox */
+/*    #PlacesToolbar,                                   /* Bookmark toolbar */
+/*                                                      /* Bookmark */
+        #PlacesToolbar .bookmarks-actions-menuseparator,/* [----------------] */
+        #PlacesToolbar .openintabs-menuitem,            /* [Open All in Tabs] */
+/* ========================================================================== */
 /* Remove unnecessary delimiters by deleting context menu (for extensions)    */
 /* However, [Inspect Element] should be displayed in the Extensions section.  */
 /* -------------------------------------------------------------------------- */
+/*  #mainPopupSet,                                      /* Popup */
 /*    #contentAreaContextMenu,                          /* Content area */
 /*      #context-media-eme-separator,                   /* [----------------] 88+ */
 /* -------------------------------------------------------------------------- */
