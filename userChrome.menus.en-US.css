@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210430
+ * @version     88.20210502
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -146,8 +146,9 @@
         #context-sendvideo,                             /* [Email Video…] */
         #context-sendaudio,                             /* [Email Audio…] */
 /*      #context-viewimagedesc,                         /* [View Description] 87+ */
-        #context-sep-setbackground,                     /* [----------------] 87+ */
-        #context-setDesktopBackground,                  /* [Set As Desktop Background…] 87+ */
+/*      #context-sep-setbackground,                     /* [----------------] 87+ */
+        #context-reloadimage[hidden] ~ #context-sep-setbackground,      /* [----------------] (#context-setDesktopBackground + Load failure image context menu) */
+        #context-setDesktopBackground,                  /* [Set Image as Desktop Background…] 87+ 88+ */
 /*      #context-ctp-play,                              /* [Activate this plugin] */
 /*      #context-ctp-hide,                              /* [Hide this plugin] */
 /*      #context-sep-ctp,                               /* [----------------] */
@@ -161,8 +162,6 @@
 /*                                                      /*   [Learn About Sending Tabs…] */
 /*                                                      /*   [Send to All Devices] */
 /*                                                      /*   [Manage Devices…] */
-        #context-sep-viewbgimage,                       /* [----------------] */
-        #context-viewbgimage,                           /* [View Background Image] */
 /*      #fill-login,                                    /* [Fill Login] 84+? */
 /*                                                      /*   Login Information 84+? */
 /*        #fill-login-no-logins,                        /*   [(No Login Suggestions)] 84+? */
@@ -171,7 +170,7 @@
 /*      #fill-login-generated-password,                 /* [Suggest Strong Password…] 84+? 88+ */
 /*      #manage-saved-logins,                           /* [Manage Logins…] 88+ */
 /*      #passwordmgr-items-separator,                   /* [----------------] 88+ */
-        #manage-saved-logins[hidden] + #passwordmgr-items-separator,    /* [----------------] 88+ */
+        #manage-saved-logins[hidden] + #passwordmgr-items-separator,    /* [----------------] (#context-sendpagetodevice + page context menu) */
 /*      #context-undo,                                  /* [Undo] */
 /*      #context-redo,                                  /* [Redo] 88+? */
 /*      #context-sep-undo,                              /* [----------------] */
@@ -190,14 +189,13 @@
 /*                                                      /*   [Send to All Devices] */
 /*                                                      /*   [Manage Devices…] */
 /*      #context-sep-selectall,                         /* [----------------] 88+ */
-        #context-sep-setbackground:not([hidden]) ~ #context-sep-selectall,      /* [----------------] 88+ */
-        #context-sep-sendlinktodevice:not([hidden]) ~ #context-sep-selectall,   /* [----------------] 88+ */
+        #context-sep-setbackground:not([hidden]) ~ #context-sep-selectall,      /* [----------------] (#context-sendlinktodevice + image link context menu) */
+        #context-sep-sendlinktodevice:not([hidden]) ~ #context-sep-selectall,   /* [----------------] (#context-sendlinktodevice + select link context menu) */
         #context-keywordfield,                          /* [Add a Keyword for this Search…] 88+ */
 /*      #context-searchselect,                          /* [Search 〇〇 for “△△”] 88+ 〇〇=search engine、△△=selected text */
 /*      #context-searchselect-private,                  /* ??? 84+? 88+ */
 /*      #frame-sep,                                     /* [----------------] */
-        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #frame-sep,   /* [----------------] 88+ */
-        #context-sep-sendlinktodevice:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,       /* [----------------] 88+ */
+        #context-sep-sendlinktodevice:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,       /* [----------------] (#context-keywordfield + input context menu) */
 /*      #frame,                                         /* [This Frame] */
 /*        #context-showonlythisframe,                   /*   [Show Only This Frame] */
           #context-openframeintab,                      /*   [Open Frame in New Tab] */

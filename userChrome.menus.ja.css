@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210430
+ * @version     88.20210502
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -145,8 +145,9 @@
         #context-sendvideo,                             /* [動画の URL をメールで送信...] */
         #context-sendaudio,                             /* [音声の URL をメールで送信...] */
 /*      #context-viewimagedesc,                         /* [画像の詳細情報を表示] 87+ */
-        #context-sep-setbackground,                     /* [----------------] 87+ */
-        #context-setDesktopBackground,                  /* [デスクトップの背景に設定...] 87+ */
+/*      #context-sep-setbackground,                     /* [----------------] 87+ */
+        #context-reloadimage[hidden] ~ #context-sep-setbackground,      /* [----------------] (#context-setDesktopBackground + 読み込み失敗画像コンテキストメニュー用) */
+        #context-setDesktopBackground,                  /* [画像をデスクトップの背景に設定...] 87+ 88+ */
 /*      #context-ctp-play,                              /* [このプラグインを有効化] */
 /*      #context-ctp-hide,                              /* [このプラグインを非表示] */
 /*      #context-sep-ctp,                               /* [----------------] */
@@ -160,8 +161,6 @@
 /*                                                      /*   [タブの送信について...] */
 /*                                                      /*   [すべての端末に送信] */
 /*                                                      /*   [端末を管理...] */
-        #context-sep-viewbgimage,                       /* [----------------] */
-        #context-viewbgimage,                           /* [背景画像だけを表示] */
 /*      #fill-login,                                    /* [ログイン情報を入力] 84+? */
 /*                                                      /*   ログイン情報 84+? */
 /*        #fill-login-no-logins,                        /*   [(ログイン情報の候補なし)] 84+? */
@@ -170,7 +169,7 @@
 /*      #fill-login-generated-password,                 /* [安全なパスワードを生成...] 84+? 88+ */
 /*      #manage-saved-logins,                           /* [ログイン情報を管理...] 88+ */
 /*      #passwordmgr-items-separator,                   /* [----------------] 88+ */
-        #manage-saved-logins[hidden] + #passwordmgr-items-separator,    /* [----------------] 88+ */
+        #manage-saved-logins[hidden] + #passwordmgr-items-separator,    /* [----------------] (#context-sendpagetodevice + ページコンテキストメニュー用) */
 /*      #context-undo,                                  /* [元に戻す] */
 /*      #context-redo,                                  /* [やり直し] 88+? */
 /*      #context-sep-undo,                              /* [----------------] */
@@ -189,14 +188,13 @@
 /*                                                      /*   [すべての端末に送信] */
 /*                                                      /*   [端末を管理...] */
 /*      #context-sep-selectall,                         /* [----------------] 88+ */
-        #context-sep-setbackground:not([hidden]) ~ #context-sep-selectall,      /* [----------------] 88+ */
-        #context-sep-sendlinktodevice:not([hidden]) ~ #context-sep-selectall,   /* [----------------] 88+ */
+        #context-sep-setbackground:not([hidden]) ~ #context-sep-selectall,      /* [----------------] (#context-sendlinktodevice + 画像リンクコンテキストメニュー用) */
+        #context-sep-sendlinktodevice:not([hidden]) ~ #context-sep-selectall,   /* [----------------] (#context-sendlinktodevice + 選択リンクコンテキストメニュー用) */
         #context-keywordfield,                          /* [この検索にキーワードを設定...] 88+ */
 /*      #context-searchselect,                          /* [〇〇 で検索: "△△"] 〇〇=検索エンジン、△△=選択文字列 88+ */
 /*      #context-searchselect-private,                  /* ??? 84+? 88+ */
 /*      #frame-sep,                                     /* [----------------] */
-        #context-copylink:not([hidden]) ~ #context-copy[hidden] ~ #frame-sep,   /* [----------------] 88+ */
-        #context-sep-sendlinktodevice:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,       /* [----------------] 88+ */
+        #context-sep-sendlinktodevice:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,       /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) */
 /*      #frame,                                         /* [このフレーム] */
 /*        #context-showonlythisframe,                   /*   [このフレームだけを表示] */
           #context-openframeintab,                      /*   [フレームを新しいタブで開く] */
