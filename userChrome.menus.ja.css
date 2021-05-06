@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     88.20210502
+ * @version     88.20210506
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -95,6 +95,7 @@
 /*      #context-viewsource-highlightSyntax,            /* [構文を強調表示] 88+ */
 /*      #context-sep-viewsource-commands,               /* [----------------] 88+ */
 /*      #spell-no-suggestions,                          /* [修正候補なし] 88+ */
+/*                                                      /* 修正候補 */
 /*      #spell-add-to-dictionary,                       /* [辞書に追加] */
 /*      #spell-undo-add-to-dictionary,                  /* [辞書への追加を元に戻す] */
 /*      #spell-suggestions-separator,                   /* [----------------] */
