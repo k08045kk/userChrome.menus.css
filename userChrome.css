@@ -2,8 +2,8 @@
 
 
 /* userChrome.menus.css */
-@import "userChrome.menus.ja.css";
-/*@import "userChrome.menus.en-US.css";*/
+@import "userChrome.menus.en-US.css"; /**/
+/*@import "userChrome.menus.ja.css"; /**/
 
 
-/* The rest of the code */
+/* Other codes */
