@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     89.20210601
+ * @version     89.20210602
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -231,7 +231,7 @@
         #context-viewpartialsource-selection,           /* [選択した部分のソースを表示] 88+ */
 /*      #context-viewsource,                            /* [ページのソースを表示] 88+ */
         #context-inspect-a11y,                          /* [アクセシビリティプロパティを調査] 67+ 82+? */
-/*      #context-inspect,                               /* [要素を調査] 82+? */
+/*      #context-inspect,                               /* [調査] 82+? 89+? */
 /*      #context-media-eme-separator,                   /* [----------------] */
 /*      #context-media-eme-learnmore,                   /* [DRM の詳細...] */
 /*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */

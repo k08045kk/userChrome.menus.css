@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     89.20210601
+ * @version     89.20210602
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -231,7 +231,7 @@
         #context-viewpartialsource-selection,           /* [View Selection Source] 88+ */
 /*      #context-viewsource,                            /* [View Page Source] 88+ */
         #context-inspect-a11y,                          /* [Inspect Accessibility Properties] 67+ 82+? */
-/*      #context-inspect,                               /* [Inspect Element] 82+? */
+/*      #context-inspect,                               /* [Inspect] 82+? 89+? */
 /*      #context-media-eme-separator,                   /* [----------------] */
 /*      #context-media-eme-learnmore,                   /* [Learn more about DRM…] */
 /*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
