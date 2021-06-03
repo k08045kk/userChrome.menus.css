@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     89.20210602
+ * @version     89.20210603
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -313,7 +313,7 @@
         #PlacesToolbar .bookmarks-actions-menuseparator,/* [----------------] */
         #PlacesToolbar .openintabs-menuitem,            /* [Open All in Tabs] */
 /* ========================================================================== */
-/* Remove unnecessary separator by deleting context menu (for extensions)     */
+/* Remove unnecessary separator by deleting Context Menu (for Extensions)     */
 /* However, [Inspect Element] should be displayed in the Extensions section.  */
 /* -------------------------------------------------------------------------- */
 /*  #mainPopupSet,                                      /* Popup */
@@ -322,8 +322,8 @@
 /*      menuseparator:first-child,                      /* [----------------] */
 /*      menuseparator:last-child,                       /* [----------------] */
 /* -------------------------------------------------------------------------- */
-/* Remove context menu (for Extensions)                                       */
-/* Remove a label name in the context menu by specifying it directly.         */
+/* Remove Context Menu (for Extensions)                                       */
+/* Remove a label by directly specifying its name in the context menu.        */
 /* The menu item is specified by menuitem.                                    */
 /* The menu group is specified by menu.                                       */
 /* -------------------------------------------------------------------------- */

@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     89.20210602
+ * @version     89.20210603
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -323,7 +323,7 @@
 /*      menuseparator:last-child,                       /* [----------------] */
 /* -------------------------------------------------------------------------- */
 /* コンテキストメニューを削除（拡張機能用）                                   */
-/* コンテキストメニューのラベル名を直接指定で削除する。                       */
+/* コンテキストメニューのラベル名を直接指定して削除する。                     */
 /* メニューアイテムは、 menuitem で指定する。                                 */
 /* メニューグループは、 menu で指定する。                                     */
 /* -------------------------------------------------------------------------- */
