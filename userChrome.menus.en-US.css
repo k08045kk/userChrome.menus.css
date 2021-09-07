@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     89.20210603
+ * @version     92.20210907
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -47,7 +47,7 @@
 /*                                                      /*   [Learn About Sending Tabs…] */
 /*                                                      /*   [Send to All Devices] */
 /*                                                      /*   [Manage Devices…] */
-        #context_shareTabURL,                           /* [Share] 89+ */
+        #tabContextMenu > .share-tab-url-item,          /* [Share] 89+ 92+ */
         #context_reopenInContainer,                     /* [Open in New Container Tab] 88+ 89+ */
 /*                                                      /*   Container */
         #context_selectAllTabs,                         /* [Select All Tabs] 64+ 88+ */

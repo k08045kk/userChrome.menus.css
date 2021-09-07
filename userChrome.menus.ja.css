@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     89.20210603
+ * @version     92.20210907
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -47,7 +47,7 @@
 /*                                                      /*   [タブの送信について...] */
 /*                                                      /*   [すべての端末に送信] */
 /*                                                      /*   [端末を管理...] */
-        #context_shareTabURL,                           /* [共有] 89+ */
+        #tabContextMenu > .share-tab-url-item,          /* [共有] 89+ 92+ */
         #context_reopenInContainer,                     /* [新しいコンテナータブで開く] 88+ 89+ */
 /*                                                      /*   コンテナー */
         #context_selectAllTabs,                         /* [すべてのタブを選択] 64+ 88+ */
