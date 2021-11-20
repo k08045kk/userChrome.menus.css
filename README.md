@@ -17,6 +17,11 @@ You can show/hide the menu by add/remov the "/*" at the beginning of the line. Y
 + [Firefox Quantum context menu editing - バグ取りの日々](https://www.bugbugnow.net/2018/04/firefox-quantum-context-menu-editing.html)
 
 
+### Related
++ [macOS版 Firefox のコンテキストメニューを編集する - バグ取りの日々](https://www.bugbugnow.net/2021/11/edit-contenxtmenu-macos-firefox.html)
+	+ Native context menu support for Firefox for macOS
+
+
 
 ## License
 [MIT](https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE)
