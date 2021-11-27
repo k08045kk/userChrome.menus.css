@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     92.20210907
+ * @version     94.20211127
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -167,7 +167,7 @@
 /*      #context-viewimageinfo,                         /* [画像の情報を表示] 89+ (browser.menu.showViewImageInfo=true) */
 /*      #context-viewimagedesc,                         /* [画像の詳細情報を表示] 87+ */
 /**     #context-sep-setbackground,                     /* [----------------] 87+ */
-        #context-reloadimage[hidden] ~ #context-sep-setbackground,      /* [----------------] (#context-setDesktopBackground + 画像コンテキストメニュー用) */
+        #context-copyimage-contents:not([hidden]) ~ #context-sep-setbackground, /* [----------------] (#context-setDesktopBackground + 画像コンテキストメニュー用) */
         #context-setDesktopBackground,                  /* [画像をデスクトップの背景に設定...] 87+ 88+ */
 /*      #context-ctp-play,                              /* [このプラグインを有効化] */
 /*      #context-ctp-hide,                              /* [このプラグインを非表示] */

@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     92.20210907
+ * @version     94.20211127
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -167,7 +167,7 @@
 /*      #context-viewimageinfo,                         /* [View Image Info] 89+ (browser.menu.showViewImageInfo=true) */
 /*      #context-viewimagedesc,                         /* [View Description] 87+ */
 /**     #context-sep-setbackground,                     /* [----------------] 87+ */
-        #context-reloadimage[hidden] ~ #context-sep-setbackground,      /* [----------------] (#context-setDesktopBackground + Image Context Menu) **/
+        #context-copyimage-contents:not([hidden]) ~ #context-sep-setbackground, /* [----------------] (#context-setDesktopBackground + Image Context Menu) **/
         #context-setDesktopBackground,                  /* [Set Image as Desktop Background…] 87+ 88+ */
 /*      #context-ctp-play,                              /* [Activate this plugin] */
 /*      #context-ctp-hide,                              /* [Hide this plugin] */
