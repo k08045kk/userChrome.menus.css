@@ -15,7 +15,7 @@
  *                必要に応じてコピー・ペーストして使用してください。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     89.20210603
+ * @version     98.20220309
  * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -274,16 +274,18 @@
 /*      #downloadsContextMenu > .downloadPauseMenuItem,         /* [中断] */
 /*      #downloadsContextMenu > .downloadResumeMenuItem,        /* [再開] */
 /*      #downloadsContextMenu > .downloadUnblockMenuItem,       /* [ダウンロードを許可] */
-/*      #downloadsContextMenu > .downloadUseSystemDefaultMenuItem,      /* [システムのビューアーで開く] */
-/*      #downloadsContextMenu > .downloadAlwaysUseSystemDefaultMenuItem,/* [常にシステムのビューアーで開く] */
+/*      #downloadsContextMenu > .downloadUseSystemDefaultMenuItem,      /* [〇〇 で開く] 98+ */
+/*      #downloadsContextMenu > .downloadAlwaysUseSystemDefaultMenuItem,/* [常に 〇〇 で開く] 98+ */
+/*      #downloadsContextMenu > .downloadAlwaysOpenSimilarFilesMenuItem,/* [常に既定のプログラムで開く] 98+ */
 /*      #downloadsContextMenu > .downloadShowMenuItem,          /* [保存フォルダーを開く] */
 /*      #downloadsContextMenu > .downloadCommandsSeparator,     /* [----------------] */
 /*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-go-to-download-page"],     /* [ダウンロード元のページを開く] */
 /*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-copy-download-link"],      /* [ダウンロード元の URL をコピー] */
 /*                                                              /* [----------------] */
+/*      #downloadsContextMenu > .downloadDeleteFileMenuItem,            /* [削除] 98+? */
 /*      #downloadsContextMenu > .downloadRemoveFromHistoryMenuItem,     /* [履歴から削除] */
 /*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-clear-list"],      /* [プレビューパネルの消去] */
-/*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-clear-downloads"], /* [ダウンロードの消去] */
+/*      #downloadsContextMenu > menuitem[data-l10n-id="downloads-cmd-clear-downloads"], /* [ダウンロード履歴をすべて消去] 98+? */
 
 
 /* -------------------------------------------------------------------------- *
@@ -353,6 +355,8 @@
 /*      #paste-and-go,                                  /* [貼り付けて移動] */
 /*      「テキストボック」参照                          /* [削除] */
 /*      「テキストボック」参照                          /* [すべて選択] */
+/*      #urlbar .textbox-contextmenu > .menuseparator-add-engine,   /* [----------------] */
+/*      #urlbar .textbox-contextmenu > .context-menu-add-engine,    /* ["〇〇" を追加] */
 
 
 /* -------------------------------------------------------------------------- *
