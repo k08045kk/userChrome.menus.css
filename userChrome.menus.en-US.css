@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     94.20211127
+ * @version     98.20220309
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -110,14 +110,15 @@
 /*      #spell-add-to-dictionary,                       /* [Add to Dictionary] */
 /*      #spell-undo-add-to-dictionary,                  /* [Undo Add To Dictionary] */
 /*      #spell-suggestions-separator,                   /* [----------------] */
-        #context-openlinkincurrent,                     /* [Open Link] */
+/*      #context-openlinkincurrent,                     /* [Open Link] */
         #context-openlinkincontainertab,                /* [Open Link in New 〇〇 Tab] 〇〇=Container */
         #context-openlinkintab,                         /* [Open Link in New Tab] */
         #context-openlinkinusercontext-menu,            /* [Open Link in New Container Tab] */
 /*                                                      /*   Container */
         #context-openlink,                              /* [Open Link in New Window] */
         #context-openlinkprivate,                       /* [Open Link in New Private Window] */
-        #context-sep-open,                              /* [----------------] */
+/**     #context-sep-open,                              /* [----------------] */
+        #context-openlinkincurrent[hidden] ~ #context-sep-open, /* [----------------] */
         #context-bookmarklink,                          /* [Bookmark This Link] */
 /*      #context-savelink,                              /* [Save Link As…] */
         #context-savelinktopocket,                      /* [Save Link to Pocket] */

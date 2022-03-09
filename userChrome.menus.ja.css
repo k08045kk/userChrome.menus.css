@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     94.20211127
+ * @version     98.20220309
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -110,14 +110,15 @@
 /*      #spell-add-to-dictionary,                       /* [辞書に追加] */
 /*      #spell-undo-add-to-dictionary,                  /* [辞書への追加を元に戻す] */
 /*      #spell-suggestions-separator,                   /* [----------------] */
-        #context-openlinkincurrent,                     /* [選択した URL を開く] */
+/*      #context-openlinkincurrent,                     /* [選択した URL を開く] */
         #context-openlinkincontainertab,                /* [リンクを新しい 〇〇 タブで開く] 〇〇=コンテナ名 */
         #context-openlinkintab,                         /* [リンクを新しいタブで開く] */
         #context-openlinkinusercontext-menu,            /* [リンクを新しいコンテナータブで開く] */
 /*                                                      /*   コンテナ */
         #context-openlink,                              /* [リンクを新しいウィンドウで開く] */
         #context-openlinkprivate,                       /* [リンクを新しいプライベートウィンドウで開く] */
-        #context-sep-open,                              /* [----------------] */
+/**     #context-sep-open,                              /* [----------------] */
+        #context-openlinkincurrent[hidden] ~ #context-sep-open, /* [----------------] */
         #context-bookmarklink,                          /* [このリンクをブックマーク] */
 /*      #context-savelink,                              /* [名前を付けてリンク先を保存...] */
         #context-savelinktopocket,                      /* [リンクを Pocket に保存] */
