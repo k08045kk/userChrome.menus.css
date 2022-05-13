@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     98.20220309
+ * @version     100.20220513
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -243,6 +243,8 @@
         #placesContext_openBookmarkContainer\:tabs,     /* [Open All Bookmarks] 89+ */
         #placesContext_openBookmarkLinks\:tabs,         /* [Open All Bookmarks] 89+ */
         #placesContext_open\:newtab,                    /* [Open in New Tab] 89+ */
+        #placesContext_open\:newcontainertab,           /* [Open in New Container Tab] 100+? */
+/*                                                      /*   Container */
         #placesContext_openContainer\:tabs,             /* [Open All in Tabs] 89+ */
         #placesContext_openLinks\:tabs,                 /* [Open All in Tabs] 89+ */
         #placesContext_open\:newwindow,                 /* [Open in New Window] 89+ */

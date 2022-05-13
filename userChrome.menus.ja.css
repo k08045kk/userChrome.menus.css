@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     98.20220309
+ * @version     100.20220513
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -243,6 +243,8 @@
         #placesContext_openBookmarkContainer\:tabs,     /* [ブックマークをすべて開く] 89+ */
         #placesContext_openBookmarkLinks\:tabs,         /* [ブックマークをすべて開く] 89+ */
         #placesContext_open\:newtab,                    /* [新しいタブで開く] 89+ */
+        #placesContext_open\:newcontainertab,           /* [新しいコンテナータブで開く] 100+? */
+/*                                                      /*   コンテナー */
         #placesContext_openContainer\:tabs,             /* [タブですべて開く] 89+ */
         #placesContext_openLinks\:tabs,                 /* [タブですべて開く] 89+ */
         #placesContext_open\:newwindow,                 /* [新しいウィンドウで開く] 89+ */
