@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     100.20220513
+ * @version     106.20221019
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -71,6 +71,8 @@
         #toolbar-context-menu > .customize-context-moveToPanel,         /* [オーバーフローメニューにピン留め] */
 /*      #toolbar-context-autohide-downloads-button,                     /* [履歴がないときはボタンを非表示にする] 88+? */
         #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [ツールバーから削除] */
+/*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] */
+/*      #toolbar-context-always-open-downloads-panel,   /* [ダウンロード開始時にパネルを表示する] */
         #toolbar-context-openANewTab,                   /* [新しいタブ] 89+ */
         #toolbarNavigatorItemsMenuSeparator,            /* [----------------] 89+ */
 /*      #toolbar-context-reloadSelectedTab,             /* [選択したタブを再読み込み] */
@@ -79,8 +81,8 @@
 /*      #toolbar-context-bookmarkSelectedTabs,          /* [選択したタブをブックマーク...] */
 /*      #toolbar-context-selectAllTabs,                 /* [すべてのタブを選択] */
 /*      #toolbar-context-undoCloseTab,                  /* [閉じたタブを開きなおす] 88+ */
-/**     #toolbar-context-undoCloseTab + menuseparator,  /* [----------------] */
-        #toolbar-context-autohide-downloads-button[hidden] ~ #toolbar-context-undoCloseTab[hidden] + menuseparator,     /* [----------------] **/
+/**     #toolbarItemsMenuSeparator,                     /* [----------------] */
+        #toolbar-context-autohide-downloads-button[hidden] ~ #toolbar-context-undoCloseTab[hidden] + #toolbarItemsMenuSeparator,     /* [----------------] **/
 /**     #toggle_toolbar-menubar,                        /* [メニューバー] */
 /**     #toolbar-context-menu > #toggle_PersonalToolbar,/* [ブックマークツールバー] 85+ */
 /*                                                      /*   [常に表示する] 85+ */
@@ -90,7 +92,10 @@
         .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #toggle_toolbar-menubar,   /* [メニューバー] **/
         .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #toggle_PersonalToolbar,   /* [ブックマークツールバー] **/
         .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #viewToolbarsMenuSeparator,/* [----------------] **/
-/*      #toolbar-context-menu > .viewCustomizeToolbar,  /* [カスタマイズ...] */
+/*      #toolbar-context-menu > .viewCustomizeToolbar,  /* [ツールバーをカスタマイズ...] */
+/*      #toolbar-context-menu > menuseparator[contexttype="fullscreen"],        /* [----------------] */
+/*      #toolbar-context-menu > .fullscreen-context-autohide,                   /* [ツールバーを隠す] */
+/*      #toolbar-context-menu > menuitem[data-l10n-id="full-screen-exit"],      /* [全画面表示モードを終了] */
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* コンテンツエリア */
 /*      #context-navigation,                            /* ナビゲーション */

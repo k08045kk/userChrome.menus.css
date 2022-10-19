@@ -11,9 +11,10 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     102.20220923
+ * @version     102.20221019
  * @since       57.20171227 - First edition
  * @since       102.20220923 - Branch from userChrome.menus.en-US.css v100.20220513
+ * @since       102.20221019 - fix Corresponding to omission of update of toolbar (#13)
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
  * @see         https://www.bugbugnow.net/2018/04/firefox-quantum-context-menu-editing.html
@@ -72,6 +73,8 @@
         #toolbar-context-menu > .customize-context-moveToPanel,         /* [Pin to Overflow Menu] */
 /*      #toolbar-context-autohide-downloads-button,                     /* [Hide Button When Empty] 88+? */
         #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [Remove from Toolbar] */
+/*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] */
+/*      #toolbar-context-always-open-downloads-panel,   /* [Show Panel When Download Begins] */
         #toolbar-context-openANewTab,                   /* [New Tab] 89+ */
         #toolbarNavigatorItemsMenuSeparator,            /* [----------------] 89+ */
 /*      #toolbar-context-reloadSelectedTab,             /* [Reload Selected Tab] */
@@ -80,8 +83,8 @@
 /*      #toolbar-context-bookmarkSelectedTabs,          /* [Bookmark Selected Tabs…] */
 /*      #toolbar-context-selectAllTabs,                 /* [Select All Tabs] */
 /*      #toolbar-context-undoCloseTab,                  /* [Reopen Closed Tab] 88+ */
-/**     #toolbar-context-undoCloseTab + menuseparator,  /* [----------------] */
-        #toolbar-context-autohide-downloads-button[hidden] ~ #toolbar-context-undoCloseTab[hidden] + menuseparator,     /* [----------------] **/
+/**     #toolbarItemsMenuSeparator,                     /* [----------------] */
+        #toolbar-context-autohide-downloads-button[hidden] ~ #toolbar-context-undoCloseTab[hidden] + #toolbarItemsMenuSeparator,     /* [----------------] **/
 /**     #toggle_toolbar-menubar,                        /* [Menu Bar] */
 /**     #toolbar-context-menu > #toggle_PersonalToolbar,/* [Bookmarks Toolbar] 85+ */
 /*                                                      /*   [Always Show] 85+ */
@@ -92,6 +95,9 @@
         .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #toggle_PersonalToolbar,   /* [Bookmarks Toolbar] **/
         .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #viewToolbarsMenuSeparator,/* [----------------] **/
 /*      #toolbar-context-menu > .viewCustomizeToolbar,  /* [Customize Toolbar…] 88+? */
+/*      #toolbar-context-menu > menuseparator[contexttype="fullscreen"],        /* [----------------] */
+/*      #toolbar-context-menu > .fullscreen-context-autohide,                   /* [Hide Toolbars] */
+/*      #toolbar-context-menu > menuitem[data-l10n-id="full-screen-exit"],      /* [Exit Full Screen Mode] */
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* Content Area */
 /*      #context-navigation,                            /* Navigation */
