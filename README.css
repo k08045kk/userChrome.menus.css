@@ -15,7 +15,7 @@
  *                必要に応じてコピー・ペーストして使用してください。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     98.20220309
+ * @version     106.20221031
  * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -427,6 +427,7 @@
 /*    menuitem[data-l10n-id="text-action-cut"],         /* [切り取り] */
 /*    menuitem[data-l10n-id="text-action-copy"],        /* [コピー] */
 /*    menuitem[data-l10n-id="text-action-paste"],       /* [貼り付け] */
+/*    menuitem[data-l10n-id="text-action-paste-no-formatting"],         /* [書式なしで貼り付け] 106+? */
 /*    menuitem[data-l10n-id="text-action-delete"],      /* [削除] */
 /*    menuitem[data-l10n-id="text-action-delete"] + menuseparator,      /* [----------------] */
 /*    menuitem[data-l10n-id="text-action-select-all"],  /* [すべて選択] */

@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     106.20221019
+ * @version     106.20221031
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -198,6 +198,7 @@
 /*      #context-cut,                                   /* [切り取り] */
 /*      #context-copy,                                  /* [コピー] */
 /*      #context-paste,                                 /* [貼り付け] */
+/*      #context-paste-no-formatting,                   /* [書式なしで貼り付け] 106+? */
 /*      #context-delete,                                /* [削除] */
 /*      #context-selectall,                             /* [すべて選択] */
         #context-print-selection,                       /* [選択した部分を印刷] 84+ 88+ */
