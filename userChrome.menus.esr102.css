@@ -11,10 +11,11 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     102.20221019
+ * @version     102.20221125
  * @since       57.20171227 - First edition
  * @since       102.20220923 - Branch from userChrome.menus.en-US.css v100.20220513
  * @since       102.20221019 - fix Corresponding to omission of update of toolbar (#13)
+ * @since       102.20221125 - fix Lack of support for PiP nameplate change  (#15)
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
  * @see         https://www.bugbugnow.net/2018/04/firefox-quantum-context-menu-editing.html
@@ -157,7 +158,7 @@
 /*      #context-media-showcontrols,                    /* [Show Controls] 88+ */
 /*      #context-media-sep-video-commands,              /* [----------------] 88+ */
         #context-viewvideo,                             /* [Open Video in New Tab] 88+ 89+ */
-/*      #context-video-pictureinpicture,                /* [Picture-in-Picture] 85+? */
+/*      #context-video-pictureinpicture,                /* [Watch in Picture-in-Picture] 85+? 102+? */
 /*      #context-media-sep-commands,                    /* [----------------] */
         #context-reloadimage,                           /* [Reload Image] */
         #context-viewimage,                             /* [Open Image in New Tab] 88+ */

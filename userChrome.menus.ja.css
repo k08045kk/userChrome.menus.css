@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     106.20221031
+ * @version     107.20221125
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -155,7 +155,7 @@
 /*      #context-media-showcontrols,                    /* [コントロールを表示] 88+ */
 /*      #context-media-sep-video-commands,              /* [----------------] 88+ */
         #context-viewvideo,                             /* [動画を新しいタブで開く] 88+ 89+ */
-/*      #context-video-pictureinpicture,                /* [ピクチャーインピクチャー] 85+? */
+/*      #context-video-pictureinpicture,                /* [ピクチャーインピクチャーで視聴] 85+? 102+? */
 /*      #context-media-sep-commands,                    /* [----------------] */
         #context-reloadimage,                           /* [画像を再読み込み] */
         #context-viewimage,                             /* [画像を新しいタブで開く] 88+ */
