@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     107.20221125
+ * @version     109.20230119
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -71,6 +71,7 @@
         #toolbar-context-menu > .customize-context-moveToPanel,         /* [Pin to Overflow Menu] */
 /*      #toolbar-context-autohide-downloads-button,                     /* [Hide Button When Empty] 88+? */
         #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [Remove from Toolbar] */
+/*      #toolbar-context-menu > .customize-context-pinToToolbar,        /* [Pin to Toolbar] 109+ */
 /*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] */
 /*      #toolbar-context-always-open-downloads-panel,   /* [Show Panel When Download Begins] */
         #toolbar-context-openANewTab,                   /* [New Tab] 89+ */

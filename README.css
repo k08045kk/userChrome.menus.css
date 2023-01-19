@@ -15,7 +15,7 @@
  *                必要に応じてコピー・ペーストして使用してください。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     106.20221031
+ * @version     109.20230119
  * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -319,6 +319,20 @@
 /*      「テキストボック」参照                          /* [すべて選択] */
 /*      「テキストボック」参照                          /* [----------------] */
 /*      #syncedTabsRefreshFilter,                       /* ??? (空白の謎メニューを表示する。不具合) */
+
+
+/* -------------------------------------------------------------------------- *
+ * 拡張機能ボタン（Unified Extensions Button）
+ * 表示方法：一覧の項目を右クリック
+ * 備考：109+対応
+ * see https://support.mozilla.org/en-US/kb/unified-extensions
+ * -------------------------------------------------------------------------- */
+/*    #unified-extensions-context-menu,                 /*  */
+/*      menuitem[data-l10n-id="unified-extensions-context-menu-pin-to-toolbar"],    /* [ツールバーにピン留め] */
+/*      menuitem[data-l10n-id="unified-extensions-context-menu-pin-to-toolbar"] + menuseparator,  /* [----------------] */
+/*      menuitem[data-l10n-id="unified-extensions-context-menu-manage-extension"],  /* [拡張機能を管理] */
+/*      menuitem[data-l10n-id="unified-extensions-context-menu-remove-extension"],  /* [拡張機能を削除] */
+/*      menuitem[data-l10n-id="unified-extensions-context-menu-report-extension"],  /* [拡張機能を報告] */
 
 
 

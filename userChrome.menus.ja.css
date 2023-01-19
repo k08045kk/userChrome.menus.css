@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     107.20221125
+ * @version     109.20230119
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -71,6 +71,7 @@
         #toolbar-context-menu > .customize-context-moveToPanel,         /* [オーバーフローメニューにピン留め] */
 /*      #toolbar-context-autohide-downloads-button,                     /* [履歴がないときはボタンを非表示にする] 88+? */
         #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [ツールバーから削除] */
+/*      #toolbar-context-menu > .customize-context-pinToToolbar,        /* [ツールバーにピン留め] 109+ */
 /*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] */
 /*      #toolbar-context-always-open-downloads-panel,   /* [ダウンロード開始時にパネルを表示する] */
         #toolbar-context-openANewTab,                   /* [新しいタブ] 89+ */
