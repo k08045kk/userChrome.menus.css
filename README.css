@@ -327,7 +327,7 @@
  * 備考：109+対応
  * see https://support.mozilla.org/en-US/kb/unified-extensions
  * -------------------------------------------------------------------------- */
-/*    #unified-extensions-context-menu,                 /*  */
+/*    #unified-extensions-context-menu,                 /* 拡張機能ボタン */
 /*      menuitem[data-l10n-id="unified-extensions-context-menu-pin-to-toolbar"],    /* [ツールバーにピン留め] */
 /*      menuitem[data-l10n-id="unified-extensions-context-menu-pin-to-toolbar"] + menuseparator,  /* [----------------] */
 /*      menuitem[data-l10n-id="unified-extensions-context-menu-manage-extension"],  /* [拡張機能を管理] */
