@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     109.20230119
+ * @version     110.20230216
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -106,7 +106,6 @@
 /*        #context-stop,                                /*   [Stop] */
 /*        #context-bookmarkpage,                        /*   [Bookmark This Page] */
 /*      #context-sep-navigation,                        /* [----------------] */
-/*      #page-menu-separator,                           /* [----------------] */
 /*      #context-viewsource-goToLine,                   /* [Go to Line…] 88+ */
 /*      #context-viewsource-wrapLongLines,              /* [Wrap Long Lines] 88+ */
 /*      #context-viewsource-highlightSyntax,            /* [Syntax Highlighting] 88+ */
@@ -129,6 +128,7 @@
 /*      #context-savelink,                              /* [Save Link As…] */
         #context-savelinktopocket,                      /* [Save Link to Pocket] */
 /*      #context-copyemail,                             /* [Copy Email Address] */
+/*      #context-copyphone,                             /* [Copy Phone Number] 110+? */
 /*      #context-copylink,                              /* [Copy Link] 88+ */
         #context-sendlinktodevice,                      /* [Send Link to Device] 89+ */
 /*                                                      /*   [Not Signed In] */
@@ -143,12 +143,12 @@
 /*      #context-media-pause,                           /* [Pause] */
 /*      #context-media-mute,                            /* [Mute] */
 /*      #context-media-unmute,                          /* [Unmute] */
-/*      #context-media-playbackrate,                    /* [Play Speed] */
-/*        #context-media-playbackrate-050x,             /*   [Slow (0.5×)] */
-/*        #context-media-playbackrate-100x,             /*   [Normal] */
-/*        #context-media-playbackrate-125x,             /*   [Fast (1.25×)] */
-/*        #context-media-playbackrate-150x,             /*   [Faster (1.5×)] */
-/*        #context-media-playbackrate-200x,             /*   [Ludicrous (2×)] */
+/*      #context-media-playbackrate,                    /* [Speed] 110+? */
+/*        #context-media-playbackrate-050x,             /*   [0.5×] 110+? */
+/*        #context-media-playbackrate-100x,             /*   [1.0×] 110+? */
+/*        #context-media-playbackrate-125x,             /*   [1.25×] 110+? */
+/*        #context-media-playbackrate-150x,             /*   [1.5×] 110+? */
+/*        #context-media-playbackrate-200x,             /*   [2×] 110+? */
 /*      #context-media-loop,                            /* [Loop] */
 /*      #context-leave-dom-fullscreen,                  /* [Exit Full Screen] 88+ */
 /*      #context-video-fullscreen,                      /* [Full Screen] 88+ */
@@ -161,9 +161,9 @@
         #context-reloadimage,                           /* [Reload Image] */
         #context-viewimage,                             /* [Open Image in New Tab] 88+ */
 /*      #context-saveimage,                             /* [Save Image As…] 87+ */
+/*      #context-video-saveimage,                       /* [Save Snapshot As…] 110+ */
 /*      #context-savevideo,                             /* [Save Video As…] 87+ */
 /*      #context-saveaudio,                             /* [Save Audio As…] 87+ */
-/*      #context-video-saveimage,                       /* [Save Snapshot As…] */
         #context-copyimage-contents,                    /* [Copy Image] */
 /*      #context-copyimage,                             /* [Copy Image Link] 88+ */
 /*      #context-copyvideourl,                          /* [Copy Video Link] 88+ */
@@ -171,6 +171,7 @@
         #context-sendimage,                             /* [Email Image…] */
         #context-sendvideo,                             /* [Email Video…] */
         #context-sendaudio,                             /* [Email Audio…] */
+/*      #context-imagetext,                             /* [Copy Text From Image] 110+? */
 /*      #context-viewimageinfo,                         /* [View Image Info] 89+ (browser.menu.showViewImageInfo=true) */
 /*      #context-viewimagedesc,                         /* [View Description] 87+ */
 /**     #context-sep-setbackground,                     /* [----------------] 87+ */
@@ -202,8 +203,20 @@
 /*      #context-paste-no-formatting,                   /* [Paste Without Formatting] 106+? */
 /*      #context-delete,                                /* [Delete] */
 /*      #context-selectall,                             /* [Select All] */
+/*      #context-reveal-password,                       /* [Reveal Password] 110+? */
         #context-print-selection,                       /* [Print Selection] 84+ 88+ */
 /*      #context-sep-selectall,                         /* [----------------] 88+ */
+/*      #context-pdfjs-undo,                            /* [Undo] 110+? */
+/*      #context-pdfjs-redo,                            /* [Redo] 110+? */
+/*      #context-sep-pdfjs,                             /* [----------------] 110+? */
+/*      #context-pdfjs-cut,                             /* [Cut] 110+? */
+/*      #context-pdfjs-copy,                            /* [Copy] 110+? */
+/*      #context-pdfjs-paste,                           /* [Paste] 110+? */
+/*      #context-pdfjs-delete,                          /* [Delete] 110+? */
+/*      #context-pdfjs-selectall,                       /* [Select All] 110+? */
+/*      #context-sep-pdfjs-selectall,                   /* [----------------] 110+? */
+/*      #context-take-screenshot,                       /* [Take Screenshot] 88+ 110+ */
+/*      #context-sep-screenshots,                       /* [----------------] 88+ 110+ */
         #context-keywordfield,                          /* [Add a Keyword for this Search…] 88+ */
 /**     #context-searchselect,                          /* [Search 〇〇 for “△△”] 88+ 〇〇=search engine、△△=selected text */
 /*      #context-searchselect-private,                  /* ??? 84+? 88+ */
@@ -221,10 +234,10 @@
           #context-saveframe + menuseparator,           /*   [----------------] */
           #context-printframe,                          /*   [Print Frame…] */
           #context-printframe + menuseparator,          /*   [----------------] */
+          #context-take-frame-screenshot,               /*   [Take Screenshot] 110+? */
+          #context-sep-frame-screenshot,                /*   [----------------] 110+? */
 /*        #context-viewframesource,                     /*   [View Frame Source] */
 /*        #context-viewframeinfo,                       /*   [View Frame Info] */
-/*      #context-sep-screenshots,                       /* [----------------] 88+ */
-/*      #context-take-screenshot,                       /* [Take Screenshot] 88+ */
 /*      #spell-separator,                               /* [----------------] */
 /*      #spell-check-enabled,                           /* [Check Spelling] */
 /*      #spell-add-dictionaries-main,                   /* [Add Dictionaries…] */
@@ -290,19 +303,8 @@
 /*    #pageActionContextMenu,                           /* Page Action Context Menu */
 /*                                                      /* Extension (Page Action) */
 /*                                                      /* [----------------] */
-/*      #pageActionContextMenu > menuitem[data-l10n-id="page-action-manage-extension"], /* [Manage Extension…] */
-        #pageActionContextMenu > menuitem[data-l10n-id="page-action-remove-extension"], /* [Remove Extension] */
-/* -------------------------------------------------------------------------- */
-/*    #customizationPanelItemContextMenu,               /* Customization Panel Item・Overflow Menu */
-/*      #customizationPanelItemContextMenu > .customize-context-manageExtension,/* [Manage Extension] */
-        #customizationPanelItemContextMenu > .customize-context-removeExtension,/* [Remove Extension] */
-        #customizationPanelItemContextMenu > .customize-context-reportExtension,/* [Report Extension] */
-/*                                                      /* [----------------] */
-        #customizationPanelItemContextMenuPin,          /* [Pin to Overflow Menu] */
-        #customizationPanelItemContextMenuUnpin,        /* [Unpin from Overflow Menu] */
-        #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [Remove from Toolbar] */
-        #customizationPanelItemContextMenuUnpin + menuitem + menuseparator,     /* [----------------] */
-/*      #customizationPanelItemContextMenu > .viewCustomizeToolbar,             /* [Customize…] */
+/*      #pageActionContextMenu > menuitem[data-l10n-id="page-action-manage-extension2"],/* [Manage Extension…] 110+ */
+        #pageActionContextMenu > menuitem[data-l10n-id="page-action-remove-extension2"],/* [Remove Extension] 110+ */
 /* ========================================================================== */
 /* Additional Features                                                        */
 /* ========================================================================== */

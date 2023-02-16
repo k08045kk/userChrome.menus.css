@@ -15,7 +15,7 @@
  *                必要に応じてコピー・ペーストして使用してください。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     109.20230119
+ * @version     110.20230216
  * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -254,13 +254,22 @@
  * [拡張機能を削除] - `about:addons` の […] > [削除] で代用可能
  * [拡張機能を報告] - `about:addons` の […] > [報告] で代用可能
  * [ツールバーから削除] - カスタマイズで代用可能
+ * [備考] - Unified Extension Button により機能の陳腐化（109）
  * -------------------------------------------------------------------------- */
 /*    #customizationPaletteItemContextMenu,             /* カスタマイズパレット */
 /*                                                      /* [ツールバーに追加] */
 /*                                                      /* [オーバーフローメニューに追加] */
 /* -------------------------------------------------------------------------- */
-/*    #customizationPanelItemContextMenu,               /* カスタマイズパネルアイテム */
-/*      userChrome.menus.css 参照 */
+/*    #customizationPanelItemContextMenu,               /* カスタマイズパネルアイテム・オーバーフローメニュー */
+/*      #customizationPanelItemContextMenu > .customize-context-manageExtension,/* [拡張機能を管理] */
+        #customizationPanelItemContextMenu > .customize-context-removeExtension,/* [拡張機能を削除] */
+        #customizationPanelItemContextMenu > .customize-context-reportExtension,/* [拡張機能を報告] */
+/*                                                      /* [----------------] */
+        #customizationPanelItemContextMenuPin,          /* [オーバーフローメニューにピン留め] */
+        #customizationPanelItemContextMenuUnpin,        /* [オーバーフローメニューからピン留めを外す] */
+        #customizationPanelItemContextMenu > .customize-context-removeFromPanel,/* [ツールバーから削除] */
+        #customizationPanelItemContextMenuUnpin + menuitem + menuseparator,     /* [----------------] */
+/*      #customizationPanelItemContextMenu > .viewCustomizeToolbar,             /* [カスタマイズ...] */
 /* -------------------------------------------------------------------------- */
 /*    #customizationPanelContextMenu,                   /* カスタマイズパネル */
 /*                                                      /* [その他の項目を追加...] */
