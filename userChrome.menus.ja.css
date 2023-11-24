@@ -130,7 +130,7 @@
 /*      #context-copyemail,                             /* [メールアドレスをコピー] */
 /*      #context-copyphone,                             /* [電話番号をコピー] 110+? */
 /*      #context-copylink,                              /* [リンクをコピー] 88+ */
-        #context-stripOnShareLink,                     /* [サイト追跡を除いたリンクをコピー] 120+ */
+        #context-stripOnShareLink,                      /* [サイト追跡を除いたリンクをコピー] 120+ */
         #context-sendlinktodevice,                      /* [リンクを端末へ送信] 89+ */
 /*                                                      /*   [接続された端末がありません] */
 /*                                                      /*   [----------------] */
