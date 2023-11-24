@@ -15,7 +15,7 @@
  *                必要に応じてコピー・ペーストして使用してください。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     116.20230829
+ * @version     120.20231124
  * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -376,6 +376,7 @@
 /*      「テキストボック」参照                          /* [----------------] */
 /*      「テキストボック」参照                          /* [切り取り] */
 /*      「テキストボック」参照                          /* [コピー] */
+/*      #strip-on-share,                                /* [サイト追跡を除いてコピー] 120+ */
 /*      「テキストボック」参照                          /* [貼り付け] */
 /*      #paste-and-go,                                  /* [貼り付けて移動] */
 /*      「テキストボック」参照                          /* [削除] */
