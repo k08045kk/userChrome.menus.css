@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     120.20231124
+ * @version     123.20240314
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -63,6 +63,11 @@
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* Toolbar */
 /*                                                      /* Extensions (Browser Action) */
+/*                                                      /* [----------------] */
+/*                                                      /* [Extension Can’t Read and Change Data] 123+? */
+/*                                                      /* [Extension Can Read and Change Data:] 123+? */
+/*                                                      /* [Only When Clicked] 123+? */
+/*                                                      /* [Always Allow on 〇〇] 〇〇=domain 123+? */
 /*                                                      /* [----------------] */
 /*      #toolbar-context-menu > .customize-context-manageExtension,     /* [Manage Extension] */
         #toolbar-context-menu > .customize-context-removeExtension,     /* [Remove Extension] */

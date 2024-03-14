@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     120.20231124
+ * @version     123.20240314
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -63,6 +63,11 @@
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* ツールバー */
 /*                                                      /* 拡張機能（ブラウザアクション） */
+/*                                                      /* [----------------] */
+/*                                                      /* [データの取得と変更はできません] 123+? */
+/*                                                      /* [データの取得と変更を許可する条件:] 123+? */
+/*                                                      /* [クリック時のみ] 123+? */
+/*                                                      /* [〇〇 サイト上] 〇〇=ドメイン名 123+? */
 /*                                                      /* [----------------] */
 /*      #toolbar-context-menu > .customize-context-manageExtension,     /* [拡張機能を管理] */
         #toolbar-context-menu > .customize-context-removeExtension,     /* [拡張機能を削除] */
