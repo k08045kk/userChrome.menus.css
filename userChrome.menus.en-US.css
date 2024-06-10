@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     123.20240314
+ * @version     127.20240611
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -53,6 +53,7 @@
         #context_selectAllTabs,                         /* [Select All Tabs] 64+ 88+ */
         #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
         #context_closeTab,                              /* [Close Tab] 88+ */
+/*      #context_closeDuplicateTabs,                    /* [Close Duplicate Tabs] 127+ */
 /*      #context_closeTabOptions,                       /* [Close Multiple Tabs] 78+ */
 /*        #context_closeTabsToTheStart,                 /*   [Close Tabs to the Left] 88+ */
 /*        #context_closeTabsToTheEnd,                   /*   [Close Tabs to the Right] */
