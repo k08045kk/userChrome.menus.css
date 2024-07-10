@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     127.20240611
+ * @version     128.20240710
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -227,6 +227,8 @@
         #context-keywordfield,                          /* [Add a Keyword for this Search…] 88+ */
 /**     #context-searchselect,                          /* [Search 〇〇 for “△△”] 88+ 〇〇=search engine、△△=selected text */
 /*      #context-searchselect-private,                  /* ??? 84+? 88+ */
+        #context-translate-selection,                   /* [Translate Selection to 〇〇][Translate Link Text to 〇〇] 128+ */
+/*      #context-ask-chat,                              /* ??? 128+? */
 /**     #frame-sep,                                     /* [----------------] */
         #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,      /* [----------------] (#context-keywordfield + Input Context Menu) **/
 /*      #frame,                                         /* [This Frame] */

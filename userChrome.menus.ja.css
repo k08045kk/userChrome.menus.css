@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     127.20240611
+ * @version     128.20240710
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -227,6 +227,8 @@
         #context-keywordfield,                          /* [この検索にキーワードを設定...] 88+ */
 /**     #context-searchselect,                          /* [〇〇 で検索: "△△"] 〇〇=検索エンジン、△△=選択文字列 88+ */
 /*      #context-searchselect-private,                  /* ??? 84+? 88+ */
+        #context-translate-selection,                   /* [選択範囲を 〇〇 に翻訳][リンクテキストを 〇〇 に翻訳] 128+ */
+/*      #context-ask-chat,                              /* ??? 128+? */
 /**     #frame-sep,                                     /* [----------------] */
         #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,      /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) */
 /*      #frame,                                         /* [このフレーム] */
