@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     128.20240710
+ * @version     132.20241102
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -21,10 +21,18 @@
 /*  #mainPopupSet,                                      /* ポップアップ */
 /* -------------------------------------------------------------------------- */
 /*    #tabContextMenu,                                  /* タブ */
-        #context_openANewTab,                           /* [新しいタブ] 89+ */
+        #context_openANewTab,                           /* [新しいタブを右隣に開く] 89+ 132+? */
+        #context_addTabToNewGroup,                      /* [Add Tab to New Group] 132+ */
+        #context_moveTabToNewGroup,                     /* [Add Tab to New Group] 133+? */
+        #context_moveTabToGroup,                        /* [Add Tab to Group] 133+? */
+        #context_ungroupTab,                            /* [Remove from Group] 133+? */
         #context_openANewTab + menuseparator,           /* [----------------] 89+ */
+        #context_addTabToNewGroup + menuseparator,      /* [----------------] 89+ 132+ */
+        #context_ungroupTab + menuseparator,            /* [----------------] 89+ 133+? */
         #context_reloadTab,                             /* [タブを再読み込み] */
         #context_reloadSelectedTabs,                    /* [タブを再読み込み] 67+ */
+        #context_playTab,                               /* [タブのメディアを再生] 132+? */
+        #context_playSelectedTabs,                      /* [タブのメディアを再生] 132+? */
         #context_toggleMuteTab,                         /* [タブをミュート] */
         #context_toggleMuteSelectedTabs,                /* [タブをミュート] 67+ */
 /*      #context_pinTab,                                /* [タブをピン留め] */
@@ -52,14 +60,17 @@
 /*                                                      /*   コンテナー */
         #context_selectAllTabs,                         /* [すべてのタブを選択] 64+ 88+ */
         #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
-        #context_closeTab,                              /* [タブを閉じる] 88+ */
+        #context_closeTab,                              /* [n 個のタブを閉じる] 88+ 132+? */
 /*      #context_closeDuplicateTabs,                    /* [重複タブを閉じる] 127+ */
 /*      #context_closeTabOptions,                       /* [複数のタブを閉じる] 78+ */
 /*        #context_closeTabsToTheStart,                 /*   [左側のタブをすべて閉じる] 88+ */
 /*        #context_closeTabsToTheEnd,                   /*   [右側のタブをすべて閉じる] */
 /*        #context_closeOtherTabs,                      /*   [他のタブをすべて閉じる] */
 /*      #context_undoCloseTab,                          /* [閉じたタブを開きなおす] 88+ */
-/*      #context_undoCloseTab + menuseparator,          /* [----------------] 88+ */
+/*      #context_undoCloseTab + menuseparator,          /* [----------------] 132+? */
+/*      #context_fullscreenAutohide,                    /* [ツールバーを隠す] 132+? */
+/*      #context_fullscreenExit,                        /* [全画面表示モードを終了] 132+? */
+/*      #context_fullscreenExit + menuseparator,        /* [----------------] 88+ 132+? */
 /*                                                      /* Extensions（タブ） */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* ツールバー */

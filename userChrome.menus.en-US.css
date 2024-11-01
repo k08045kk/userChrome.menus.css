@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     128.20240710
+ * @version     132.20241102
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -21,10 +21,18 @@
 /*  #mainPopupSet,                                      /* Popup */
 /* -------------------------------------------------------------------------- */
 /*    #tabContextMenu,                                  /* Tab */
-        #context_openANewTab,                           /* [New Tab] 89+ */
+        #context_openANewTab,                           /* [New Tab to Right] 89+ 132+? */
+        #context_addTabToNewGroup,                      /* [Add Tab to New Group] 132+ */
+        #context_moveTabToNewGroup,                     /* [Add Tab to New Group] 133+? */
+        #context_moveTabToGroup,                        /* [Add Tab to Group] 133+? */
+        #context_ungroupTab,                            /* [Remove from Group] 133+? */
         #context_openANewTab + menuseparator,           /* [----------------] 89+ */
+        #context_addTabToNewGroup + menuseparator,      /* [----------------] 89+ 132+ */
+        #context_ungroupTab + menuseparator,            /* [----------------] 89+ 133+? */
         #context_reloadTab,                             /* [Reload Tab] */
         #context_reloadSelectedTabs,                    /* [Reload Tabs] 67+ */
+        #context_playTab,                               /* [Play Tab] 132+? */
+        #context_playSelectedTabs,                      /* [Play Tabs] 132+? */
         #context_toggleMuteTab,                         /* [Mute Tab] */
         #context_toggleMuteSelectedTabs,                /* [Mute Tabs] 67+ */
 /*      #context_pinTab,                                /* [Pin Tab] */
@@ -52,14 +60,17 @@
 /*                                                      /*   Container */
         #context_selectAllTabs,                         /* [Select All Tabs] 64+ 88+ */
         #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
-        #context_closeTab,                              /* [Close Tab] 88+ */
+        #context_closeTab,                              /* [Close Tab][Close n Tabs] 88+ 132+? */
 /*      #context_closeDuplicateTabs,                    /* [Close Duplicate Tabs] 127+ */
 /*      #context_closeTabOptions,                       /* [Close Multiple Tabs] 78+ */
 /*        #context_closeTabsToTheStart,                 /*   [Close Tabs to the Left] 88+ */
 /*        #context_closeTabsToTheEnd,                   /*   [Close Tabs to the Right] */
 /*        #context_closeOtherTabs,                      /*   [Close Other Tabs] */
 /*      #context_undoCloseTab,                          /* [Reopen Closed Tab] 88+ */
-/*      #context_undoCloseTab + menuseparator,          /* [----------------] 88+ */
+/*      #context_undoCloseTab + menuseparator,          /* [----------------] 132+? */
+/*      #context_fullscreenAutohide,                    /* [Hide Toolbars] 132+? */
+/*      #context_fullscreenExit,                        /* [Exit Full Screen Mode] 132+? */
+/*      #context_fullscreenExit + menuseparator,        /* [----------------] 88+ 132+? */
 /*                                                      /* Extensions (Tab) */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* Toolbar */
