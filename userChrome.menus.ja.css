@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     132.20241102
+ * @version     138.20250514
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -22,13 +22,16 @@
 /* -------------------------------------------------------------------------- */
 /*    #tabContextMenu,                                  /* タブ */
         #context_openANewTab,                           /* [新しいタブを右隣に開く] 89+ 132+? */
-        #context_addTabToNewGroup,                      /* [Add Tab to New Group] 132+ */
-        #context_moveTabToNewGroup,                     /* [Add Tab to New Group] 133+? */
-        #context_moveTabToGroup,                        /* [Add Tab to Group] 133+? */
-        #context_ungroupTab,                            /* [Remove from Group] 133+? */
-        #context_openANewTab + menuseparator,           /* [----------------] 89+ */
-        #context_addTabToNewGroup + menuseparator,      /* [----------------] 89+ 132+ */
-        #context_ungroupTab + menuseparator,            /* [----------------] 89+ 133+? */
+        #context_addTabToNewGroup,                      /* [Add Tab to New Group] 132-133 delete? */
+/*      #context_moveTabToNewGroup,                     /* [このタブを新しいグループに追加][選択したタブを新しいグループに追加] 133+? 138+ */
+/*      #context_moveTabToGroup,                        /* [このタブをグループに追加][選択したタブをグループに追加] 133+? 138+ */
+/*        #context_moveTabToGroupNewGroup,              /* [新しいグループ] 138+ */
+/*        #context_moveTabToGroupNewGroup + menuseparator,  /* [----------------] 138+ */
+/*                                                      /* 新しいグループ 138+ */
+/*      #context_ungroupTab,                            /* [このタブを各グループから除外][選択したタブを各グループから除外] 133+? 138+ */
+        #context_openANewTab + menuseparator,           /* [----------------] 89-132 delete? */
+        #context_addTabToNewGroup + menuseparator,      /* [----------------] 89+ 132-133 delete? */
+/*      #context_ungroupTab + menuseparator,            /* [----------------] 89+ 133+? */
         #context_reloadTab,                             /* [タブを再読み込み] */
         #context_reloadSelectedTabs,                    /* [タブを再読み込み] 67+ */
         #context_playTab,                               /* [タブのメディアを再生] 132+? */
