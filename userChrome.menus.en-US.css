@@ -92,9 +92,13 @@
 /*      #toolbar-context-selectAllTabs,                 /* [Select All Tabs] */
 /*      #toolbar-context-undoCloseTab,                  /* [Reopen Closed Tab] 88+ */
 /*      #toolbarItemsMenuSeparator,                     /* [----------------] */
-        #toolbar-context-customize-sidebar,             /* [Customize Sidebar] 138+? */
-        #toolbar-context-toggle-vertical-tabs,          /* [Turn on Vertical Tabs][Turn off Vertical Tabs] 138+? */
-        #sidebarRevampSeparator,                        /* [----------------] 138+? */
+/*      #toolbar-context-customize-sidebar,             /* [Customize Sidebar] 138+? */
+/**     #toolbar-context-toggle-vertical-tabs,          /* [Turn on Vertical Tabs][Turn off Vertical Tabs] 138+? */
+/**     #sidebarRevampSeparator,                        /* [----------------] 138+? */
+        #toolbar-context-customize-sidebar[hidden] ~ 
+        #toolbar-context-toggle-vertical-tabs,          /* [Turn on Vertical Tabs][Turn off Vertical Tabs] 138+? **/
+        #toolbar-context-customize-sidebar[hidden] ~ 
+        #sidebarRevampSeparator,                        /* [----------------] 138+? **/
         #toolbar-context-move-to-panel,                 /* [Pin to Overflow Menu] 138+? */
 /*      #toolbar-context-autohide-downloads-button,     /* [Hide Button When Empty] 88+? 138+? */
         #toolbar-context-remove-from-toolbar,           /* [Remove from Toolbar] 138+? */

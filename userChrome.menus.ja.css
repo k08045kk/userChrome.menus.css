@@ -92,9 +92,13 @@
 /*      #toolbar-context-selectAllTabs,                 /* [すべてのタブを選択] */
 /*      #toolbar-context-undoCloseTab,                  /* [閉じたタブを開きなおす] 88+ */
 /*      #toolbarItemsMenuSeparator,                     /* [----------------] */
-        #toolbar-context-customize-sidebar,             /* [サイドバーをカスタマイズ] 138+? */
-        #toolbar-context-toggle-vertical-tabs,          /* [垂直タブをオンにする][垂直タブをオフにする] 138+? */
-        #sidebarRevampSeparator,                        /* [----------------] 138+? */
+/*      #toolbar-context-customize-sidebar,             /* [サイドバーをカスタマイズ] 138+? */
+/**     #toolbar-context-toggle-vertical-tabs,          /* [垂直タブをオンにする][垂直タブをオフにする] 138+? */
+/**     #sidebarRevampSeparator,                        /* [----------------] 138+? */
+        #toolbar-context-customize-sidebar[hidden] ~ 
+        #toolbar-context-toggle-vertical-tabs,          /* [垂直タブをオンにする][垂直タブをオフにする] 138+? **/
+        #toolbar-context-customize-sidebar[hidden] ~ 
+        #sidebarRevampSeparator,                        /* [----------------] 138+? **/
         #toolbar-context-move-to-panel,                 /* [オーバーフローメニューにピン留め] 138+? */
 /*      #toolbar-context-autohide-downloads-button,     /* [履歴がないときはボタンを非表示にする] 88+? 138+? */
         #toolbar-context-remove-from-toolbar,           /* [ツールバーから削除] 138+? */
