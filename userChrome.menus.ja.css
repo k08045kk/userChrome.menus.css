@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     138.20250514
+ * @version     138.20250523
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -26,7 +26,7 @@
 /*      #context_moveTabToNewGroup,                     /* [このタブを新しいグループに追加][選択したタブを新しいグループに追加] 133+? 138+ */
 /*      #context_moveTabToGroup,                        /* [このタブをグループに追加][選択したタブをグループに追加] 133+? 138+ */
 /*        #context_moveTabToGroupNewGroup,              /* [新しいグループ] 138+ */
-/*        #context_moveTabToGroupNewGroup + menuseparator,  /* [----------------] 138+ */
+/*        #context_moveTabToGroupNewGroup+menuseparator,/* [----------------] 138+ */
 /*                                                      /* 新しいグループ 138+ */
 /*      #context_ungroupTab,                            /* [このタブを各グループから除外][選択したタブを各グループから除外] 133+? 138+ */
         #context_openANewTab + menuseparator,           /* [----------------] 89-132 delete? */
@@ -74,49 +74,53 @@
 /*      #context_fullscreenAutohide,                    /* [ツールバーを隠す] 132+? */
 /*      #context_fullscreenExit,                        /* [全画面表示モードを終了] 132+? */
 /*      #context_fullscreenExit + menuseparator,        /* [----------------] 88+ 132+? */
-/*                                                      /* Extensions（タブ） */
+/*                                                      /* 拡張機能（タブ） */
 /* -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* ツールバー */
 /*                                                      /* 拡張機能（ブラウザアクション） */
 /*                                                      /* [----------------] */
-/*                                                      /* [データの取得と変更はできません] 123+? */
-/*                                                      /* [データの取得と変更を許可する条件:] 123+? */
-/*                                                      /* [クリック時のみ] 123+? */
-/*                                                      /* [〇〇 サイト上] 〇〇=ドメイン名 123+? */
-/*                                                      /* [----------------] */
-/*      #toolbar-context-menu > .customize-context-manageExtension,     /* [拡張機能を管理] */
-        #toolbar-context-menu > .customize-context-removeExtension,     /* [拡張機能を削除] */
-        #toolbar-context-menu > .customize-context-reportExtension,     /* [拡張機能を報告] */
-/*                                                                      /* [----------------] */
-        #toolbar-context-menu > .customize-context-moveToPanel,         /* [オーバーフローメニューにピン留め] */
-/*      #toolbar-context-autohide-downloads-button,                     /* [履歴がないときはボタンを非表示にする] 88+? */
-        #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [ツールバーから削除] */
-/*      #toolbar-context-menu > .customize-context-pinToToolbar,        /* [ツールバーにピン留め] 109+ */
-/*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] */
-/*      #toolbar-context-always-open-downloads-panel,   /* [ダウンロード開始時にパネルを表示する] */
-        #toolbar-context-openANewTab,                   /* [新しいタブ] 89+ */
-        #toolbarNavigatorItemsMenuSeparator,            /* [----------------] 89+ */
+/*      #toolbar-context-manage-extension,              /* [拡張機能を管理] 138+? */
+        #toolbar-context-remove-extension,              /* [拡張機能を削除] 138+? */
+        #toolbar-context-report-extension,              /* [拡張機能を報告] 138+? */
+/*      #toolbar-context-report-extension+menuseparator,/* [----------------] 138+? */
+/*      #toolbar-context-openANewTab,                   /* [新しいタブ] 89+ 138+? */
+/*      #toolbarNavigatorItemsMenuSeparator,            /* [----------------] 89+ 138+? */
 /*      #toolbar-context-reloadSelectedTab,             /* [選択したタブを再読み込み] */
 /*      #toolbar-context-reloadSelectedTabs,            /* [選択したタブを再読み込み] */
 /*      #toolbar-context-bookmarkSelectedTab,           /* [選択したタブをブックマーク...] */
 /*      #toolbar-context-bookmarkSelectedTabs,          /* [選択したタブをブックマーク...] */
 /*      #toolbar-context-selectAllTabs,                 /* [すべてのタブを選択] */
 /*      #toolbar-context-undoCloseTab,                  /* [閉じたタブを開きなおす] 88+ */
-/**     #toolbarItemsMenuSeparator,                     /* [----------------] */
-        #toolbar-context-autohide-downloads-button[hidden] ~ #toolbar-context-undoCloseTab[hidden] + #toolbarItemsMenuSeparator,     /* [----------------] **/
+/*      #toolbarItemsMenuSeparator,                     /* [----------------] */
+        #toolbar-context-customize-sidebar,             /* [サイドバーをカスタマイズ] 138+? */
+        #toolbar-context-toggle-vertical-tabs,          /* [垂直タブをオンにする][垂直タブをオフにする] 138+? */
+        #sidebarRevampSeparator,                        /* [----------------] 138+? */
+        #toolbar-context-move-to-panel,                 /* [オーバーフローメニューにピン留め] 138+? */
+/*      #toolbar-context-autohide-downloads-button,     /* [履歴がないときはボタンを非表示にする] 88+? 138+? */
+        #toolbar-context-remove-from-toolbar,           /* [ツールバーから削除] 138+? */
+/**     #toolbar-context-pin-to-toolbar,                /* [ツールバーにピン留め] 109+ 138+? */
+/*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] 138+? */
+/*      #toolbar-context-always-open-downloads-panel,   /* [ダウンロード開始時にパネルを表示する] 138+? */
+/**     #customizationMenuSeparator,                    /* [----------------] 138+? */
+        #toolbar-context-pin-to-toolbar[hidden] ~ 
+        #toolbar-context-always-open-downloads-panel[hidden] ~ 
+        #customizationMenuSeparator,                    /* [----------------] 138+? **/
 /**     #toggle_toolbar-menubar,                        /* [メニューバー] */
 /**     #toolbar-context-menu > #toggle_PersonalToolbar,/* [ブックマークツールバー] 85+ */
 /*                                                      /*   [常に表示する] 85+ */
-/*                                                      /*   [表示しない] 85+ */
-/*                                                      /*   [新しいタブのみ表示する] 85+ */
+/*                                                      /*   [新しいタブのみ表示する] 85+ 138+? */
+/*                                                      /*   [表示しない] 85+ 138+? */
 /**     #viewToolbarsMenuSeparator,                     /* [----------------] */
-        .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #toggle_toolbar-menubar,   /* [メニューバー] **/
-        .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #toggle_PersonalToolbar,   /* [ブックマークツールバー] **/
-        .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #viewToolbarsMenuSeparator,/* [----------------] **/
-/*      #toolbar-context-menu > .viewCustomizeToolbar,  /* [ツールバーをカスタマイズ...] */
-/*      #toolbar-context-menu > menuseparator[contexttype="fullscreen"],        /* [----------------] */
-/*      #toolbar-context-menu > .fullscreen-context-autohide,                   /* [ツールバーを隠す] */
-/*      #toolbar-context-menu > menuitem[data-l10n-id="full-screen-exit"],      /* [全画面表示モードを終了] */
+        #toolbar-context-report-extension:not([hidden]) ~ 
+        #toggle_toolbar-menubar,                        /* [メニューバー] **/
+        #toolbar-context-report-extension:not([hidden]) ~ 
+        #toggle_PersonalToolbar,                        /* [ブックマークツールバー] **/
+        #toolbar-context-report-extension:not([hidden]) ~ 
+        #viewToolbarsMenuSeparator,                     /* [----------------] **/
+/*      #toolbar-context-customize,                     /* [ツールバーをカスタマイズ...] 138+? */
+/*      #toolbar-context-customize + menuseparator,     /* [----------------] */
+/*      #toolbar-context-full-screen-autohide,          /* [ツールバーを隠す] 138+? */
+/*      #toolbar-context-full-screen-exit,              /* [全画面表示モードを終了] 138+? */
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* コンテンツエリア */
 /*      #context-navigation,                            /* ナビゲーション */
@@ -143,7 +147,8 @@
         #context-openlink,                              /* [リンクを新しいウィンドウで開く] */
         #context-openlinkprivate,                       /* [リンクを新しいプライベートウィンドウで開く] */
 /**     #context-sep-open,                              /* [----------------] */
-        #context-openlinkincurrent[hidden] ~ #context-sep-open, /* [----------------] */
+        #context-openlinkincurrent[hidden] ~ 
+        #context-sep-open,                              /* [----------------] **/
         #context-bookmarklink,                          /* [このリンクをブックマーク] */
 /*      #context-savelink,                              /* [名前を付けてリンク先を保存...] */
         #context-savelinktopocket,                      /* [リンクを Pocket に保存] */
@@ -196,7 +201,8 @@
 /*      #context-viewimageinfo,                         /* [画像の情報を表示] 89+ (browser.menu.showViewImageInfo=true) */
 /*      #context-viewimagedesc,                         /* [画像の詳細情報を表示] 87+ */
 /**     #context-sep-setbackground,                     /* [----------------] 87+ */
-        #context-copyimage-contents:not([hidden]) ~ #context-sep-setbackground, /* [----------------] (#context-setDesktopBackground + 画像コンテキストメニュー用) */
+        #context-copyimage-contents:not([hidden]) ~ 
+        #context-sep-setbackground,                     /* [----------------] (#context-setDesktopBackground + 画像コンテキストメニュー用) **/
         #context-setDesktopBackground,                  /* [画像をデスクトップの背景に設定...] 87+ 88+ */
 /*      #context-ctp-play,                              /* [このプラグインを有効化] */
 /*      #context-ctp-hide,                              /* [このプラグインを非表示] */
@@ -244,7 +250,8 @@
         #context-translate-selection,                   /* [選択範囲を 〇〇 に翻訳][リンクテキストを 〇〇 に翻訳] 128+ */
 /*      #context-ask-chat,                              /* ??? 128+? */
 /**     #frame-sep,                                     /* [----------------] */
-        #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,      /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) */
+        #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ 
+        #frame-sep,                                     /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) **/
 /*      #frame,                                         /* [このフレーム] */
           #context-showonlythisframe,                   /*   [このフレームだけを表示] */
 /*        #context-openframeintab,                      /*   [フレームを新しいタブで開く] */
@@ -324,10 +331,10 @@
 /*                                                      /* 拡張機能（ブックマーク・履歴） */
 /* -------------------------------------------------------------------------- */
 /*    #pageActionContextMenu,                           /* ページアクションコンテキストメニュー */
-/*                                                      /* Extension (ページアクション) */
+/*                                                      /* 拡張機能 (ページアクション) */
 /*                                                      /* [----------------] */
-/*      #pageActionContextMenu > menuitem[data-l10n-id="page-action-manage-extension2"],/* [拡張機能を管理...] 110+? */
-        #pageActionContextMenu > menuitem[data-l10n-id="page-action-remove-extension2"],/* [拡張機能を削除] 110+? */
+/*      #pageActionContextMenuManageExtension,          /* [拡張機能を管理...] 110+? 138+? */
+        #pageActionContextMenuRemoveExtension,          /* [拡張機能を削除] 110+? 138+? */
 /* ========================================================================== */
 /* 追加機能                                                                   */
 /* ========================================================================== */

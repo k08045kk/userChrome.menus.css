@@ -15,7 +15,7 @@
  *                必要に応じてコピー・ペーストして使用してください。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     120.20231124
+ * @version     138.20250523
  * @note        57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -131,13 +131,54 @@
 
 
 /* -------------------------------------------------------------------------- *
+ * サイドバー
+ * 表示方法：サイドバーを右クリック
+ * 表示方法：サイドバーのボタンを右クリック
+ * 表示方法：サイドバーの履歴・同期パネル内の[…]・項目を右クリック
+ * -------------------------------------------------------------------------- */
+/*    #sidebar-context-menu,                            /* サイドバー */
+/*      #sidebar-context-menu-manage-extension,         /* [拡張機能を管理] */
+        #sidebar-context-menu-remove-extension,         /* [拡張機能を削除] */
+        #sidebar-context-menu-report-extension,         /* [拡張機能を報告] */
+/*      #sidebar-context-menu-hide-sidebar,             /* [サイドバーを隠す] */
+/*      #sidebar-context-menu-customize-sidebar,        /* [サイドバーをカスタマイズ] */
+/*      #sidebar-context-menu-enable-vertical-tabs,     /* [垂直タブをオンにする][垂直タブをオフにする] */
+/*    #sidebar-history-menu,                            /* サイドバー履歴… */
+/*    #sidebar-history-context-menu,                    /* ツールバー履歴コンテキストメニュー */
+/*      #sidebar-history-context-open-in-tab,           /* [新しいタブで開く] */
+/*      #sidebar-history-context-menu-container-tab,    /* [新しいコンテナータブで開く] */
+/*      #sidebar-history-context-open-in-window,        /* [新しいウィンドウで開く] */
+/*      #sidebar-history-context-open-in-private-window,/* [新しいプライベートウィンドウで開く] */
+/*      #sidebar-history-context-open-in-private-window + menuseparator,/* [----------------] */
+/*      #sidebar-history-context-delete-page,           /* [ページを履歴から削除] */
+/*      #sidebar-history-context-forget-site,           /* [ウェブサイトのデータをすべて消去...] */
+/*      #sidebar-history-context-forget-site + menuseparator,   /* [----------------] */
+/*      #sidebar-history-context-copy-link,                     /* [リンクをコピー] */
+/*      #sidebar-history-context-copy-link + menuseparator,     /* [----------------] */
+/*      #sidebar-history-context-bookmark-page,                 /* [ページをブックマークに追加...] */
+/*    #sidebar-synced-tabs-context-menu,                        /* ツールバー同期コンテキストメニュー */
+/*      #sidebar-synced-tabs-context-open-in-window,            /* [新しいウィンドウで開く] */
+/*      #sidebar-synced-tabs-context-open-in-private-window,    /* [新しいプライベートウィンドウで開く] */
+/*      #sidebar-synced-tabs-context-open-in-private-window + menuseparator,    /* [----------------] */
+/*      #sidebar-context-menu-close-remote-tab,                /* [端末上のタブを閉じる] */
+/*      #sidebar-context-menu-close-remote-tab + menuseparator,/* [----------------] */
+/*      #sidebar-synced-tabs-context-bookmark-tab,             /* [タブをブックマークに追加...] */
+/*      #sidebar-synced-tabs-context-copy-link,                /* [リンクをコピー] */
+
+
+/* -------------------------------------------------------------------------- *
  * ツールバー
  * 表示方法：ツールバーボタンを右クリック
  * 表示方法：ブラウザアクションを右クリック
  * 表示方法：ダウンロードツールチップを右クリック（#toolbar-context-autohide-downloads-button）
+ * 表示方法：サイドバーツールチップを右クリック
+ * 表示方法：他システムブラウザアクションを右クリック
+ * 表示方法：メニューバーの右端ボタンを右クリック
+ * 表示方法：タブバー右端を右クリック
  * [削除項目] - 削除理由
  * [拡張機能を削除] - `about:addons` の […] > [削除] で代用可能
  * [拡張機能を報告] - `about:addons` の […] > [報告] で代用可能
+ * [垂直タブをオンにする] - サイドバーにタブバー用の欄が常に表示されるため（#20）
  * -------------------------------------------------------------------------- */
 /*    #toolbar-context-menu,                            /* ツールバー */
 /*      userChrome.menus.css 参照 */

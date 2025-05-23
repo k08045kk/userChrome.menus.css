@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     138.20250514
+ * @version     138.20250523
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -26,7 +26,7 @@
 /*      #context_moveTabToNewGroup,                     /* [Add Tab to New Group][Add Tabs to New Group] 133+? 138+ */
 /*      #context_moveTabToGroup,                        /* [Add Tab to Group][Add Tabs to Group] 133+? 138+ */
 /*        #context_moveTabToGroupNewGroup,              /* [New Group] 138+ */
-/*        #context_moveTabToGroupNewGroup + menuseparator,  /* [----------------] 138+ */
+/*        #context_moveTabToGroupNewGroup+menuseparator,/* [----------------] 138+ */
 /*                                                      /* New Group 138+ */
 /*      #context_ungroupTab,                            /* [Remove from Group] 133+? 138+ */
         #context_openANewTab + menuseparator,           /* [----------------] 89-132 delete? */
@@ -79,44 +79,48 @@
 /*    #toolbar-context-menu,                            /* Toolbar */
 /*                                                      /* Extensions (Browser Action) */
 /*                                                      /* [----------------] */
-/*                                                      /* [Extension Can’t Read and Change Data] 123+? */
-/*                                                      /* [Extension Can Read and Change Data:] 123+? */
-/*                                                      /* [Only When Clicked] 123+? */
-/*                                                      /* [Always Allow on 〇〇] 〇〇=domain 123+? */
-/*                                                      /* [----------------] */
-/*      #toolbar-context-menu > .customize-context-manageExtension,     /* [Manage Extension] */
-        #toolbar-context-menu > .customize-context-removeExtension,     /* [Remove Extension] */
-        #toolbar-context-menu > .customize-context-reportExtension,     /* [Report Extension] */
-/*                                                                      /* [----------------] */
-        #toolbar-context-menu > .customize-context-moveToPanel,         /* [Pin to Overflow Menu] */
-/*      #toolbar-context-autohide-downloads-button,                     /* [Hide Button When Empty] 88+? */
-        #toolbar-context-menu > .customize-context-removeFromToolbar,   /* [Remove from Toolbar] */
-/*      #toolbar-context-menu > .customize-context-pinToToolbar,        /* [Pin to Toolbar] 109+ */
-/*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] */
-/*      #toolbar-context-always-open-downloads-panel,   /* [Show Panel When Download Begins] */
-        #toolbar-context-openANewTab,                   /* [New Tab] 89+ */
-        #toolbarNavigatorItemsMenuSeparator,            /* [----------------] 89+ */
+/*      #toolbar-context-manage-extension,              /* [Manage Extension] 138+? */
+        #toolbar-context-remove-extension,              /* [Remove Extension] 138+? */
+        #toolbar-context-report-extension,              /* [Report Extension] 138+? */
+/*      #toolbar-context-report-extension+menuseparator,/* [----------------] 138+? */
+        #toolbar-context-openANewTab,                   /* [New Tab] 89+ 138+? */
+        #toolbarNavigatorItemsMenuSeparator,            /* [----------------] 89+ 138+? */
 /*      #toolbar-context-reloadSelectedTab,             /* [Reload Selected Tab] */
 /*      #toolbar-context-reloadSelectedTabs,            /* [Reload Selected Tabs] */
 /*      #toolbar-context-bookmarkSelectedTab,           /* [Bookmark Selected Tab…] */
 /*      #toolbar-context-bookmarkSelectedTabs,          /* [Bookmark Selected Tabs…] */
 /*      #toolbar-context-selectAllTabs,                 /* [Select All Tabs] */
 /*      #toolbar-context-undoCloseTab,                  /* [Reopen Closed Tab] 88+ */
-/**     #toolbarItemsMenuSeparator,                     /* [----------------] */
-        #toolbar-context-autohide-downloads-button[hidden] ~ #toolbar-context-undoCloseTab[hidden] + #toolbarItemsMenuSeparator,     /* [----------------] **/
+/*      #toolbarItemsMenuSeparator,                     /* [----------------] */
+        #toolbar-context-customize-sidebar,             /* [サイドバーをカスタマイズ] 138+? */
+        #toolbar-context-toggle-vertical-tabs,          /* [垂直タブをオンにする][垂直タブをオフにする] 138+? */
+        #sidebarRevampSeparator,                        /* [----------------] 138+? */
+        #toolbar-context-move-to-panel,                 /* [Pin to Overflow Menu] 138+? */
+/*      #toolbar-context-autohide-downloads-button,     /* [Hide Button When Empty] 88+? 138+? */
+        #toolbar-context-remove-from-toolbar,           /* [Remove from Toolbar] 138+? */
+/*      #toolbar-context-pin-to-toolbar,                /* [Pin to Toolbar] 109+ 138+? */
+/*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] 138+? */
+/*      #toolbar-context-always-open-downloads-panel,   /* [Show Panel When Download Begins] 138+? */
+/**     #customizationMenuSeparator,                    /* [----------------] 138+? */
+        #toolbar-context-pin-to-toolbar[hidden] ~ 
+        #toolbar-context-always-open-downloads-panel[hidden] ~ 
+        #customizationMenuSeparator,                    /* [----------------] 138+? **/
 /**     #toggle_toolbar-menubar,                        /* [Menu Bar] */
 /**     #toolbar-context-menu > #toggle_PersonalToolbar,/* [Bookmarks Toolbar] 85+ */
 /*                                                      /*   [Always Show] 85+ */
-/*                                                      /*   [Never Show] 85+ */
-/*                                                      /*   [Only Show on New Tab] 85+ */
+/*                                                      /*   [Only Show on New Tab] 85+ 138+? **/
+/*                                                      /*   [Never Show] 85+ 138+? **/
 /**     #viewToolbarsMenuSeparator,                     /* [----------------] */
-        .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #toggle_toolbar-menubar,   /* [Menu Bar] **/
-        .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #toggle_PersonalToolbar,   /* [Bookmarks Toolbar] **/
-        .customize-context-removeFromToolbar:not([hidden]):not([disabled]) ~ #viewToolbarsMenuSeparator,/* [----------------] **/
-/*      #toolbar-context-menu > .viewCustomizeToolbar,  /* [Customize Toolbar…] 88+? */
-/*      #toolbar-context-menu > menuseparator[contexttype="fullscreen"],        /* [----------------] */
-/*      #toolbar-context-menu > .fullscreen-context-autohide,                   /* [Hide Toolbars] */
-/*      #toolbar-context-menu > menuitem[data-l10n-id="full-screen-exit"],      /* [Exit Full Screen Mode] */
+        #toolbar-context-report-extension:not([hidden]) ~ 
+        #toggle_toolbar-menubar,                        /* [Menu Bar] **/
+        #toolbar-context-report-extension:not([hidden]) ~ 
+        #toggle_PersonalToolbar,                        /* [Bookmarks Toolbar] **/
+        #toolbar-context-report-extension:not([hidden]) ~ 
+        #viewToolbarsMenuSeparator,                     /* [----------------] **/
+/*      #toolbar-context-customize,                     /* [Customize Toolbar…] 88+? 138+? */
+/*      #toolbar-context-customize + menuseparator,     /* [----------------] 138+? */
+/*      #toolbar-context-full-screen-autohide,          /* [Hide Toolbars] 138+? */
+/*      #toolbar-context-full-screen-exit,              /* [Exit Full Screen Mode] 138+? */
 /* -------------------------------------------------------------------------- */
 /*    #contentAreaContextMenu,                          /* Content Area */
 /*      #context-navigation,                            /* Navigation */
@@ -143,7 +147,8 @@
         #context-openlink,                              /* [Open Link in New Window] */
         #context-openlinkprivate,                       /* [Open Link in New Private Window] */
 /**     #context-sep-open,                              /* [----------------] */
-        #context-openlinkincurrent[hidden] ~ #context-sep-open, /* [----------------] */
+        #context-openlinkincurrent[hidden] ~ 
+        #context-sep-open,                              /* [----------------] **/
         #context-bookmarklink,                          /* [Bookmark This Link] */
 /*      #context-savelink,                              /* [Save Link As…] */
         #context-savelinktopocket,                      /* [Save Link to Pocket] */
@@ -196,7 +201,8 @@
 /*      #context-viewimageinfo,                         /* [View Image Info] 89+ (browser.menu.showViewImageInfo=true) */
 /*      #context-viewimagedesc,                         /* [View Description] 87+ */
 /**     #context-sep-setbackground,                     /* [----------------] 87+ */
-        #context-copyimage-contents:not([hidden]) ~ #context-sep-setbackground, /* [----------------] (#context-setDesktopBackground + Image Context Menu) **/
+        #context-copyimage-contents:not([hidden]) ~ 
+        #context-sep-setbackground,                     /* [----------------] (#context-setDesktopBackground + Image Context Menu) **/
         #context-setDesktopBackground,                  /* [Set Image as Desktop Background…] 87+ 88+ */
 /*      #context-ctp-play,                              /* [Activate this plugin] */
 /*      #context-ctp-hide,                              /* [Hide this plugin] */
@@ -244,7 +250,8 @@
         #context-translate-selection,                   /* [Translate Selection to 〇〇][Translate Link Text to 〇〇] 128+ */
 /*      #context-ask-chat,                              /* ??? 128+? */
 /**     #frame-sep,                                     /* [----------------] */
-        #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,      /* [----------------] (#context-keywordfield + Input Context Menu) **/
+        #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ 
+        #frame-sep,                                     /* [----------------] (#context-keywordfield + Input Context Menu) **/
 /*      #frame,                                         /* [This Frame] */
           #context-showonlythisframe,                   /*   [Show Only This Frame] */
 /*        #context-openframeintab,                      /*   [Open Frame in New Tab] */
@@ -326,8 +333,8 @@
 /*    #pageActionContextMenu,                           /* Page Action Context Menu */
 /*                                                      /* Extension (Page Action) */
 /*                                                      /* [----------------] */
-/*      #pageActionContextMenu > menuitem[data-l10n-id="page-action-manage-extension2"],/* [Manage Extension…] 110+ */
-        #pageActionContextMenu > menuitem[data-l10n-id="page-action-remove-extension2"],/* [Remove Extension] 110+ */
+/*      #pageActionContextMenuManageExtension,          /* [Manage Extension…] 110+ 138+? */
+        #pageActionContextMenuRemoveExtension,          /* [Remove Extension] 110+ 138+? */
 /* ========================================================================== */
 /* Additional Features                                                        */
 /* ========================================================================== */
