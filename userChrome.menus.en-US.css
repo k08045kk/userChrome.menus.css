@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     138.20250523
+ * @version     140.20250624
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -42,6 +42,7 @@
 /*      #context_unpinTab,                              /* [Unpin Tab] */
 /*      #context_pinSelectedTabs,                       /* [Pin Tabs] 67+ */
 /*      #context_unpinSelectedTabs,                     /* [Unpin Tabs] 67+ */
+        #context_unloadTab,                             /* [Unload Tab] 140+ */
 /*      #context_duplicateTab,                          /* [Duplicate Tab] */
 /*      #context_duplicateTabs,                         /* [Duplicate Tabs] 67+ */
 /*      #context_duplicateTabs + menuseparator,         /* [----------------] 67+ */

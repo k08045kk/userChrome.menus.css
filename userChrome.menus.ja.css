@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     138.20250523
+ * @version     140.20250624
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -42,6 +42,7 @@
 /*      #context_unpinTab,                              /* [タブのピン留めを外す] */
 /*      #context_pinSelectedTabs,                       /* [タブをピン留め] 67+ */
 /*      #context_unpinSelectedTabs,                     /* [タブのピン留めを外す] 67+ */
+        #context_unloadTab,                             /* [タブを解放] 140+ */
 /*      #context_duplicateTab,                          /* [タブを複製] */
 /*      #context_duplicateTabs,                         /* [タブを複製] 67+ */
 /*      #context_duplicateTabs + menuseparator,         /* [----------------] 67+ */
