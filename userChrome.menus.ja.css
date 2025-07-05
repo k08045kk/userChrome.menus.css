@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     140.20250624
+ * @version     140.20250706
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -247,7 +247,7 @@
 /*      #context-pdfjs-delete,                          /* [削除] 110+? */
 /*      #context-pdfjs-selectall,                       /* [すべて選択] 110+? */
 /*      #context-sep-pdfjs-selectall,                   /* [----------------] 110+? */
-/*      #context-take-screenshot,                       /* [スクリーンショットを撮影] 88+ 110+? */
+/*      #context-take-screenshot,                       /* [スクリーンショットを撮影] 88+ 110+? (screenshots.browser.component.enabled=true) */
 /*      #context-sep-screenshots,                       /* [----------------] 88+ 110+? */
         #context-keywordfield,                          /* [この検索にキーワードを設定...] 88+ */
 /**     #context-searchselect,                          /* [〇〇 で検索: "△△"] 〇〇=検索エンジン、△△=選択文字列 88+ */
