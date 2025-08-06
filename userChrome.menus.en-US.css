@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     140.20250706
+ * @version     141.20250807
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -250,6 +250,7 @@
 /*      #context-take-screenshot,                       /* [Take Screenshot] 88+ 110+ (screenshots.browser.component.enabled=true) */
 /*      #context-sep-screenshots,                       /* [----------------] 88+ 110+ */
         #context-keywordfield,                          /* [Add a Keyword for this Search…] 88+ */
+        #context-add-engine,                            /* [Add Search Engine] 141+? */
 /**     #context-searchselect,                          /* [Search 〇〇 for “△△”] 88+ 〇〇=search engine、△△=selected text */
 /*      #context-searchselect-private,                  /* ??? 84+? 88+ */
         #context-translate-selection,                   /* [Translate Selection to 〇〇][Translate Link Text to 〇〇] 128+ */
