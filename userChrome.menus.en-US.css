@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     141.20250807
+ * @version     142.20250903
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -46,6 +46,12 @@
 /*      #context_duplicateTab,                          /* [Duplicate Tab] */
 /*      #context_duplicateTabs,                         /* [Duplicate Tabs] 67+ */
 /*      #context_duplicateTabs + menuseparator,         /* [----------------] 67+ */
+        #context_askChat,                               /* [Ask an AI Chatbot] 142+ */
+/*                                                      /*   [Summarize Page] 142+ */
+/*                                                      /*   [Choose an AI Chatbot] 142+ */
+/*                                                      /*   [----------------] 142+ */
+/*                                                      /*   [Remove AI Chatbot] 142+ */
+        #context_askChat + menuseparator,               /* [----------------] 142+ */
         #context_bookmarkSelectedTabs,                  /* [Bookmark Tabs…] */
         #context_bookmarkTab,                           /* [Bookmark Tab] 64+ */
         #context_moveTabOptions,                        /* [Move Tab] 64+ 67+ */
@@ -254,7 +260,11 @@
 /**     #context-searchselect,                          /* [Search 〇〇 for “△△”] 88+ 〇〇=search engine、△△=selected text */
 /*      #context-searchselect-private,                  /* ??? 84+? 88+ */
         #context-translate-selection,                   /* [Translate Selection to 〇〇][Translate Link Text to 〇〇] 128+ */
-/*      #context-ask-chat,                              /* ??? 128+? */
+        #context-ask-chat,                              /* [Ask an AI Chatbot] 128+? 142+ */
+/*                                                      /*   [Summarize Page] 142+ */
+/*                                                      /*   [Choose an AI Chatbot] 142+ */
+/*                                                      /*   [----------------] 142+ */
+/*                                                      /*   [Remove AI Chatbot] 142+ */
 /**     #frame-sep,                                     /* [----------------] */
         #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ 
         #frame-sep,                                     /* [----------------] (#context-keywordfield + Input Context Menu) **/

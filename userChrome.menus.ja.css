@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     141.20250807
+ * @version     142.20250903
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -46,6 +46,12 @@
 /*      #context_duplicateTab,                          /* [タブを複製] */
 /*      #context_duplicateTabs,                         /* [タブを複製] 67+ */
 /*      #context_duplicateTabs + menuseparator,         /* [----------------] 67+ */
+        #context_askChat,                               /* [AI チャットボットに尋ねる] 142+ */
+/*                                                      /*   [ページを要約] 142+ */
+/*                                                      /*   [AI チャットボットを選ぶ] 142+ */
+/*                                                      /*   [----------------] 142+ */
+/*                                                      /*   [AI チャットボットを削除] 142+ */
+        #context_askChat + menuseparator,               /* [----------------] 142+ */
         #context_bookmarkSelectedTabs,                  /* [タブをブックマーク...] */
         #context_bookmarkTab,                           /* [タブをブックマーク] 64+ */
         #context_moveTabOptions,                        /* [タブを移動] 64+ 67+ */
@@ -254,7 +260,11 @@
 /**     #context-searchselect,                          /* [〇〇 で検索: "△△"] 〇〇=検索エンジン、△△=選択文字列 88+ */
 /*      #context-searchselect-private,                  /* ??? 84+? 88+ */
         #context-translate-selection,                   /* [選択範囲を 〇〇 に翻訳][リンクテキストを 〇〇 に翻訳] 128+ */
-/*      #context-ask-chat,                              /* ??? 128+? */
+        #context-ask-chat,                              /* [AI チャットボットに尋ねる] 128+? 142+ */
+/*                                                      /*   [ページを要約] 142+ */
+/*                                                      /*   [AI チャットボットを選ぶ] 142+ */
+/*                                                      /*   [----------------] 142+ */
+/*                                                      /*   [AI チャットボットを削除] 142+ */
 /**     #frame-sep,                                     /* [----------------] */
         #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ 
         #frame-sep,                                     /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) **/
