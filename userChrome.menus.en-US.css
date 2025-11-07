@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     142.20250903
+ * @version     145.20251107
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -211,6 +211,7 @@
 /*      #context-imagetext,                             /* [Copy Text From Image] 110+? */
 /*      #context-viewimageinfo,                         /* [View Image Info] 89+ (browser.menu.showViewImageInfo=true) */
 /*      #context-viewimagedesc,                         /* [View Description] 87+ */
+/*      #context-visual-search,                         /* [Search Image with Google Lens] 145+ */
 /**     #context-sep-setbackground,                     /* [----------------] 87+ */
         #context-copyimage-contents:not([hidden]) ~ 
         #context-sep-setbackground,                     /* [----------------] (#context-setDesktopBackground + Image Context Menu) **/
