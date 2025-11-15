@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     144.20251108
+ * @version     145.20251115
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -245,6 +245,10 @@
 /*      #context-reveal-password,                       /* [パスワードを開示] 110+? */
         #context-print-selection,                       /* [選択した部分を印刷] 84+ 88+ */
 /*      #context-sep-selectall,                         /* [----------------] 88+ */
+        #context-copy-link-to-highlight,                /* [選択部分へのリンクをコピー] 145+ */
+        #context-copy-clean-link-to-highlight,          /* [追跡を除去した選択部分へのリンクをコピー] 145+ */
+        #context-remove-highlight,                      /* [選択部分を解除] 145+ */
+        #context-sep-highlights,                        /* [----------------] 145+ */
 /*      #context-pdfjs-undo,                            /* [元に戻す] 110+? */
 /*      #context-pdfjs-redo,                            /* [やり直し] 110+? */
 /*      #context-sep-pdfjs,                             /* [----------------] 110+? */
