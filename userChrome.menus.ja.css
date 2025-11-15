@@ -157,6 +157,7 @@
 /*                                                      /*   コンテナ */
         #context-openlink,                              /* [リンクを新しいウィンドウで開く] */
         #context-openlinkprivate,                       /* [リンクを新しいプライベートウィンドウで開く] */
+        #context-previewlink,                           /* [リンク先をプレビュー] 146+? */
 /**     #context-sep-open,                              /* [----------------] */
         #context-openlinkincurrent[hidden] ~ 
         #context-sep-open,                              /* [----------------] **/

@@ -157,6 +157,7 @@
 /*                                                      /*   Container */
         #context-openlink,                              /* [Open Link in New Window] */
         #context-openlinkprivate,                       /* [Open Link in New Private Window] */
+        #context-previewlink,                           /* [Preview Link] 146+? */
 /**     #context-sep-open,                              /* [----------------] */
         #context-openlinkincurrent[hidden] ~ 
         #context-sep-open,                              /* [----------------] **/
