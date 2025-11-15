@@ -102,10 +102,8 @@
 /*      #toolbar-context-customize-sidebar,             /* [サイドバーをカスタマイズ] 138+? */
 /**     #toolbar-context-toggle-vertical-tabs,          /* [垂直タブをオンにする][垂直タブをオフにする] 138+? */
 /**     #sidebarRevampSeparator,                        /* [----------------] 138+? */
-        #toolbar-context-customize-sidebar[hidden] ~ 
-        #toolbar-context-toggle-vertical-tabs,          /* [垂直タブをオンにする][垂直タブをオフにする] 138+? **/
-        #toolbar-context-customize-sidebar[hidden] ~ 
-        #sidebarRevampSeparator,                        /* [----------------] 138+? **/
+        #toolbar-context-customize-sidebar[hidden] ~ #toolbar-context-toggle-vertical-tabs, /* [垂直タブをオンにする][垂直タブをオフにする] 138+? **/
+        #toolbar-context-customize-sidebar[hidden] ~ #sidebarRevampSeparator,   /* [----------------] 138+? **/
         #toolbar-context-move-to-panel,                 /* [オーバーフローメニューにピン留め] 138+? */
 /*      #toolbar-context-autohide-downloads-button,     /* [履歴がないときはボタンを非表示にする] 88+? 138+? */
         #toolbar-context-remove-from-toolbar,           /* [ツールバーから削除] 138+? */
@@ -113,21 +111,16 @@
 /*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] 138+? */
 /*      #toolbar-context-always-open-downloads-panel,   /* [ダウンロード開始時にパネルを表示する] 138+? */
 /**     #customizationMenuSeparator,                    /* [----------------] 138+? */
-        #toolbar-context-pin-to-toolbar[hidden] ~ 
-        #toolbar-context-always-open-downloads-panel[hidden] ~ 
-        #customizationMenuSeparator,                    /* [----------------] 138+? **/
+        #toolbar-context-pin-to-toolbar[hidden] ~ #toolbar-context-always-open-downloads-panel[hidden] ~ #customizationMenuSeparator,/* [----------------] 138+? **/
 /**     #toggle_toolbar-menubar,                        /* [メニューバー] */
 /**     #toolbar-context-menu > #toggle_PersonalToolbar,/* [ブックマークツールバー] 85+ */
 /*                                                      /*   [常に表示する] 85+ */
 /*                                                      /*   [新しいタブのみ表示する] 85+ 138+? */
 /*                                                      /*   [表示しない] 85+ 138+? */
 /**     #viewToolbarsMenuSeparator,                     /* [----------------] */
-        #toolbar-context-report-extension:not([hidden]) ~ 
-        #toggle_toolbar-menubar,                        /* [メニューバー] **/
-        #toolbar-context-report-extension:not([hidden]) ~ 
-        #toggle_PersonalToolbar,                        /* [ブックマークツールバー] **/
-        #toolbar-context-report-extension:not([hidden]) ~ 
-        #viewToolbarsMenuSeparator,                     /* [----------------] **/
+        #toolbar-context-report-extension:not([hidden]) ~ #toggle_toolbar-menubar,  /* [メニューバー] **/
+        #toolbar-context-report-extension:not([hidden]) ~ #toggle_PersonalToolbar,  /* [ブックマークツールバー] **/
+        #toolbar-context-report-extension:not([hidden]) ~ #viewToolbarsMenuSeparator,   /* [----------------] **/
 /*      #toolbar-context-customize,                     /* [ツールバーをカスタマイズ...] 138+? */
 /*      #toolbar-context-customize + menuseparator,     /* [----------------] */
 /*      #toolbar-context-full-screen-autohide,          /* [ツールバーを隠す] 138+? */
@@ -159,8 +152,7 @@
         #context-openlinkprivate,                       /* [リンクを新しいプライベートウィンドウで開く] */
         #context-previewlink,                           /* [リンク先をプレビュー] 146+? */
 /**     #context-sep-open,                              /* [----------------] */
-        #context-openlinkincurrent[hidden] ~ 
-        #context-sep-open,                              /* [----------------] **/
+        #context-openlinkincurrent[hidden] ~ #context-sep-open, /* [----------------] **/
         #context-bookmarklink,                          /* [このリンクをブックマーク] */
 /*      #context-savelink,                              /* [名前を付けてリンク先を保存...] */
         #context-savelinktopocket,                      /* [リンクを Pocket に保存] */
@@ -214,8 +206,7 @@
 /*      #context-viewimagedesc,                         /* [画像の詳細情報を表示] 87+ */
 /*      #context-visual-search,                         /* [Google Lens で画像を検索] 144+ */
 /**     #context-sep-setbackground,                     /* [----------------] 87+ */
-        #context-copyimage-contents:not([hidden]) ~ 
-        #context-sep-setbackground,                     /* [----------------] (#context-setDesktopBackground + 画像コンテキストメニュー用) **/
+        #context-copyimage-contents:not([hidden]) ~ #context-sep-setbackground, /* [----------------] (#context-setDesktopBackground + 画像コンテキストメニュー用) **/
         #context-setDesktopBackground,                  /* [画像をデスクトップの背景に設定...] 87+ 88+ */
 /*      #context-ctp-play,                              /* [このプラグインを有効化] */
 /*      #context-ctp-hide,                              /* [このプラグインを非表示] */
@@ -272,8 +263,7 @@
 /*                                                      /*   [----------------] 142+ */
 /*                                                      /*   [AI チャットボットを削除] 142+ */
 /**     #frame-sep,                                     /* [----------------] */
-        #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ 
-        #frame-sep,                                     /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) **/
+        #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,  /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) **/
         #context-copyimage:not([hidden]) ~ #frame-sep,  /* [----------------] (#context-ask-chat + 画像コンテキストメニュー用) **/
 /*      #frame,                                         /* [このフレーム] */
           #context-showonlythisframe,                   /*   [このフレームだけを表示] */

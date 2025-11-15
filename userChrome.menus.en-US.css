@@ -102,10 +102,8 @@
 /*      #toolbar-context-customize-sidebar,             /* [Customize Sidebar] 138+? */
 /**     #toolbar-context-toggle-vertical-tabs,          /* [Turn on Vertical Tabs][Turn off Vertical Tabs] 138+? */
 /**     #sidebarRevampSeparator,                        /* [----------------] 138+? */
-        #toolbar-context-customize-sidebar[hidden] ~ 
-        #toolbar-context-toggle-vertical-tabs,          /* [Turn on Vertical Tabs][Turn off Vertical Tabs] 138+? **/
-        #toolbar-context-customize-sidebar[hidden] ~ 
-        #sidebarRevampSeparator,                        /* [----------------] 138+? **/
+        #toolbar-context-customize-sidebar[hidden] ~ #toolbar-context-toggle-vertical-tabs, /* [Turn on Vertical Tabs][Turn off Vertical Tabs] 138+? **/
+        #toolbar-context-customize-sidebar[hidden] ~ #sidebarRevampSeparator,   /* [----------------] 138+? **/
         #toolbar-context-move-to-panel,                 /* [Pin to Overflow Menu] 138+? */
 /*      #toolbar-context-autohide-downloads-button,     /* [Hide Button When Empty] 88+? 138+? */
         #toolbar-context-remove-from-toolbar,           /* [Remove from Toolbar] 138+? */
@@ -113,21 +111,16 @@
 /*      #toolbarDownloadsAnchorMenuSeparator,           /* [----------------] 138+? */
 /*      #toolbar-context-always-open-downloads-panel,   /* [Show Panel When Download Begins] 138+? */
 /**     #customizationMenuSeparator,                    /* [----------------] 138+? */
-        #toolbar-context-pin-to-toolbar[hidden] ~ 
-        #toolbar-context-always-open-downloads-panel[hidden] ~ 
-        #customizationMenuSeparator,                    /* [----------------] 138+? **/
+        #toolbar-context-pin-to-toolbar[hidden] ~ #toolbar-context-always-open-downloads-panel[hidden] ~ #customizationMenuSeparator,/* [----------------] 138+? **/
 /**     #toggle_toolbar-menubar,                        /* [Menu Bar] */
 /**     #toolbar-context-menu > #toggle_PersonalToolbar,/* [Bookmarks Toolbar] 85+ */
 /*                                                      /*   [Always Show] 85+ */
 /*                                                      /*   [Only Show on New Tab] 85+ 138+? **/
 /*                                                      /*   [Never Show] 85+ 138+? **/
 /**     #viewToolbarsMenuSeparator,                     /* [----------------] */
-        #toolbar-context-report-extension:not([hidden]) ~ 
-        #toggle_toolbar-menubar,                        /* [Menu Bar] **/
-        #toolbar-context-report-extension:not([hidden]) ~ 
-        #toggle_PersonalToolbar,                        /* [Bookmarks Toolbar] **/
-        #toolbar-context-report-extension:not([hidden]) ~ 
-        #viewToolbarsMenuSeparator,                     /* [----------------] **/
+        #toolbar-context-report-extension:not([hidden]) ~ #toggle_toolbar-menubar,  /* [Menu Bar] **/
+        #toolbar-context-report-extension:not([hidden]) ~ #toggle_PersonalToolbar,  /* [Bookmarks Toolbar] **/
+        #toolbar-context-report-extension:not([hidden]) ~ #viewToolbarsMenuSeparator,   /* [----------------] **/
 /*      #toolbar-context-customize,                     /* [Customize Toolbar…] 88+? 138+? */
 /*      #toolbar-context-customize + menuseparator,     /* [----------------] 138+? */
 /*      #toolbar-context-full-screen-autohide,          /* [Hide Toolbars] 138+? */
@@ -159,8 +152,7 @@
         #context-openlinkprivate,                       /* [Open Link in New Private Window] */
         #context-previewlink,                           /* [Preview Link] 146+? */
 /**     #context-sep-open,                              /* [----------------] */
-        #context-openlinkincurrent[hidden] ~ 
-        #context-sep-open,                              /* [----------------] **/
+        #context-openlinkincurrent[hidden] ~ #context-sep-open, /* [----------------] **/
         #context-bookmarklink,                          /* [Bookmark This Link] */
 /*      #context-savelink,                              /* [Save Link As…] */
         #context-savelinktopocket,                      /* [Save Link to Pocket] */
@@ -214,8 +206,7 @@
 /*      #context-viewimagedesc,                         /* [View Description] 87+ */
 /*      #context-visual-search,                         /* [Search Image with Google Lens] 144+ */
 /**     #context-sep-setbackground,                     /* [----------------] 87+ */
-        #context-copyimage-contents:not([hidden]) ~ 
-        #context-sep-setbackground,                     /* [----------------] (#context-setDesktopBackground + Image Context Menu) **/
+        #context-copyimage-contents:not([hidden]) ~ #context-sep-setbackground, /* [----------------] (#context-setDesktopBackground + Image Context Menu) **/
         #context-setDesktopBackground,                  /* [Set Image as Desktop Background…] 87+ 88+ */
 /*      #context-ctp-play,                              /* [Activate this plugin] */
 /*      #context-ctp-hide,                              /* [Hide this plugin] */
@@ -272,8 +263,7 @@
 /*                                                      /*   [----------------] 142+ */
 /*                                                      /*   [Remove AI Chatbot] 142+ */
 /**     #frame-sep,                                     /* [----------------] */
-        #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ 
-        #frame-sep,                                     /* [----------------] (#context-keywordfield + Input Context Menu) **/
+        #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,  /* [----------------] (#context-keywordfield + Input Context Menu) **/
         #context-copyimage:not([hidden]) ~ #frame-sep,  /* [----------------] (#context-ask-chat + Image Context Menu) **/
 /*      #frame,                                         /* [This Frame] */
           #context-showonlythisframe,                   /*   [Show Only This Frame] */
