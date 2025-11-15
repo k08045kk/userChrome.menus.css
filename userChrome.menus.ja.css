@@ -273,6 +273,7 @@
 /**     #frame-sep,                                     /* [----------------] */
         #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ 
         #frame-sep,                                     /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) **/
+        #context-copyimage:not([hidden]) ~ #frame-sep,  /* [----------------] (#context-ask-chat + 画像コンテキストメニュー用) **/
 /*      #frame,                                         /* [このフレーム] */
           #context-showonlythisframe,                   /*   [このフレームだけを表示] */
 /*        #context-openframeintab,                      /*   [フレームを新しいタブで開く] */

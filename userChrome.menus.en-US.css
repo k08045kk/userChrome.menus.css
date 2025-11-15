@@ -273,6 +273,7 @@
 /**     #frame-sep,                                     /* [----------------] */
         #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ 
         #frame-sep,                                     /* [----------------] (#context-keywordfield + Input Context Menu) **/
+        #context-copyimage:not([hidden]) ~ #frame-sep,  /* [----------------] (#context-ask-chat + Image Context Menu) **/
 /*      #frame,                                         /* [This Frame] */
           #context-showonlythisframe,                   /*   [Show Only This Frame] */
 /*        #context-openframeintab,                      /*   [Open Frame in New Tab] */
