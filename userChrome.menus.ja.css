@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     145.20251115
+ * @version     145.20251204
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -265,6 +265,7 @@
 /**     #frame-sep,                                     /* [----------------] */
         #context-sep-selectall:not([hidden]) ~ #context-searchselect[hidden] ~ #frame-sep,  /* [----------------] (#context-keywordfield + 入力コンテキストメニュー用) **/
         #context-copyimage:not([hidden]) ~ #frame-sep,  /* [----------------] (#context-ask-chat + 画像コンテキストメニュー用) **/
+        #context-savepage:not([hidden]) ~ #frame-sep,   /* [----------------] (#context-ask-chat + ファイルコンテキストメニュー用) **/
 /*      #frame,                                         /* [このフレーム] */
           #context-showonlythisframe,                   /*   [このフレームだけを表示] */
 /*        #context-openframeintab,                      /*   [フレームを新しいタブで開く] */
