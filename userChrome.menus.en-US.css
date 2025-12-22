@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     145.20251204
+ * @version     146.20251222
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -29,9 +29,13 @@
 /*        #context_moveTabToGroupNewGroup+menuseparator,/* [----------------] 138+ */
 /*                                                      /* New Group 138+ */
 /*      #context_ungroupTab,                            /* [Remove from Group] 133+? 138+ */
+/*      #context_ungroupSplitView,                      /* [Remove from Group] 147+ */
+/*      #context_moveTabToSplitView,                    /* [] 146+ */
+/*      #context_separateSplitView,                     /* [Separate Split View] 146+ */
         #context_openANewTab + menuseparator,           /* [----------------] 89-132 delete? */
         #context_addTabToNewGroup + menuseparator,      /* [----------------] 89+ 132-133 delete? */
 /*      #context_ungroupTab + menuseparator,            /* [----------------] 89+ 133+? 138+ */
+/*      #context_separateSplitView + menuseparator,     /* [----------------] 146+ */
         #context_reloadTab,                             /* [Reload Tab] */
         #context_reloadSelectedTabs,                    /* [Reload Tabs] 67+ */
         #context_playTab,                               /* [Play Tab] 132+? */
