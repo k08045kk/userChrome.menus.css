@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     146.20251222
+ * @version     146.20251226
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -320,9 +320,9 @@
         #placesContext_openSeparator,                   /* [----------------] */
 /*      #placesContext_show_bookmark\:info,             /* [Edit Bookmark…] 89+ */
 /*      #placesContext_show\:info,                      /* [Edit…] 89+ */
-/*      #placesContext_show_folder\:info,               /* [Rename Folder…] 89+ */
-/*      #placesContext_deleteBookmark,                  /* [Remove Bookmark] 89+ */
-/*      #placesContext_deleteFolder,                    /* [Remove Folder] 89+ */
+/*      #placesContext_show_folder\:info,               /* [Edit Folder…] 89+ 146+? */
+/*      #placesContext_deleteBookmark,                  /* [Delete Bookmark] 89+ 146+? */
+/*      #placesContext_deleteFolder,                    /* [Delete Folder] 89+ 146+? */
 /*      #placesContext_delete,                          /* [Delete] 89+ */
 /*      #placesContext_delete_history,                  /* [Delete Page] 89+ */
 /*      #placesContext_deleteHost,                      /* [Forget About This Site] 89+ */

@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     146.20251222
+ * @version     146.20251226
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -320,7 +320,7 @@
         #placesContext_openSeparator,                   /* [----------------] */
 /*      #placesContext_show_bookmark\:info,             /* [ブックマークを編集...] 89+ */
 /*      #placesContext_show\:info,                      /* [編集...] 89+ */
-/*      #placesContext_show_folder\:info,               /* [フォルダー名を変更...] 89+ */
+/*      #placesContext_show_folder\:info,               /* [フォルダーを編集...] 89+ 146+? */
 /*      #placesContext_deleteBookmark,                  /* [ブックマークを削除] 89+ */
 /*      #placesContext_deleteFolder,                    /* [フォルダーを削除] 89+ */
 /*      #placesContext_delete,                          /* [削除] 89+ */
