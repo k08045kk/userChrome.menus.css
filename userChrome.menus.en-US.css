@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     146.20251226
+ * @version     147.20260126
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -25,9 +25,12 @@
         #context_addTabToNewGroup,                      /* [Add Tab to New Group] 132-133 delete? */
 /*      #context_moveTabToNewGroup,                     /* [Add Tab to New Group][Add Tabs to New Group] 133+? 138+ */
 /*      #context_moveTabToGroup,                        /* [Add Tab to Group][Add Tabs to Group] 133+? 138+ */
-/*        #context_moveTabToGroupNewGroup,              /* [New Group] 138+ */
-/*        #context_moveTabToGroupNewGroup+menuseparator,/* [----------------] 138+ */
-/*                                                      /* New Group 138+ */
+/*        #context_moveTabToGroupNewGroup,              /*   [New Group] 138+ */
+/*        #open-tab-groups-separator-upper,             /*   [----------------] 138+ 147+? */
+/*                                                      /*   New Group List 138+ */
+/*        #open-tab-groups-separator-lower,             /*   [----------------] 147+? */
+/*        #context_moveTabToSavedGroup,                 /*   [Closed Groups] 147+? */
+/*                                                      /*     Closed Group List 147+? */
 /*      #context_ungroupTab,                            /* [Remove from Group] 133+? 138+ */
 /*      #context_ungroupSplitView,                      /* [Remove from Group] 147+ */
 /*      #context_moveTabToSplitView,                    /* [] 146+ */
@@ -62,18 +65,20 @@
 /*        #context_moveToStart,                         /*   [Move to Start] 67+ */
 /*        #context_moveToEnd,                           /*   [Move to End] 67+ */
 /*        #context_openTabInWindow,                     /*   [Move to New Window] 67+ */
-        #context_sendTabToDevice,                       /* [Send Tab to Device] */
-/*                                                      /*   [Not Signed In] */
-/*                                                      /*   [----------------] */
-/*                                                      /*   [Sign in to Firefox…] */
-/*                                                      /*   [Learn About Sending Tabs…] */
-/*                                                      /*   [Send to All Devices] */
-/*                                                      /*   [Manage Devices…] */
         #tabContextMenu > .share-tab-url-item,          /* [Share] 89+ 92+ */
         #context_reopenInContainer,                     /* [Open in New Container Tab] 88+ 89+ */
 /*                                                      /*   Container */
         #context_selectAllTabs,                         /* [Select All Tabs] 64+ 88+ */
         #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
+/*      #context_sendTabToDevice,                       /* [Send to Device] 147+ */
+/*                                                      /*   [Not Signed In] 147- */
+/*                                                      /*   Device List */
+/*                                                      /*   [----------------] */
+/*                                                      /*   [Sign in to Firefox…] 147- */
+/*                                                      /*   [Learn About Sending Tabs…] 147- */
+/*                                                      /*   [Send to All Devices] */
+/*                                                      /*   [Manage Devices…] */
+/*      #context_sendTabToDeviceSeparator,              /* [----------------] 147+ */
         #context_closeTab,                              /* [Close Tab][Close n Tabs] 88+ 132+? */
 /*      #context_closeDuplicateTabs,                    /* [Close Duplicate Tabs] 127+ */
 /*      #context_closeTabOptions,                       /* [Close Multiple Tabs] 78+ */
@@ -217,13 +222,6 @@
 /*      #context-sep-ctp,                               /* [----------------] */
         #context-savepage,                              /* [Save Page As…] */
         #context-pocket,                                /* [Save Page to Pocket] */
-        #context-sendpagetodevice,                      /* [Send Page to Device] */
-/*                                                      /*   [Not Signed In] */
-/*                                                      /*   [----------------] */
-/*                                                      /*   [Sign in to Firefox…] */
-/*                                                      /*   [Learn About Sending Tabs…] */
-/*                                                      /*   [Send to All Devices] */
-/*                                                      /*   [Manage Devices…] */
 /*      #fill-login,                                    /* [Use Saved Password] 84+? 88+? */
 /*                                                      /*   Login Information 84+? 88+? */
 /*      #fill-login-generated-password,                 /* [Suggest Strong Password…] 84+? 88+ */
@@ -301,6 +299,15 @@
 /*      #context-viewsource,                            /* [View Page Source] 88+ */
         #context-inspect-a11y,                          /* [Inspect Accessibility Properties] 67+ 82+? */
 /*      #context-inspect,                               /* [Inspect] 82+? 89+? */
+/*      #context-sep-sendpagetodevice,                  /* [----------------] 147+ */
+/*      #context-sendpagetodevice,                      /* [Send to Device] 147+ */
+/*                                                      /*   [Not Signed In] 147- */
+/*                                                      /*   Device List */
+/*                                                      /*   [----------------] */
+/*                                                      /*   [Sign in to Firefox…] 147- */
+/*                                                      /*   [Learn About Sending Tabs…] 147- */
+/*                                                      /*   [Send to All Devices] */
+/*                                                      /*   [Manage Devices…] */
 /*      #context-media-eme-separator,                   /* [----------------] */
 /*      #context-media-eme-learnmore,                   /* [Learn more about DRM…] */
 /*      #context-media-eme-learnmore + menuseparator,   /* [----------------] */
