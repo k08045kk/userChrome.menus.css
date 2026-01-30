@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     147.20260126
+ * @version     147.20260130
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -169,6 +169,7 @@
 /*      #context-copyphone,                             /* [Copy Phone Number] 110+? */
 /*      #context-copylink,                              /* [Copy Link] 88+ */
         #context-stripOnShareLink,                      /* [Copy Link Without Site Tracking] 120+ */
+/*      #context-sep-copylink,                          /* [----------------] 147+ */
         #context-sendlinktodevice,                      /* [Send Link to Device] 89+ */
 /*                                                      /*   [Not Signed In] */
 /*                                                      /*   [----------------] */
@@ -176,8 +177,7 @@
 /*                                                      /*   [Learn About Sending Tabs…] */
 /*                                                      /*   [Send to All Devices] */
 /*                                                      /*   [Manage Devices…] */
-/*      #context-sep-sendlinktodevice,                  /* [----------------] 89+ */
-/*      #context-sep-copylink,                          /* [----------------] */
+        #context-sep-sendlinktodevice,                  /* [----------------] 89+ */
 /*      #context-media-play,                            /* [Play] */
 /*      #context-media-pause,                           /* [Pause] */
 /*      #context-media-mute,                            /* [Mute] */
@@ -299,8 +299,8 @@
 /*      #context-viewsource,                            /* [View Page Source] 88+ */
         #context-inspect-a11y,                          /* [Inspect Accessibility Properties] 67+ 82+? */
 /*      #context-inspect,                               /* [Inspect] 82+? 89+? */
-/*      #context-sep-sendpagetodevice,                  /* [----------------] 147+ */
-/*      #context-sendpagetodevice,                      /* [Send to Device] 147+ */
+        #context-sep-sendpagetodevice,                  /* [----------------] 147+ */
+        #context-sendpagetodevice,                      /* [Send to Device] 147+ */
 /*                                                      /*   [Not Signed In] 147- */
 /*                                                      /*   Device List */
 /*                                                      /*   [----------------] */

@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     147.20260126
+ * @version     147.20260130
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -169,6 +169,7 @@
 /*      #context-copyphone,                             /* [電話番号をコピー] 110+? */
 /*      #context-copylink,                              /* [リンクをコピー] 88+ */
         #context-stripOnShareLink,                      /* [サイト追跡を除いたリンクをコピー] 120+ */
+/*      #context-sep-copylink,                          /* [----------------] 147+ */
         #context-sendlinktodevice,                      /* [リンクを端末へ送信] 89+ */
 /*                                                      /*   [接続された端末がありません] */
 /*                                                      /*   [----------------] */
@@ -176,8 +177,7 @@
 /*                                                      /*   [タブの送信について...] */
 /*                                                      /*   [すべての端末に送信] */
 /*                                                      /*   [端末を管理...] */
-/*      #context-sep-sendlinktodevice,                  /* [----------------] 89+ */
-/*      #context-sep-copylink,                          /* [----------------] */
+        #context-sep-sendlinktodevice,                  /* [----------------] 89+ */
 /*      #context-media-play,                            /* [再生] */
 /*      #context-media-pause,                           /* [一時停止] */
 /*      #context-media-mute,                            /* [ミュート] */
@@ -299,8 +299,8 @@
 /*      #context-viewsource,                            /* [ページのソースを表示] 88+ */
         #context-inspect-a11y,                          /* [アクセシビリティプロパティを調査] 67+ 82+? */
 /*      #context-inspect,                               /* [調査] 82+? 89+? */
-/*      #context-sep-sendpagetodevice,                  /* [----------------] 147+ */
-/*      #context-sendpagetodevice,                      /* [端末へ送信] 147+ */
+        #context-sep-sendpagetodevice,                  /* [----------------] 147+ */
+        #context-sendpagetodevice,                      /* [端末へ送信] 147+ */
 /*                                                      /*   [接続された端末がありません] 147- */
 /*                                                      /*   端末一覧 */
 /*                                                      /*   [----------------] */
