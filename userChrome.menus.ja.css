@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     147.20260130
+ * @version     149.20260328
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -24,6 +24,7 @@
         #context_openANewTab,                           /* [新しいタブを右隣に開く] 89+ 132+? */
         #context_addTabToNewGroup,                      /* [Add Tab to New Group] 132-133 delete? */
 /*      #context_moveTabToNewGroup,                     /* [このタブを新しいグループに追加][選択したタブを新しいグループに追加] 133+? 138+ */
+/*      #context_moveSplitViewToNewGroup,               /* [分割ビューを新しいグループに追加] 149+ */
 /*      #context_moveTabToGroup,                        /* [このタブをグループに追加][選択したタブをグループに追加] 133+? 138+ */
 /*        #context_moveTabToGroupNewGroup,              /*   [新しいグループ] 138+ */
 /*        #open-tab-groups-separator-upper,             /*   [----------------] 138+ 147+? */
@@ -33,12 +34,14 @@
 /*                                                      /*     閉じたグループ一覧 147+? */
 /*      #context_ungroupTab,                            /* [このタブを各グループから除外][選択したタブを各グループから除外] 133+? 138+ */
 /*      #context_ungroupSplitView,                      /* [このタブをグループから除外] 147+ */
-/*      #context_moveTabToSplitView,                    /* [] 146+ */
+/*      #context_moveTabToSplitView,                    /* [分割ビューを追加] 146+ 149+ */
 /*      #context_separateSplitView,                     /* [分割ビューを終了] 146+ */
+/*      #context_reverseSplitView,                      /* [Reverse Tabs] ???+ */
         #context_openANewTab + menuseparator,           /* [----------------] 89-132 delete? */
         #context_addTabToNewGroup + menuseparator,      /* [----------------] 89+ 132-133 delete? */
 /*      #context_ungroupTab + menuseparator,            /* [----------------] 89+ 133+? */
 /*      #context_separateSplitView + menuseparator,     /* [----------------] 146+ */
+/*      #context_reverseSplitView + menuseparator,      /* [----------------] ???+ */
         #context_reloadTab,                             /* [タブを再読み込み] */
         #context_reloadSelectedTabs,                    /* [タブを再読み込み] 67+ */
         #context_playTab,                               /* [タブのメディアを再生] 132+? */

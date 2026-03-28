@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     147.20260130
+ * @version     149.20260328
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -24,6 +24,7 @@
         #context_openANewTab,                           /* [New Tab to Right] 89+ 132+? */
         #context_addTabToNewGroup,                      /* [Add Tab to New Group] 132-133 delete? */
 /*      #context_moveTabToNewGroup,                     /* [Add Tab to New Group][Add Tabs to New Group] 133+? 138+ */
+/*      #context_moveSplitViewToNewGroup,               /* [Add Split View to New Group] 149+ */
 /*      #context_moveTabToGroup,                        /* [Add Tab to Group][Add Tabs to Group] 133+? 138+ */
 /*        #context_moveTabToGroupNewGroup,              /*   [New Group] 138+ */
 /*        #open-tab-groups-separator-upper,             /*   [----------------] 138+ 147+? */
@@ -33,12 +34,14 @@
 /*                                                      /*     Closed Group List 147+? */
 /*      #context_ungroupTab,                            /* [Remove from Group] 133+? 138+ */
 /*      #context_ungroupSplitView,                      /* [Remove from Group] 147+ */
-/*      #context_moveTabToSplitView,                    /* [] 146+ */
+/*      #context_moveTabToSplitView,                    /* [Add Split View] 146+ */
 /*      #context_separateSplitView,                     /* [Separate Split View] 146+ */
+/*      #context_reverseSplitView,                      /* [Reverse Tabs] ???+ */
         #context_openANewTab + menuseparator,           /* [----------------] 89-132 delete? */
         #context_addTabToNewGroup + menuseparator,      /* [----------------] 89+ 132-133 delete? */
 /*      #context_ungroupTab + menuseparator,            /* [----------------] 89+ 133+? 138+ */
 /*      #context_separateSplitView + menuseparator,     /* [----------------] 146+ */
+/*      #context_reverseSplitView + menuseparator,      /* [----------------] ???+ */
         #context_reloadTab,                             /* [Reload Tab] */
         #context_reloadSelectedTabs,                    /* [Reload Tabs] 67+ */
         #context_playTab,                               /* [Play Tab] 132+? */
