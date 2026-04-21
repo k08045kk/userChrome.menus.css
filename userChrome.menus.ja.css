@@ -158,7 +158,7 @@
 /*      #context-openlinkincurrent,                     /* [選択した URL を開く] */
         #context-openlinkincontainertab,                /* [リンクを新しい 〇〇 タブで開く] 〇〇=コンテナ名 */
         #context-openlinkintab,                         /* [リンクを新しいタブで開く] */
-/*      #context-openlinkinsplitview,                   /* [リンクを分割ビューで開く] 150+ */
+        #context-openlinkinsplitview,                   /* [リンクを分割ビューで開く] 150+ */
         #context-openlinkinusercontext-menu,            /* [リンクを新しいコンテナータブで開く] */
 /*                                                      /*   コンテナ */
         #context-openlink,                              /* [リンクを新しいウィンドウで開く] */
