@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     150.20260421
+ * @version     150.20260425
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -36,12 +36,12 @@
 /*      #context_ungroupSplitView,                      /* [このタブをグループから除外] 147+ */
 /*      #context_moveTabToSplitView,                    /* [分割ビューを追加] 146+ 149+ */
 /*      #context_separateSplitView,                     /* [分割ビューを終了] 146+ */
-/*      #context_reverseSplitView,                      /* [Reverse Tabs] ???+ */
+/*      #context_reverseSplitView,                      /* [左右のタブを入れ替える] 150+ */
         #context_openANewTab + menuseparator,           /* [----------------] 89-132 delete? */
         #context_addTabToNewGroup + menuseparator,      /* [----------------] 89+ 132-133 delete? */
 /*      #context_ungroupTab + menuseparator,            /* [----------------] 89+ 133+? */
 /*      #context_separateSplitView + menuseparator,     /* [----------------] 146+ */
-/*      #context_reverseSplitView + menuseparator,      /* [----------------] ???+ */
+/*      #context_reverseSplitView + menuseparator,      /* [----------------] 150+ */
         #context_reloadTab,                             /* [タブを再読み込み] */
         #context_reloadSelectedTabs,                    /* [タブを再読み込み] 67+ */
         #context_playTab,                               /* [タブのメディアを再生] 132+? */
