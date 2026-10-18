@@ -11,7 +11,7 @@
  *              不足がある場合、 README.css を確認してください。ここに含まれない項目を記載しています。
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     150.20260425
+ * @version     157.20261018
  * @since       57.20171227 - 初版
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -73,15 +73,9 @@
 /*                                                      /*   コンテナー */
         #context_selectAllTabs,                         /* [すべてのタブを選択] 64+ 88+ */
         #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
-/*      #context_sendTabToDevice,                       /* [端末へ送信] 147+ */
-/*                                                      /*   [接続された端末がありません] 147- */
-/*                                                      /*   端末一覧 */
-/*                                                      /*   [----------------] */
-/*                                                      /*   [他の端末を接続...] 147- */
-/*                                                      /*   [タブの送信について...] 147- */
-/*                                                      /*   [すべての端末に送信] */
-/*                                                      /*   [端末を管理...] */
-/*      #context_sendTabToDeviceSeparator,              /* [----------------] 147+ */
+        #context_sendTabToDevice,                       /* [モバイル端末へ送信] 147+ 157+ */
+/*                                                      /*   省略 */
+        #context_sendTabToDeviceSeparator,              /* [----------------] 147+ 157+ */
         #context_closeTab,                              /* [n 個のタブを閉じる] 88+ 132+? */
 /*      #context_closeDuplicateTabs,                    /* [重複タブを閉じる] 127+ */
 /*      #context_closeTabOptions,                       /* [複数のタブを閉じる] 78+ */

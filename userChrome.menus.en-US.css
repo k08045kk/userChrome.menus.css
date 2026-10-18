@@ -11,7 +11,7 @@
  *              If any are missing, please check README.css. Items not included here are listed here.
  * @author      toshi (https://github.com/k08045kk)
  * @license     MIT License | https://github.com/k08045kk/userChrome.menus.css/blob/master/LICENSE
- * @version     150.20260425
+ * @version     157.20261018
  * @since       57.20171227 - First edition
  * @see         https://github.com/k08045kk/userChrome.menus.css
  * @see         https://www.bugbugnow.net/2017/12/firefox-quantum-57.html
@@ -73,15 +73,9 @@
 /*                                                      /*   Container */
         #context_selectAllTabs,                         /* [Select All Tabs] 64+ 88+ */
         #context_selectAllTabs + menuseparator,         /* [----------------] 88+ */
-/*      #context_sendTabToDevice,                       /* [Send to Device] 147+ */
-/*                                                      /*   [Not Signed In] 147- */
-/*                                                      /*   Device List */
-/*                                                      /*   [----------------] */
-/*                                                      /*   [Sign in to Firefox…] 147- */
-/*                                                      /*   [Learn About Sending Tabs…] 147- */
-/*                                                      /*   [Send to All Devices] */
-/*                                                      /*   [Manage Devices…] */
-/*      #context_sendTabToDeviceSeparator,              /* [----------------] 147+ */
+        #context_sendTabToDevice,                       /* [Send to Mobile] 147+ 157+ */
+/*                                                      /*   Omission */
+        #context_sendTabToDeviceSeparator,              /* [----------------] 147+ 157+ */
         #context_closeTab,                              /* [Close Tab][Close n Tabs] 88+ 132+? */
 /*      #context_closeDuplicateTabs,                    /* [Close Duplicate Tabs] 127+ */
 /*      #context_closeTabOptions,                       /* [Close Multiple Tabs] 78+ */
